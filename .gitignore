@@ -1,3 +1,4 @@
 .http-mitm-proxy
 data
 node_modules
+public/assets/lib

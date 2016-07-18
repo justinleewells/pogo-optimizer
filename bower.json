@@ -1,0 +1,6 @@
+{
+  "name": "pogo-optimizer",
+  "dependencies": {
+    "react": "^15.2.1"
+  }
+}
