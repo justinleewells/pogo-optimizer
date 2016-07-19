@@ -11,9 +11,9 @@ So, first of all, you need node.js, protobuf, and git (obviously). I've only tes
 Run these commands:
 
 ```
+brew install --devel protobuf
 npm install
 bower install
-brew install --devel protobuf
 node index
 ```
 Now you should have a webserver running. Make sure your phone and computer are connected to the same wireless network.
