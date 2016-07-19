@@ -30,7 +30,7 @@ var PokemonListContainer = React.createClass({
   },
   render: function() {
     return (
-      <div className="pokemonListContainer">
+      <div id="pokemonListContainer">
         <PokemonList data={this.state.data} />
       </div>
     );
@@ -41,18 +41,46 @@ var PokemonList = React.createClass({
   render: function() {
     var pokemonNodes = this.props.data.map(function(pokemon) {
       return (
-        <div>
-          <img class="pokemonPortrait" src={"assets/img/icons/" + pokemon.id + ".png"} />
-          <span class="iv attack">{pokemon.individual_attack}</span>
-          <span class="iv stamina">{pokemon.individual_stamina}</span>
-          <span class="iv defense">{pokemon.individual_defense}</span>
-          <span class="powerQuotient">{Math.round(100 * pokemon.power_quotient)}</span>
-        </div>
+        // <div className="pokemonEntry">
+        //   <div  className="portrait" style={{backgroundImage: 'url(assets/img/icons/' + pokemon.id + '.png)'}} />
+        //   <span className="name">{pokemon.nickname || pokemon.pokemon_type.toLowerCase()}</span>
+        //   <span className="cell iv attack">{pokemon.individual_attack}</span>
+        //   <span className="cell iv stamina">{pokemon.individual_stamina}</span>
+        //   <span className="cell iv defense">{pokemon.individual_defense}</span>
+        //   <span className="cell quotient">{Math.round(100 * pokemon.power_quotient) + "%"}</span>
+        // </div>
+        <tr>
+          <td>
+            <h4 className="ui image header">
+              <img className="ui mini rounded image" src={'assets/img/icons/' + pokemon.id + '.png'} />
+              <div className="content name">
+                {pokemon.nickname || pokemon.pokemon_type.toLowerCase()}
+              </div>
+            </h4>
+          </td>
+          <td>{pokemon.individual_attack}</td>
+          <td>{pokemon.individual_defense}</td>
+          <td>{pokemon.individual_stamina}</td>
+          <td>{Math.round(100 * pokemon.power_quotient) + "%"}</td>
+        </tr>
       );
     });
     return (
-      <div className="pokemonList">
-        {pokemonNodes}
+      <div id="pokemonList">
+        <table className="ui celled table">
+          <thead>
+            <tr>
+              <th>Pokemon</th>
+              <th>Attack</th>
+              <th>Defense</th>
+              <th>Stamina</th>
+              <th>Quotient</th>
+            </tr>
+          </thead>
+          <tbody>
+            {pokemonNodes}
+          </tbody>
+        </table>
       </div>
     );
   }

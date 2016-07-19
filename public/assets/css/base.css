@@ -1,0 +1,8 @@
+body {
+    background-color: #c0392b;
+    font-family: 'Lato', sans-serif;
+}
+
+.name {
+    text-transform: capitalize;
+}
