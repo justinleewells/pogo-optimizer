@@ -5,6 +5,13 @@
 var jsf = require('jsonfile');
 var express = require('express');
 var app = express();
+var fs = require('fs');
+
+if (!fs.existsSync('./data/inventory.json')) {
+  jsf.writeFileSync('./data/inventory.json', {}, {}, function (err) {
+    if (err) console.log(err);
+  });
+}
 
 app.use(express.static('public'));
 app.use("/ca.pem", express.static('.http-mitm-proxy/certs/ca.pem'));
