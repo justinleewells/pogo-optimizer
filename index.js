@@ -5,7 +5,8 @@
 var express = require('express');
 var app = express();
 
-app.use(express.static('.http-mitm-proxy/certs'));
+app.use(express.static('public'));
+app.use("/ca.pem", express.static('.http-mitm-proxy/certs/ca.pem'));
 
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!');
