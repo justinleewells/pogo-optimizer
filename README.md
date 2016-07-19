@@ -18,7 +18,7 @@ node index
 ```
 Now you should have a webserver running. Make sure your phone and computer are connected to the same wireless network.
 
-Next, check your network settings for your internal ip address. Mine was 10.0.1.3. Since that was my internal ip address, I'm going to visit 10.0.1.3:3000/ca.pem to accept the certificate.
+Next, check your network settings for your internal ip address. Mine was 10.0.1.3. So, I'm going to go add 10.0.1.3:8081 as a proxy to my phone. Next, I'm going to visit 10.0.1.3:3000/ca.pem to accept the certificate.
 
 After accepting the certificate, open Pokemon GO on your phone. After you can see your character walking around, go to localhost:3000 on your laptop. Enjoy.
 
