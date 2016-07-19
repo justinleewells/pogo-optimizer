@@ -11,6 +11,8 @@ So, first of all, you need node.js, protobuf, and git (obviously). I've only tes
 Run these commands:
 
 ```
+git clone https://github.com/justinleewells/pogo-optimizer
+cd pogo-optimizer
 brew install --devel protobuf
 npm install
 bower install
