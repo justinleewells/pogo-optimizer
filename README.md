@@ -16,3 +16,12 @@ Now you should have a webserver running. Make sure your phone and computer are c
 Next, check your network settings for your internal ip address. Mine was 10.0.1.3. Since that was my internal ip address, I'm going to visit 10.0.1.3:3000/ca.pem to accept the certificate.
 
 After accepting the certificate, open Pokemon GO on your phone. After you can see your character walking around, go to localhost:3000 on your laptop. Enjoy.
+
+## TODO
+
+* Remove Pokemon after they have been transferred
+* Make client usable while catching Pokemon
+
+## Feature Requests/Suggestions
+
+I'd love to hear what feature requests and suggestions you all have, so feel free to shoot me an email.
