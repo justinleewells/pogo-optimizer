@@ -8,7 +8,7 @@ var app = express();
 var fs = require('fs');
 
 if (!fs.existsSync('./data/inventory.json')) {
-  jsf.writeFileSync('./data/inventory.json', {}, {}, function (err) {
+  jsf.writeFileSync('./data/inventory.json', [], {}, function (err) {
     if (err) console.log(err);
   });
 }
