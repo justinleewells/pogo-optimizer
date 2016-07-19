@@ -13,12 +13,38 @@ body {
     margin: 0 auto;
 }
 
+.white.button {
+    background-color: white;
+    color: #333;
+}
+
 .name {
     text-transform: capitalize;
 }
 
 .stat {
     text-align: center !important;
+}
+
+th.atk {
+    background-color: #F08030 !important;
+}
+td.atk {
+    background-color: #F5AC78 !important;
+}
+
+th.def {
+    background-color: #F8D030 !important;
+}
+td.def {
+    background-color: #FAE078 !important;
+}
+
+th.sta {
+    background-color: #FF0000 !important;
+}
+td.sta {
+    background-color: #FF5959 !important;
 }
 
 .Normal {
