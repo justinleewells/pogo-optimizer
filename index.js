@@ -37,7 +37,7 @@ app.listen(3000, function () {
  */
 
 var _ = require('lodash');
-var PokemonGoMITM = require('pokemon-go-mitm-node');
+var PokemonGoMITM = require('pokemon-go-mitm');
 var PokemonData = require('./data/pokemon.json');
 var MoveData = require('./data/moves.json');
 
