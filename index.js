@@ -73,8 +73,8 @@ var server = new PokemonGoMITM({
       return entry;
     });
     if (formatted.length > 0) {
-      return jsf.writeFile("./data/inventory.json", formatted, {spaces: 2}, function(err) {
-        return console.log(err);
+      jsf.writeFile("./data/inventory.json", formatted, {spaces: 2}, function(err) {
+        console.log(err);
       });
     }
   }
