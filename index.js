@@ -29,6 +29,7 @@ app.listen(3000, function () {
 var _ = require('lodash');
 var PokemonGoMITM = require('pokemon-go-mitm-node');
 var PokemonData = require('./data/pokemon.json');
+var MoveData = require('./data/moves.json');
 
 var server = new PokemonGoMITM({
   port: 8081
@@ -55,6 +56,10 @@ var server = new PokemonGoMITM({
         entry.type_1 = data["Type I"];
         if (data["Type II"]) entry.type_2 = data["Type II"];
       }
+      var move1 = _.find(MoveData, {id: entry.move_1});
+      if (move1 !== undefined) entry.move_1 = move1.name;
+      var move2 = _.find(MoveData, {id: entry.move_2});
+      if (move2 !== undefined) entry.move_2 = move2.name;
       return entry;
     });
     if (formatted.length > 0) {

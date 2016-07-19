@@ -27,9 +27,9 @@ var PokemonListContainer = React.createClass({
         return 0;
       });
     }
-    else if (this.state.sort === 'type') {
+    else if (this.state.sort === 'species') {
       data.sort(function (a, b) {
-        if (a.pokemon_type == b.pokemon_type) {
+        if (a.id == b.id) {
           if (a.power_quotient > b.power_quotient) {
             return -1;
           }
@@ -38,10 +38,10 @@ var PokemonListContainer = React.createClass({
           }
           return 0;
         }
-        if (a.pokemon_type > b.pokemon_type) {
+        if (a.id > b.id) {
           return 1;
         }
-        if (a.pokemon_type < b.pokemon_type) {
+        if (a.id < b.id) {
           return -1;
         }
         return 0;
@@ -90,6 +90,9 @@ var PokemonList = React.createClass({
                 <div className="sub header">
                   {(Math.round(pokemon.weight_kg * 100) / 100) + "kg, " + (Math.round(pokemon.height_m * 100) / 100) + "m"}
                 </div>
+                <div className="sub header">
+                  {pokemon.move_1 + "/" + pokemon.move_2}
+                </div>
               </div>
             </h4>
           </td>
@@ -110,8 +113,8 @@ var PokemonList = React.createClass({
         <button className="ui button white" onClick={() => this.props.setSortType('perfect')}>
           Perfect
         </button>
-        <button className="ui button white" onClick={() => this.props.setSortType('type')}>
-          Type
+        <button className="ui button white" onClick={() => this.props.setSortType('species')}>
+          Species
         </button>
         <button className="ui button white" onClick={() => this.props.setSortType('cp')}>
           CP
