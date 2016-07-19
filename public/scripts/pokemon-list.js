@@ -41,14 +41,6 @@ var PokemonList = React.createClass({
   render: function() {
     var pokemonNodes = this.props.data.map(function(pokemon) {
       return (
-        // <div className="pokemonEntry">
-        //   <div  className="portrait" style={{backgroundImage: 'url(assets/img/icons/' + pokemon.id + '.png)'}} />
-        //   <span className="name">{pokemon.nickname || pokemon.pokemon_type.toLowerCase()}</span>
-        //   <span className="cell iv attack">{pokemon.individual_attack}</span>
-        //   <span className="cell iv stamina">{pokemon.individual_stamina}</span>
-        //   <span className="cell iv defense">{pokemon.individual_defense}</span>
-        //   <span className="cell quotient">{Math.round(100 * pokemon.power_quotient) + "%"}</span>
-        // </div>
         <tr>
           <td>
             <h4 className="ui image header">
@@ -58,23 +50,32 @@ var PokemonList = React.createClass({
               </div>
             </h4>
           </td>
-          <td>{pokemon.individual_attack}</td>
-          <td>{pokemon.individual_defense}</td>
-          <td>{pokemon.individual_stamina}</td>
-          <td>{Math.round(100 * pokemon.power_quotient) + "%"}</td>
+          <td className={"stat " + pokemon.type_1}>{pokemon.type_1}</td>
+          <td className={"stat " + pokemon.type_2}>{pokemon.type_2}</td>
+          <td className="stat">{pokemon.cp}</td>
+          <td className="stat">{pokemon.stamina_max}</td>
+          <td className="stat">{pokemon.individual_attack}</td>
+          <td className="stat">{pokemon.individual_defense}</td>
+          <td className="stat">{pokemon.individual_stamina}</td>
+          <td className="stat">{Math.round(100 * pokemon.power_quotient) + "%"}</td>
         </tr>
       );
     });
     return (
       <div id="pokemonList">
+        <h1 id="title">Pokemon GO Optimizer</h1>
         <table className="ui celled table">
           <thead>
             <tr>
               <th>Pokemon</th>
-              <th>Attack</th>
-              <th>Defense</th>
-              <th>Stamina</th>
-              <th>Quotient</th>
+              <th>Type 1</th>
+              <th>Type 2</th>
+              <th className="stat">CP</th>
+              <th className="stat">HP</th>
+              <th className="stat">ATK</th>
+              <th className="stat">DEF</th>
+              <th className="stat">STA</th>
+              <th className="stat">Perfect</th>
             </tr>
           </thead>
           <tbody>

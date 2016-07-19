@@ -52,6 +52,8 @@ var server = new PokemonGoMITM({
       });
       if (data != null) {
         entry.id = parseInt(data.Number);
+        entry.type_1 = data["Type I"];
+        if (data["Type II"]) entry.type_2 = data["Type II"];
       }
       return entry;
     });
