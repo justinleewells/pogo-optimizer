@@ -1,5 +1,7 @@
 # Pokemon GO Optimizer
-This tool shows you the IVs and information necessary to determine which Pokemon get ground into candy. Perfect for any trainer aspiring to be the very best.
+This tool shows you the IVs and information necessary to determine which Pokemon get ground into candy. Perfect for any trainer aspiring to be the very best. This won't get you banned.
+
+![example](http://i.imgur.com/3V8xw1G.png)
 
 ## Setup
 So, first of all, you need node.js. I've only tested this on Mac, so if you want to test it on other platforms, be my guest.
