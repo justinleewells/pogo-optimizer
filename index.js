@@ -78,4 +78,5 @@ var server = new PokemonGoMITM({
       });
     }
   }
+  return data;
 });
