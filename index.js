@@ -57,7 +57,7 @@ var server = new PokemonGoMITM({
   tmp = data.inventory_delta.inventory_items;
   if (tmp.length > 0) {
     formatted = _.reduce(tmp, function(result, entry) {
-      if (entry.inventory_item_data.pokemon_data !== undefined && !entry.inventory_item_data.pokemon_data.is_egg) {
+      if (entry.inventory_item_data && entry.inventory_item_data.pokemon_data && !entry.inventory_item_data.pokemon_data.is_egg) {
         result.push(entry.inventory_item_data.pokemon_data);
       }
       return result;
