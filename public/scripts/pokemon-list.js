@@ -86,7 +86,7 @@ var PokemonList = React.createClass({
             <h4 className="ui image header">
               <img className="ui mini rounded image" src={'assets/img/icons/' + pokemon.id + '.png'} />
               <div className="content name">
-                {pokemon.nickname || pokemon.pokemon_type.toLowerCase()}
+                {pokemon.nickname || (pokemon.pokemon_type||'').toLowerCase()}
                 <div className="sub header">
                   {(Math.round(pokemon.weight_kg * 100) / 100) + "kg, " + (Math.round(pokemon.height_m * 100) / 100) + "m"}
                 </div>
