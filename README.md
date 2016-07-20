@@ -1,7 +1,7 @@
 # Pokemon GO Optimizer
 This tool shows you the IVs and information necessary to determine which Pokemon get ground into candy. Perfect for any trainer aspiring to be the very best.
 
-I have been told that it's a possibility Niantic could get mad at us for using this, but I'll let you know if I hear anything for them. I imagine that it's safe for the time being.
+I have been told that it's a possibility Niantic could get mad at us for using this, but I'll let you know if I hear anything from them. I imagine that it's safe for the time being.
 
 ![example](http://i.imgur.com/3V8xw1G.png)
 
