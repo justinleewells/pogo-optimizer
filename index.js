@@ -40,16 +40,25 @@ var _ = require('lodash');
 var PokemonGoMITM = require('pokemon-go-mitm');
 var PokemonData = require('./data/pokemon.json');
 var MoveData = require('./data/moves.json');
+var firstRun = true;
 
 var server = new PokemonGoMITM({
   port: 8081
-}).setResponseHandler("GetInventory", function(data) {
+})
+.addRequestHandler("GetInventory", function(data) {
+  if (firstRun) {
+    delete data.last_timestamp_ms;
+    firstRun = false;
+  }
+  return data
+})
+.setResponseHandler("GetInventory", function(data) {
   var formatted, tmp;
   tmp = data.inventory_delta.inventory_items;
   if (tmp.length > 0) {
     formatted = _.reduce(tmp, function(result, entry) {
-      if (entry.inventory_item_data.pokemon !== undefined && !entry.inventory_item_data.pokemon.is_egg) {
-        result.push(entry.inventory_item_data.pokemon);
+      if (entry.inventory_item_data.pokemon_data !== undefined && !entry.inventory_item_data.pokemon_data.is_egg) {
+        result.push(entry.inventory_item_data.pokemon_data);
       }
       return result;
     }, []);
@@ -59,10 +68,11 @@ var server = new PokemonGoMITM({
       if (entry.individual_defense === undefined) entry.individual_defense = 0;
       entry.power_quotient = (entry.individual_stamina + entry.individual_attack + entry.individual_defense) / 45;
       var data = _.find(PokemonData, function (pokemon) {
-        return (pokemon.Name.toUpperCase() == entry.pokemon_type || pokemon.AltName == entry.pokemon_type);
+        return (pokemon.Name.toUpperCase() == entry.pokemon_id || pokemon.AltName == entry.pokemon_id);
       });
       if (data != null) {
         entry.id = parseInt(data.Number);
+        entry.nickname = data["Name"];
         entry.type_1 = data["Type I"];
         if (data["Type II"]) entry.type_2 = data["Type II"];
       }
@@ -74,7 +84,7 @@ var server = new PokemonGoMITM({
     });
     if (formatted.length > 0) {
       jsf.writeFile("./data/inventory.json", formatted, {spaces: 2}, function(err) {
-        console.log(err);
+        if (err != null) console.log(err);
       });
     }
   }
