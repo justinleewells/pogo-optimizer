@@ -57,7 +57,7 @@ var server = new PokemonGoMITM({
   tmp = data.inventory_delta.inventory_items;
   if (tmp.length > 0) {
     formatted = _.reduce(tmp, function(result, entry) {
-      if (entry.inventory_item_data.pokemon_data !== undefined && !entry.inventory_item_data.pokemon_data.is_egg) {
+      if (entry.inventory_item_data && entry.inventory_item_data.pokemon_data && !entry.inventory_item_data.pokemon_data.is_egg) {
         result.push(entry.inventory_item_data.pokemon_data);
       }
       return result;
@@ -71,15 +71,13 @@ var server = new PokemonGoMITM({
         return (pokemon.Name.toUpperCase() == entry.pokemon_id || pokemon.AltName == entry.pokemon_id);
       });
       if (data != null) {
-        entry.id = parseInt(data.Number);
+        entry.pokedex_id = parseInt(data.Number);
         entry.nickname = data["Name"];
         entry.type_1 = data["Type I"];
         if (data["Type II"]) entry.type_2 = data["Type II"];
       }
-      var move1 = _.find(MoveData, {id: entry.move_1});
-      if (move1 !== undefined) entry.move_1 = move1.name;
-      var move2 = _.find(MoveData, {id: entry.move_2});
-      if (move2 !== undefined) entry.move_2 = move2.name;
+      entry.move_1 = formatMoveName(entry.move_1);
+      entry.move_2 = formatMoveName(entry.move_2);
       return entry;
     });
     if (formatted.length > 0) {
@@ -90,3 +88,23 @@ var server = new PokemonGoMITM({
   }
   return data;
 });
+
+/**
+ * Utility functions
+ */
+
+function capitalize(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function formatMoveName(name) {
+  var ret = '';
+  var spl = name.split('_');
+  _.forEach(spl, function(str) {
+    if (str !== 'FAST') {
+      if (ret !== '') ret += ' ';
+      ret += capitalize(str.toLowerCase());
+    }
+  });
+  return ret;
+}
