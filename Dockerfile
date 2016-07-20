@@ -12,5 +12,7 @@ ADD . /code/
 RUN npm install --silent
 RUN bower install --allow-root --silent
 
+CMD node index
+
 EXPOSE 8081
 EXPOSE 3000
