@@ -6,17 +6,23 @@ This is a fork from the [original project](https://github.com/justinleewells/pog
 To install and setup everything using Docker, build the image in the root directory of this repository with:
 
 ```bash
-docker build -t pogo .
+$ docker build -t pogo .
 ```
 
 Then create a container with the same ports as described above with this command:
 
 ```bash
-docker run -d -p 3000:3000 -p 8081:8081 -it pogo
+$ docker run -d -p 3000:3000 -p 8081:8081 -it pogo
 ```
 
-### Dockerhub
+## Dockerhub
 There is also an automated build on Dockerhub: [cmeter/pogo-optimizer](https://hub.docker.com/r/cmeter/pogo-optimizer/)
+
+So you don't need to clone the repository:
+
+```bash
+$ docker run -d -p 3000:3000 -p 8081:8081 -it cmeter/pogo-optimizer
+```
 
 
 
