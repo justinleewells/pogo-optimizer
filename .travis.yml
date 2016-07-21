@@ -1,0 +1,10 @@
+language: node
+
+services:
+  - docker
+
+before_install:
+  - echo "Start Build"
+
+script:
+  - docker build -t pogo .
