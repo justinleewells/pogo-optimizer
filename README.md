@@ -26,7 +26,7 @@ node index
 Run these commands:
 
 ```
-sudo dnf install nodejs protobuf protobuf-devel
+sudo dnf install nodejs protobuf protobuf-devel npm
 sudo npm install -g bower
 git clone https://github.com/justinleewells/pogo-optimizer
 cd pogo-optimizer
