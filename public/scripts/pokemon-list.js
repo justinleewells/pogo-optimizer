@@ -30,7 +30,7 @@ var PokemonListContainer = React.createClass({
     }
     else if (this.state.sort === 'species') {
       data.sort(function (a, b) {
-        if (a.id == b.id) {
+        if (a.game_id == b.game_id) {
           if (a.power_quotient > b.power_quotient) {
             return -1;
           }
@@ -39,10 +39,10 @@ var PokemonListContainer = React.createClass({
           }
           return 0;
         }
-        if (a.id > b.id) {
+        if (a.game_id > b.game_id) {
           return 1;
         }
-        if (a.id < b.id) {
+        if (a.game_id < b.game_id) {
           return -1;
         }
         return 0;
