@@ -1,4 +1,27 @@
-# Pokemon GO Optimizer
+# Pokemon GO Optimizer with Docker support
+
+This is a fork from the [original project](https://github.com/justinleewells/pogo-optimizer), which enhances the installation experience. 
+
+## Setup using Docker
+To install and setup everything using Docker, build the image in the root directory of this repository with:
+
+```bash
+docker build -t pogo .
+```
+
+Then create a container with the same ports as described above with this command:
+
+```bash
+docker run -d -p 3000:3000 -p 8081:8081 -it pogo
+```
+
+### Dockerhub
+There is also an automated build on Dockerhub: [cmeter/pogo-optimizer/](https://hub.docker.com/)
+
+
+
+## Original Readme
+
 This tool shows you the IVs and information necessary to determine which Pokemon get ground into candy. Perfect for any trainer aspiring to be the very best.
 
 I have been told that it's a possibility Niantic could get mad at us for using this, but I'll let you know if I hear anything for them. I imagine that it's safe for the time being.
@@ -57,22 +80,6 @@ To set up a WiFi proxy on your Android 6.0.1+ phone, follow these steps:
 * Under "Proxy," change the setting from None to Manual.
 * Enter e.g. 10.0.1.3 as the proxy name.
 * Enter 8081 as the port
-
-
-### Docker
-To install and setup everything using Docker, build the image in the root directory of this repository with:
-
-```bash
-docker build -t pogo .
-```
-
-Then create a container with the same ports as described above with this command:
-
-```bash
-docker run -d -p 3000:3000 -p 8081:8081 -it pogo node index
-```
-
-This simplifies the installation steps and only requires that you have docker installed. All ports are the same as already described.
 
 ## TODO
 
