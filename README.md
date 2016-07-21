@@ -48,6 +48,9 @@ After accepting the certificate, open Pokemon GO on your phone. After you can se
 
 ### Android
 
+If your Android doesn't understands ".pem" certificates you will have to convert it to a ".crt".
+Convert it with `openssl x509 -inform PEM -outform DER -in ca.pem -out ca.crt` on a system with openssl available.
+
 To set up a WiFi proxy on your Android 6.0.1+ phone, follow these steps:
 
 * Go to Settings > WiFi.
