@@ -45,13 +45,6 @@ var firstRun = true;
 var server = new PokemonGoMITM({
   port: 8081
 })
-.addRequestHandler("GetInventory", function(data) {
-  if (firstRun) {
-    delete data.last_timestamp_ms;
-    firstRun = false;
-  }
-  return data
-})
 .setResponseHandler("GetInventory", function(data) {
   var formatted, tmp;
   tmp = data.inventory_delta.inventory_items;
