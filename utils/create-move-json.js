@@ -19,8 +19,8 @@ moves = _.map(moves, function (entry) {
   tmp.type = capitalizeFirstLetter(type[type.length-1].toLowerCase());
   var name = '';
   for (var i = 2; i < info.length; i++) {
-    if (i !== 2) name += ' ';
-    name += capitalizeFirstLetter(info[i].toLowerCase());
+	if (i !== 2) name += ' ';
+	name += capitalizeFirstLetter(info[i].toLowerCase());
   }
   tmp.name = name;
   return tmp;
@@ -168,10 +168,10 @@ var data = {
 
 _.forEach(data, function (name, key) {
   if (_.find(moves, {name: name}) == undefined) {
-    moves.push({
-      id: parseInt(key),
-      name: name
-    });
+	moves.push({
+	  id: parseInt(key),
+	  name: name
+	});
   }
 });
 
