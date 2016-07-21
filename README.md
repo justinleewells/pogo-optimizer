@@ -16,7 +16,7 @@ docker run -d -p 3000:3000 -p 8081:8081 -it pogo
 ```
 
 ### Dockerhub
-There is also an automated build on Dockerhub: [cmeter/pogo-optimizer/](https://hub.docker.com/)
+There is also an automated build on Dockerhub: [cmeter/pogo-optimizer](https://hub.docker.com/r/cmeter/pogo-optimizer/)
 
 
 
