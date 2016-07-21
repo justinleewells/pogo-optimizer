@@ -65,7 +65,9 @@ var server = new PokemonGoMITM({
       });
       if (data != null) {
         entry.pokedex_id = parseInt(data.Number);
-        entry.nickname = data["Name"];
+	if (entry.nickname === undefined) {
+          entry.nickname = data["Name"];
+        }
         entry.type_1 = data["Type I"];
         if (data["Type II"]) entry.type_2 = data["Type II"];
       }
