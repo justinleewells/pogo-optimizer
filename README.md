@@ -39,6 +39,23 @@ node index
 
 Now you should have a webserver running. Make sure your phone and computer are connected to the same wireless network.
 
+### Setup using Docker
+To install and setup everything using Docker, build the image in the root directory of this repository with:
+
+```bash
+$ git clone https://github.com/justinleewells/pogo-optimizer.git
+$ cd pogo-optimizer
+$ docker build -t pogo .
+```
+
+Then create a container with the same ports as described above with this command:
+
+```bash
+$ docker run -d -p 3000:3000 -p 8081:8081 -it pogo
+```
+
+All ports are not accessible and usable as described above.
+
 ## Phone Setup
 
 Next, check your network settings for your internal ip address.
