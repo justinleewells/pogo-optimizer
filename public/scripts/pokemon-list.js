@@ -99,6 +99,7 @@ var PokemonList = React.createClass({
           </td>
           <td className={"stat " + pokemon.type_1}>{pokemon.type_1}</td>
           <td className={"stat " + pokemon.type_2}>{pokemon.type_2}</td>
+          <td className="stat">{pokemon.num_upgrades}</td>
           <td className="stat">{pokemon.cp}</td>
           <td className="stat">{pokemon.stamina_max}</td>
           <td className="stat atk">{pokemon.individual_attack}</td>
@@ -126,8 +127,9 @@ var PokemonList = React.createClass({
               <th>Pokemon</th>
               <th className="stat">Type 1</th>
               <th className="stat">Type 2</th>
-              <th className="stat">CP</th>
-              <th className="stat">HP</th>
+              <th className="stat" title="Number of Upgrades">⬆</th>
+              <th className="stat" title="Combat Power">CP</th>
+              <th className="stat" title="Health Points">HP</th>
               <th className="stat atk">ATK</th>
               <th className="stat def">DEF</th>
               <th className="stat sta">STA</th>
