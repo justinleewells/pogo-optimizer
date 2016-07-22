@@ -56,7 +56,7 @@ var server = new PokemonGoMITM({
       if (entry.individual_stamina === undefined) entry.individual_stamina = 0;
       if (entry.individual_attack === undefined)  entry.individual_attack  = 0;
       if (entry.individual_defense === undefined) entry.individual_defense = 0;
-      entry.power_quotient = (entry.individual_stamina + entry.individual_attack + entry.individual_defense) / 45;
+      entry.power_quotient = (entry.individual_stamina + entry.individual_attack*2 + entry.individual_defense) / 60;
       var data = _.find(PokemonData, function (pokemon) {
         return (pokemon.Name.toUpperCase() == entry.pokemon_id || pokemon.AltName == entry.pokemon_id);
       });
