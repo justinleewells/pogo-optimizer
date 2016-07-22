@@ -87,7 +87,7 @@ var PokemonList = React.createClass({
             <h4 className="ui image header">
               <img className="ui mini rounded image" src={'assets/img/icons/' + pokemon.pokedex_id + '.png'} />
               <div className="content name">
-                {pokemon.nickname || pokemon.pokemon_id.toLowerCase() || ''}
+                {pokemon.nickname + (pokemon.favorite ? '★' : '') || pokemon.pokemon_id.toLowerCase() || ''}
                 <div className="sub header">
                   {(Math.round(pokemon.weight_kg * 100) / 100) + "kg, " + (Math.round(pokemon.height_m * 100) / 100) + "m"}
                 </div>
@@ -99,6 +99,7 @@ var PokemonList = React.createClass({
           </td>
           <td className={"stat " + pokemon.type_1}>{pokemon.type_1}</td>
           <td className={"stat " + pokemon.type_2}>{pokemon.type_2}</td>
+          <td className="stat">{pokemon.num_upgrades}</td>
           <td className="stat">{pokemon.cp}</td>
           <td className="stat">{pokemon.stamina_max}</td>
           <td className="stat atk">{pokemon.individual_attack}</td>
@@ -126,8 +127,9 @@ var PokemonList = React.createClass({
               <th>Pokemon</th>
               <th className="stat">Type 1</th>
               <th className="stat">Type 2</th>
-              <th className="stat">CP</th>
-              <th className="stat">HP</th>
+              <th className="stat" title="Number of Upgrades">⬆</th>
+              <th className="stat" title="Combat Power">CP</th>
+              <th className="stat" title="Health Points">HP</th>
               <th className="stat atk">ATK</th>
               <th className="stat def">DEF</th>
               <th className="stat sta">STA</th>
