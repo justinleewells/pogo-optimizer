@@ -7,11 +7,9 @@ var express = require('express');
 var app = express();
 var fs = require('fs');
 
-if (!fs.existsSync('./data/inventory.json')) {
-  jsf.writeFileSync('./data/inventory.json', [], {}, function (err) {
-    if (err) console.log(err);
-  });
-}
+jsf.writeFileSync('./data/inventory.json', [], {}, function (err) {
+  if (err) console.log(err);
+});
 
 app.use(express.static('public'));
 app.use("/ca.pem", express.static('.http-mitm-proxy/certs/ca.pem'));
@@ -39,8 +37,6 @@ app.listen(3000, function () {
 var _ = require('lodash');
 var PokemonGoMITM = require('pokemon-go-mitm');
 var PokemonData = require('./data/pokemon.json');
-var MoveData = require('./data/moves.json');
-var firstRun = true;
 
 var server = new PokemonGoMITM({
   port: 8081
@@ -65,9 +61,7 @@ var server = new PokemonGoMITM({
       });
       if (data != null) {
         entry.pokedex_id = parseInt(data.Number);
-	if (entry.nickname === undefined) {
-          entry.nickname = data["Name"];
-        }
+	      if (entry.nickname === undefined) entry.nickname = data["Name"];
         entry.type_1 = data["Type I"];
         if (data["Type II"]) entry.type_2 = data["Type II"];
       }
@@ -76,6 +70,8 @@ var server = new PokemonGoMITM({
       return entry;
     });
     if (formatted.length > 0) {
+      var inventory = jsf.readFileSync('./data/inventory.json');
+      if (inventory.length > formatted.length) formatted = inventory.concat(formatted);
       jsf.writeFile("./data/inventory.json", formatted, {spaces: 2}, function(err) {
         if (err != null) console.log(err);
       });
