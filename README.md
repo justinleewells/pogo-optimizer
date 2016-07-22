@@ -1,21 +1,23 @@
 # Pokemon GO Optimizer
-This tool shows you the IVs and information necessary to determine which Pokemon get ground into candy. Perfect for any trainer aspiring to be the very best.
+In Pokemon GO, each Pokemon has hidden values that determine its maximum attainable HP and CP known as individual values — or IVs for short. The goal of this project is to display these hidden values to the user as painlessly as possible, while giving insight into each Pokemon's combat abilities.
 
-I have been told that it's a possibility Niantic could get mad at us for using this, but I'll let you know if I hear anything for them. I imagine that it's safe for the time being.
+While this app is relatively undetectable, if Niantic contacts me and requests that I discontinue development, I will comply. Until then, please be aware that you are using this at your own risk.
 
 ![example](http://i.imgur.com/3V8xw1G.png)
 
-## Host Setup
-So, first of all, you need node.js, protobuf, and git (obviously). I've only tested this on Mac, so if you want to test it on other platforms, be my guest.
+# Host Setup
 
 ### Mac OSX
 
 Run these commands:
 
 ```
+brew install node
+brew install git
+brew install --devel protobuf
+npm install -g bower
 git clone https://github.com/justinleewells/pogo-optimizer
 cd pogo-optimizer
-brew install --devel protobuf
 npm install
 bower install
 node index
@@ -26,7 +28,7 @@ node index
 Run these commands:
 
 ```
-sudo dnf install nodejs protobuf protobuf-devel
+sudo dnf install nodejs protobuf protobuf-devel npm
 sudo npm install -g bower
 git clone https://github.com/justinleewells/pogo-optimizer
 cd pogo-optimizer
@@ -46,6 +48,16 @@ Next, visit http://10.0.1.3:3000/ca.pem and install the certificate.
 
 After accepting the certificate, open Pokemon GO on your phone. After you can see your character walking around, go to localhost:3000 on your host machine. Enjoy.
 
+## iOS
+
+To set up a WiFi proxy on your iOS 9.0.0+ phone, follow these steps:
+
+* Go to Settings > Wi-Fi
+* Click the information icon beside the network you are connected to
+* Select 'Manual' in the HTTP Proxy settings at the bottom
+* Enter e.g. 10.0.1.3 as the server
+* Enter 8081 as the port
+
 ### Android
 
 If your Android doesn't understands ".pem" certificates you will have to convert it to a ".crt".
@@ -61,12 +73,16 @@ To set up a WiFi proxy on your Android 6.0.1+ phone, follow these steps:
 * Enter e.g. 10.0.1.3 as the proxy name.
 * Enter 8081 as the port
 
+## A Note About Windows
+Currently, it is very difficult to get this program working on Windows. Until a fully javascript implementation of protobuf can be utilized, Windows support will not be provided. Until then, the recommended solution is Docker, which we will provide documentation for shortly.
 
 ## TODO
 
-* Remove Pokemon after they have been transferred
-* Make client usable while catching Pokemon
+* Display more information (level, dust efficiency, optimal moves, etc)
+* Improve user experience
+* Utilize fully javascript protobuf implementation
+* Create Electron app
 
 ## Feature Requests/Suggestions
 
-I'd love to hear what feature requests and suggestions you all have, so feel free to shoot me an email.
+I'd love to hear what feature requests and suggestions you all have, so feel free to shoot me an email or open an issue.
