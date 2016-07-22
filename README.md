@@ -42,6 +42,7 @@ To install and setup everything using Docker, build the image in the root direct
 
 ```bash
 $ git clone https://github.com/justinleewells/pogo-optimizer.git
+$ cd pogo-optimizer
 $ docker build -t pogo .
 ```
 
@@ -50,6 +51,8 @@ Then create a container with the same ports as described above with this command
 ```bash
 $ docker run -d -p 3000:3000 -p 8081:8081 -it pogo
 ```
+
+All ports are not accessible and usable as described above.
 
 ## Phone Setup
 
