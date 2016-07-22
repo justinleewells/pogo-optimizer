@@ -5,6 +5,7 @@ var PokemonListContainer = React.createClass({
       dataType: 'json',
       cache: false,
       success: function(data) {
+        console.log(data);
         this.setSortType(this.state.sort, data);
       }.bind(this),
       error: function(xhr, status, err) {
@@ -29,7 +30,7 @@ var PokemonListContainer = React.createClass({
     }
     else if (this.state.sort === 'species') {
       data.sort(function (a, b) {
-        if (a.id == b.id) {
+        if (a.pokedex_id == b.pokedex_id) {
           if (a.power_quotient > b.power_quotient) {
             return -1;
           }
@@ -38,10 +39,10 @@ var PokemonListContainer = React.createClass({
           }
           return 0;
         }
-        if (a.id > b.id) {
+        if (a.pokedex_id > b.pokedex_id) {
           return 1;
         }
-        if (a.id < b.id) {
+        if (a.pokedex_id < b.pokedex_id) {
           return -1;
         }
         return 0;
@@ -81,12 +82,12 @@ var PokemonList = React.createClass({
   render: function() {
     var pokemonNodes = this.props.data.map(function(pokemon) {
       return (
-        <tr>
+        <tr key={pokemon.id}>
           <td>
             <h4 className="ui image header">
-              <img className="ui mini rounded image" src={'assets/img/icons/' + pokemon.id + '.png'} />
+              <img className="ui mini rounded image" src={'assets/img/icons/' + pokemon.pokedex_id + '.png'} />
               <div className="content name">
-                {pokemon.nickname || pokemon.pokemon_type.toLowerCase()}
+                {pokemon.nickname || pokemon.pokemon_id.toLowerCase() || ''}
                 <div className="sub header">
                   {(Math.round(pokemon.weight_kg * 100) / 100) + "kg, " + (Math.round(pokemon.height_m * 100) / 100) + "m"}
                 </div>

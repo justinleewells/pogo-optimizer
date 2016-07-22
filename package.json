@@ -1,11 +1,11 @@
 {
   "name": "pogo-optimizer",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "author": "justinleewells",
   "dependencies": {
     "express": "^4.14.0",
     "jsonfile": "^2.3.1",
     "lodash": "^4.13.1",
-    "pokemon-go-mitm": "^1.2.0"
+    "pokemon-go-mitm": "git+https://github.com/rastapasta/pokemon-go-mitm-node.git#c3a3419"
   }
 }
