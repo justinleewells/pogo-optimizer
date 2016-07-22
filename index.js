@@ -37,6 +37,7 @@ app.listen(3000, function () {
 var _ = require('lodash');
 var PokemonGoMITM = require('pokemon-go-mitm');
 var PokemonData = require('./data/pokemon.json');
+var releasing_id = null;
 
 var server = new PokemonGoMITM({
   port: 8081
@@ -78,6 +79,19 @@ var server = new PokemonGoMITM({
     }
   }
   return data;
+})
+.setResponseHandler("ReleasePokemon", function(data) {
+  if (data.result === 'SUCCESS' && releasing_id !== null) {
+    var inventory = jsf.readFileSync('./data/inventory.json');
+    _.remove(inventory, {id: releasing_id});
+    releasing_id = null;
+    jsf.writeFile("./data/inventory.json", inventory, {spaces: 2}, function(err) {
+      if (err != null) console.log(err);
+    });
+  }
+})
+.setRequestHandler("ReleasePokemon", function (data) {
+  releasing_id = data.pokemon_id;
 });
 
 /**
