@@ -7,6 +7,9 @@ While this app is relatively undetectable, if Niantic contacts me and requests t
 
 # Host Setup
 
+## A Note About Windows
+Currently, it is very difficult to get this program working on Windows. Until a fully javascript implementation of protobuf can be utilized, Windows support will not be provided. For the time being, the recommended solution is Docker. If anyone would like to contribution documentation on how to get this project running flawlessly on Windows with Docker, please contact me.
+
 ### Mac OSX
 
 Run these commands:
@@ -91,9 +94,6 @@ To set up a WiFi proxy on your Android 6.0.1+ phone, follow these steps:
 * Enter e.g. 10.0.1.3 as the proxy name.
 * Enter 8081 as the port
 
-## A Note About Windows
-Currently, it is very difficult to get this program working on Windows. Until a fully javascript implementation of protobuf can be utilized, Windows support will not be provided. For the time being, the recommended solution is Docker. If anyone would like to contribution documentation on how to get this project running flawlessly on Windows with Docker, please contact me.
-
 ## TODO
 
 * Display more information (level, dust efficiency, optimal moves, etc)
@@ -104,3 +104,8 @@ Currently, it is very difficult to get this program working on Windows. Until a 
 ## Feature Requests/Suggestions
 
 I'd love to hear what feature requests and suggestions you all have, so feel free to shoot me an email or open an issue.
+
+## Credits
+
+* @rastapasta and @AeonLucid for their libraries. Without their work this project wouldn't be possible
+* All the excellent contributors
