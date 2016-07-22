@@ -14,6 +14,7 @@ Run these commands:
 ```
 brew install node
 brew install git
+brew install pkg-config
 brew install --devel protobuf
 npm install -g bower
 git clone https://github.com/justinleewells/pogo-optimizer
