@@ -72,6 +72,7 @@ var server = new PokemonGoMITM({
     });
     if (formatted.length > 0) {
       var inventory = jsf.readFileSync('./data/inventory.json');
+      console.log(formatted);
       if (inventory.length > formatted.length) formatted = inventory.concat(formatted);
       jsf.writeFile("./data/inventory.json", formatted, {spaces: 2}, function(err) {
         if (err != null) console.log(err);
@@ -79,6 +80,9 @@ var server = new PokemonGoMITM({
     }
   }
   return data;
+})
+.setRequestHandler("ReleasePokemon", function (data) {
+  releasing_id = data.pokemon_id;
 })
 .setResponseHandler("ReleasePokemon", function(data) {
   if (data.result === 'SUCCESS' && releasing_id !== null) {
@@ -89,9 +93,6 @@ var server = new PokemonGoMITM({
       if (err != null) console.log(err);
     });
   }
-})
-.setRequestHandler("ReleasePokemon", function (data) {
-  releasing_id = data.pokemon_id;
 });
 
 /**
