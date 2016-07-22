@@ -1,4 +1,5 @@
 FROM node
+MAINTAINER Christian Meter <cmeter@googlemail.com>
 
 RUN apt-get update -qq
 RUN apt-get install -yqq libprotobuf-dev
