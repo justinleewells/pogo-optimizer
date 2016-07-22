@@ -4,6 +4,24 @@
 
 This is a fork from the [original project](https://github.com/justinleewells/pogo-optimizer), which enhances the installation experience. 
 
+## Setup using Docker
+To install and setup everything using Docker, build the image in the root directory of this repository with:
+
+```bash
+$ git clone --recursive https://github.com/n2o/pogo-optimizer.git
+$ git submodule foreach git pull origin master
+$ docker build -t pogo .
+```
+
+Since I included his project as a submodule, the command `git submodule ...`
+updates it to the latest version and contains all changes he made in his repository.
+
+Then create a container with the same ports as described above with this command:
+
+```bash
+$ docker run -d -p 3000:3000 -p 8081:8081 -it pogo
+```
+
 ## Setup with Dockerhub
 There is also an automated build on Dockerhub: [cmeter/pogo-optimizer](https://hub.docker.com/r/cmeter/pogo-optimizer/)
 
@@ -12,21 +30,6 @@ So you don't need to clone the repository:
 ```bash
 $ docker run -d -p 3000:3000 -p 8081:8081 -it cmeter/pogo-optimizer
 ```
-
-## Setup using Docker
-To install and setup everything using Docker, build the image in the root directory of this repository with:
-
-```bash
-$ git clone --recursive https://github.com/n2o/pogo-optimizer.git
-$ docker build -t pogo .
-```
-
-Then create a container with the same ports as described above with this command:
-
-```bash
-$ docker run -d -p 3000:3000 -p 8081:8081 -it pogo
-```
-
 
 ## Original Readme
 
