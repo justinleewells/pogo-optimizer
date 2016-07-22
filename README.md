@@ -91,7 +91,7 @@ To set up a WiFi proxy on your Android 6.0.1+ phone, follow these steps:
 * Enter 8081 as the port
 
 ## A Note About Windows
-Currently, it is very difficult to get this program working on Windows. Until a fully javascript implementation of protobuf can be utilized, Windows support will not be provided. Until then, the recommended solution is Docker, which we will provide documentation for shortly.
+Currently, it is very difficult to get this program working on Windows. Until a fully javascript implementation of protobuf can be utilized, Windows support will not be provided. For the time being, the recommended solution is Docker. If anyone would like to contribution documentation on how to get this project running flawlessly on Windows with Docker, please contact me.
 
 ## TODO
 
