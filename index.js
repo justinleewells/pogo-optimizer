@@ -8,6 +8,11 @@ var jsf     = require('jsonfile');
 var express = require('express');
 var app     = express();
 
+var stage     = 0;
+var player    = null;
+var inventory = null;
+var releasing = null;
+
 if (!fs.existsSync(__dirname + '/data/save/')) fs.mkdirSync(__dirname + '/data/save/');
 
 /**
@@ -18,11 +23,6 @@ var PokemonGoMITM = require('pokemon-go-mitm');
 
 var Player    = require('./lib/player');
 var Inventory = require('./lib/inventory');
-
-var stage     = 0;
-var player    = null;
-var inventory = null;
-var releasing = null;
 
 new PokemonGoMITM({port: 8081})
   .setResponseHandler('GetPlayer', function (data) {
@@ -85,6 +85,13 @@ app.get('/api/inventory', function (req, res, next) {
 
 app.get('/api/stage', function (req, res, next) {
   return res.send(stage);
+});
+
+app.post('/api/logout', function (req, res, next) {
+  stage     = 0;
+  player    = null;
+  inventory = null;
+  releasing = null;
 });
 
 app.listen(3000, function () {
