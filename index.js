@@ -34,6 +34,7 @@ new PokemonGoMITM({port: 8081})
         inventory = new Inventory(player.username);
         inventory.load(candy, pokemon);
         inventory.save();
+        stage = 2;
       } else {
         inventory.update(candy, pokemon);
         inventory.save();
