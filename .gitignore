@@ -2,7 +2,7 @@
 data/inventory.json
 data/raw_data.json
 node_modules
-public/assets/lib
+public
 src/assets/lib
 data/save
 utils/out

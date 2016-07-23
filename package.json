@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-copy": "0.0.2",
     "gulp-jade": "^1.1.0",
     "gulp-stylus": "^2.5.0"
   }
