@@ -68,6 +68,9 @@ var server = new PokemonGoMITM({
       }
       entry.move_1 = formatMoveName(entry.move_1);
       entry.move_2 = formatMoveName(entry.move_2);
+      entry.stat_base = computeStatBase(entry, data);
+      entry.cpm_est = Math.sqrt(entry.cp) * entry.stat_base;
+      entry.cpm = entry.cp_multiplier + (entry.additional_cp_multiplier === undefined ? 0 : entry.additional_cp_multiplier);
       return entry;
     });
     if (formatted.length > 0) {
@@ -111,4 +114,17 @@ function formatMoveName(name) {
     }
   });
   return ret;
+}
+
+/**
+ * stat_base is a measure of this pokemon's individual strength, and will never change.
+ * Unlike power_quotient, it is comparable cross-species.
+ * It is related to the pokemon by: CPM = sqrt(CP) * stat_base,
+ * Or equivalently: CP = (CPM / stat_base)^2
+ */
+function computeStatBase(entry, pokemon) {
+    var atk = entry.individual_attack + pokemon.stats.attack;
+    var def = entry.individual_defense + pokemon.stats.defense;
+    var sta = entry.individual_stamina + pokemon.stats.stamina;
+    return Math.sqrt(10 / (atk * Math.sqrt(def * sta)));
 }

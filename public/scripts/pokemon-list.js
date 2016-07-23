@@ -58,6 +58,16 @@ var PokemonListContainer = React.createClass({
         }
         return 0;
       });
+    } else if (this.state.sort === 'cp_potential') {
+      data.sort(function (a, b) {
+       if (a.stat_base < b.stat_base) {
+         return -1;
+       }
+       if (a.stat_base > b.stat_base) {
+         return 1;
+       }
+       return 0;
+      });
     }
 
     this.setState({data: data});
@@ -105,6 +115,7 @@ var PokemonList = React.createClass({
           <td className="stat def">{pokemon.individual_defense}</td>
           <td className="stat sta">{pokemon.individual_stamina}</td>
           <td className="stat">{Math.round(100 * pokemon.power_quotient) + "%"}</td>
+          <td className="stat">{parseInt(1 / (pokemon.stat_base * pokemon.stat_base))}</td>
         </tr>
       );
     });
@@ -120,6 +131,9 @@ var PokemonList = React.createClass({
         <button className="ui button white" onClick={() => this.props.setSortType('cp')}>
           CP
         </button>
+        <button className="ui button white" onClick={() => this.props.setSortType('cp_potential')}>
+          CP Potential
+        </button>
         <table className="ui celled table">
           <thead>
             <tr>
@@ -132,6 +146,7 @@ var PokemonList = React.createClass({
               <th className="stat def">DEF</th>
               <th className="stat sta">STA</th>
               <th className="stat">Perfect</th>
+              <th className="stat" title="CP Potential -- The theoretical max CP for this Pokemon ignoring current level caps">CP Potential</th>
             </tr>
           </thead>
           <tbody>
