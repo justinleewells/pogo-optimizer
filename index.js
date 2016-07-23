@@ -78,7 +78,6 @@ var server = new PokemonGoMITM({
       });
     }
   }
-  return data;
 })
 .setRequestHandler("ReleasePokemon", function (data) {
   releasing_id = data.pokemon_id;
