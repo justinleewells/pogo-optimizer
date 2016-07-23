@@ -70,10 +70,6 @@ new PokemonGoMITM({port: 8081})
  * Express
  */
 
-jsf.writeFileSync('./data/inventory.json', [], {}, function (err) {
-  if (err) console.log(err);
-});
-
 app.use(express.static('public'));
 app.use("/ca.pem", express.static('.http-mitm-proxy/certs/ca.pem'));
 
