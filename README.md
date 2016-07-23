@@ -57,6 +57,33 @@ $ docker run -d -p 3000:3000 -p 8081:8081 -it pogo
 
 All ports are not accessible and usable as described above.
 
+### Docker setup for Windows (Docker)
+Docker is VM software that will make running Pokemon Go Optimizer easier on Windows.
+This will require Hyper-V to be enabled on your CPU, this may need enabling in the BIOS if your CPU supports it.
+Some CPU's are not supported but if you have (Intel) VT-x or (AMD) AMD-V on the CPU this should work.
+
+First install [Docker](https://docs.docker.com/docker-for-windows/)
+If you do not have the Hyper-V installed from Microsoft, after running Docker for the first time, it will give you a warning.
+Accept this warning to install and restart your PC, if this does not work, there are manual instructions on how to complete this installation.
+
+Next launch Command Line and use the docker commands above using the lastet version by downloading the ZIP file (if you have Git installed you can grab the latest version using the git command as well).
+
+```
+git clone https://github.com/justinleewells/pogo-optimizer.git
+cd pogo-optimizer
+docker build -t pogo .
+```
+
+If you do not have git installed you can use the following command to automatically get the lastest version of PoGo Optimizer (I have not tested this).
+
+```
+docker run -d -p 3000:3000 -p 8081:8081 -it cmeter/pogo-optimizer
+```
+
+This should now run the latest version of Pokemon Go Optimizer! check using http://localhost:3000/
+
+If this website is not accessible on other devices in your network, then you have some problems with your firewall setup and should disable it for ease of use. You could also setup firewall policies that allow inbound and outbound traffic on port 3000 and 8081.
+
 ## Phone Setup
 
 Next, check your network settings for your internal ip address.
@@ -90,6 +117,11 @@ To set up a WiFi proxy on your Android 6.0.1+ phone, follow these steps:
 * Under "Proxy," change the setting from None to Manual.
 * Enter e.g. 10.0.1.3 as the proxy name.
 * Enter 8081 as the port
+
+There is currently a problem with some Android phones not accepting ca.pem or ca.crt certificated (Sony Z5 series on 6.0.1 has this problem).
+
+The only way I have found to solve this problem is to install OpenSSL on your PC/Mac and use the above command to create a ca.crt.
+Once created this needs transfering to the phone manually and then installed at Root acccess level. For this task I used [Root Certificate Manager](https://play.google.com/store/apps/details?id=net.jolivier.cert.Importer&hl=en_GB), this is quite easy, just launch the tool, it will ask for Super User prividges, accept them then use the browser to find your new ca.crt file.
 
 ## A Note About Windows
 Currently, it is very difficult to get this program working on Windows. Until a fully javascript implementation of protobuf can be utilized, Windows support will not be provided. For the time being, the recommended solution is Docker. If anyone would like to contribution documentation on how to get this project running flawlessly on Windows with Docker, please contact me.
