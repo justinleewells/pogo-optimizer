@@ -87,6 +87,10 @@ app.get('/api/inventory', function (req, res, next) {
   else res.send({});
 });
 
+app.get('/api/stage', function (req, res, next) {
+  return res.send(stage);
+});
+
 app.listen(3000, function () {
   console.log('Pokemon GO Optimizer front-end listening on port 3000');
 
