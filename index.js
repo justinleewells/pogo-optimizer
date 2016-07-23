@@ -6,6 +6,9 @@ var jsf = require('jsonfile');
 var express = require('express');
 var app = express();
 var fs = require('fs');
+var argv = require('minimist')(process.argv.slice(2));
+var webport = ("wp" in argv) ? argv.wp : 3000
+var proxyport = ("pp" in argv) ? argv.pp : 8081
 
 jsf.writeFileSync('./data/inventory.json', [], {}, function (err) {
   if (err) console.log(err);
@@ -22,11 +25,11 @@ app.get('/api/pokemon', function (req, res, next) {
   });
 });
 
-app.listen(3000, function () {
-  console.log('Pokemon GO Optimizer front-end listening on port 3000');
+app.listen(webport, function () {
+  console.log('Pokemon GO Optimizer front-end listening on port ' + webport);
 
   require('dns').lookup(require('os').hostname(), function (err, add, fam) {
-    console.log('Accept the cert at ' + add + ':3000/ca.pem if you haven\'t already done so');
+    console.log('Accept the cert at ' + add + ':' + webport + '/ca.pem if you haven\'t already done so');
   });
 });
 
@@ -40,7 +43,7 @@ var PokemonData = require('./data/pokemon.json');
 var releasing_id = null;
 
 var server = new PokemonGoMITM({
-  port: 8081
+  port: proxyport
 })
 .setResponseHandler("GetInventory", function(data) {
   var formatted, tmp;
