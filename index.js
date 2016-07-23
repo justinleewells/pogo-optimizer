@@ -120,7 +120,7 @@ function formatMoveName(name) {
  * stat_base is a measure of this pokemon's individual strength, and will never change.
  * Unlike power_quotient, it is comparable cross-species.
  * It is related to the pokemon by: CPM = sqrt(CP) * stat_base,
- * Or equivalently: CP = sqrt(CPM / stat_base)
+ * Or equivalently: CP = (CPM / stat_base)^2
  */
 function computeStatBase(entry, pokemon) {
     var atk = entry.individual_attack + pokemon.stats.attack;
