@@ -37,7 +37,7 @@ new PokemonGoMITM({port: 8081})
     if (data.success) {
       var delta = data.inventory_delta;
       var pokemon = _.reduce(delta.inventory_items, function (result, item) {
-        return (item.inventory_item_data.pokemon_data !== undefined) ? _.concat(result, item.inventory_item_data.pokemon_data) : result;
+        return (item.inventory_item_data.pokemon_data !== undefined && !item.inventory_item_data.pokemon_data.is_egg) ? _.concat(result, item.inventory_item_data.pokemon_data) : result;
       }, []);
       var candy = _.reduce(delta.inventory_items, function (result, item) {
         return (item.inventory_item_data.pokemon_family !== undefined) ? _.concat(result, item.inventory_item_data.pokemon_family) : result;
