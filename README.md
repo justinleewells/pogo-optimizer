@@ -38,6 +38,18 @@ bower install
 node index
 ```
 
+### Arch Linux
+
+Run these commands:
+```
+sudo pacman -S nodejs protobuf npm bower
+git clone https://github.com/justinleewells/pogo-optimizer
+cd pogo-optimizer
+npm install
+bower install
+node index
+```
+
 Now you should have a webserver running. Make sure your phone and computer are connected to the same wireless network.
 
 ### Setup using Docker
