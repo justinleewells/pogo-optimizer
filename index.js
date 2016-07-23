@@ -4,7 +4,6 @@
 
 var _       = require('lodash');
 var fs      = require('fs');
-var jsf     = require('jsonfile');
 var express = require('express');
 var app     = express();
 
