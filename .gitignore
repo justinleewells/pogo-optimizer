@@ -4,3 +4,4 @@ data/raw_data.json
 node_modules
 public/assets/lib
 data/save
+utils/out
