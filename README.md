@@ -5,7 +5,7 @@ While this app is relatively undetectable, if Niantic contacts me and requests t
 
 ![example](http://i.imgur.com/3V8xw1G.png)
 
-# Host Setup
+## Host Setup
 
 ### Mac OSX
 
@@ -24,25 +24,46 @@ bower install
 node index
 ```
 
-### RPM-based Linux (Fedora, CentOS, RHEL)
+### Linux
 
-Run these commands:
+Run the commands below for your flavor of choice to get the necessary dependencies, [then see "Common"](#common) below for usage.
+
+#### RPM-based (Fedora, CentOS, RHEL)
 
 ```
 sudo dnf install nodejs protobuf protobuf-devel npm
 sudo npm install -g bower
-git clone https://github.com/justinleewells/pogo-optimizer
-cd pogo-optimizer
-npm install
-bower install
-node index
 ```
 
-### Arch Linux
+If your distribution is newer (e.g. F24+), npm is included with nodejs and you won't need both.
 
-Run these commands:
+#### Arch Linux
+
 ```
 sudo pacman -S nodejs protobuf npm bower
+```
+
+#### Deb based (Debian, Ubuntu, Raspbian, et al)
+
+For Debian stable, you'll need the latest node from sources:
+
+```
+sudo apt-get install -y curl build-essential libprotobuf-dev git pkg-config
+curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+sudo apt-get install nodejs
+```
+
+For Debian testing, you can just get nodejs from the repository:
+
+```
+sudo apt-get install -y build-essential libprotobuf-dev git pkg-config nodejs
+```
+
+#### Common
+
+After you install the necessary packages, all Linux flavors follow this routine:
+
+```
 git clone https://github.com/justinleewells/pogo-optimizer
 cd pogo-optimizer
 npm install
@@ -50,7 +71,7 @@ bower install
 node index
 ```
 
-Now you should have a webserver running. Make sure your phone and computer are connected to the same wireless network.
+This should launch the webserver on localhost:3000.
 
 ### Setup using Docker
 To install and setup everything using Docker, build the image in the root directory of this repository with:
@@ -98,14 +119,21 @@ If this website is not accessible on other devices in your network, then you hav
 
 ## Phone Setup
 
-Next, check your network settings for your internal ip address.
-If your host computer's IP is 10.0.1.3, you'll add 10.0.1.3:8081 as a proxy on your phone.
+Before proceeding to phone setup, you should have a webserver running on your host computer, and your phone and host computer
+should be connected to the same network.
+
+Check your host computer's network settings for your IP address.
+If your host computer's IP is 10.0.1.3, you'll visit http://10.0.1.3:3000 on your phone to view the pogo-optimizer application.
+Verify you can connect before continuing.
 
 Next, visit http://10.0.1.3:3000/ca.pem and install the certificate.
 
-After accepting the certificate, open Pokemon GO on your phone. After you can see your character walking around, go to localhost:3000 on your host machine. Enjoy.
+Then, add 10.0.1.3 port 8081 as a proxy for your WiFi connection on your phone.
 
-## iOS
+Lastly, after accepting the certificate and enabling the proxy, open Pokemon GO on your phone.
+After you can see your character walking around, go to http://localhost:3000 on your host machine. Enjoy!
+
+### iOS
 
 To set up a WiFi proxy on your iOS 9.0.0+ phone, follow these steps:
 
@@ -117,7 +145,7 @@ To set up a WiFi proxy on your iOS 9.0.0+ phone, follow these steps:
 
 ### Android
 
-If your Android doesn't understands ".pem" certificates you will have to convert it to a ".crt".
+If your Android phone doesn't understand ".pem" certificates you will have to convert it to a ".crt".
 Convert it with `openssl x509 -inform PEM -outform DER -in ca.pem -out ca.crt` on a system with openssl available.
 
 To set up a WiFi proxy on your Android 6.0.1+ phone, follow these steps:
