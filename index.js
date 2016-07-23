@@ -34,7 +34,7 @@ new PokemonGoMITM({port: 8081})
     }
   })
   .setResponseHandler('GetInventory', function (data) {
-    if (data.success) {
+    if (data.success && player !== null) {
       var delta = data.inventory_delta;
       var pokemon = _.reduce(delta.inventory_items, function (result, item) {
         return (item.inventory_item_data.pokemon_data !== undefined && !item.inventory_item_data.pokemon_data.is_egg) ? _.concat(result, item.inventory_item_data.pokemon_data) : result;
@@ -51,6 +51,8 @@ new PokemonGoMITM({port: 8081})
         inventory.update(candy, pokemon);
         inventory.save();
       }
+    } else if (player === null) {
+      console.error("WARNING: Cannot set inventory. No player logged in.");
     }
   })
   .setRequestHandler("ReleasePokemon", function (data) {
