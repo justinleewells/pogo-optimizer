@@ -13,6 +13,10 @@ body {
     margin: 0 auto;
 }
 
+.float-right {
+	float: right;
+}
+
 .white.button {
     background-color: white;
     color: #333;
