@@ -1,4 +1,16 @@
 /**
+ * Initialization
+ */
+
+var _       = require('lodash');
+var fs      = require('fs');
+var jsf     = require('jsonfile');
+var express = require('express');
+var app     = express();
+
+if (!fs.existsSync(__dirname + '/data/save/')) fs.mkdirSync(__dirname + '/data/save/');
+
+/**
  * Mitm
  */
 
@@ -55,12 +67,6 @@ new PokemonGoMITM({port: 8081})
 /**
  * Express
  */
-
-var _       = require('lodash');
-var fs      = require('fs');
-var jsf     = require('jsonfile');
-var express = require('express');
-var app     = express();
 
 jsf.writeFileSync('./data/inventory.json', [], {}, function (err) {
   if (err) console.log(err);
