@@ -7,14 +7,15 @@
     "express": "^4.14.0",
     "jsonfile": "^2.3.1",
     "lodash": "^4.13.1",
-    "pokemon-go-mitm": "^1.5.0",
-    "rimraf": "^2.5.4"
+    "pokemon-go-mitm": "^1.5.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-connect": "^4.2.0",
     "gulp-copy": "0.0.2",
     "gulp-jade": "^1.1.0",
-    "gulp-stylus": "^2.5.0"
+    "gulp-stylus": "^2.5.0",
+    "rimraf": "^2.5.4"
   },
   "scripts": {
     "start": "gulp && node index"
