@@ -76,6 +76,13 @@ gulp.task('js', ['clean'], function copyJS() {
     .pipe(connect.reload());
 });
 
+gulp.task('font', ['clean'], function copyFont() {
+  return gulp.src([
+    './src/assets/lib/font-awesome/**/*'
+  ])
+    .pipe(copy('./public', {prefix: 1}));
+});
+
 /**
  * Dev
  */
@@ -94,5 +101,5 @@ gulp.task('watch', function watchFiles() {
   gulp.watch('./src/assets/css/*.styl', ['stylus']);
 });
 
-gulp.task('default', ['clean', 'jade', 'stylus', 'img', 'lib-js', 'lib-css', 'favicon', 'js']);
-gulp.task('dev', ['clean', 'jade', 'stylus', 'img', 'lib-js', 'lib-css', 'favicon', 'js', 'connect', 'watch']);
+gulp.task('default', ['clean', 'jade', 'stylus', 'img', 'lib-js', 'lib-css', 'favicon', 'js', 'font']);
+gulp.task('dev', ['clean', 'jade', 'stylus', 'img', 'lib-js', 'lib-css', 'favicon', 'js', 'font', 'connect', 'watch']);
