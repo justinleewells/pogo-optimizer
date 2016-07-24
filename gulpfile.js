@@ -38,7 +38,7 @@ gulp.task('stylus', ['clean'], function buildCSS() {
 });
 
 gulp.task('img', ['clean'], function copyImages() {
-  return gulp.src(['./src/assets/img/*/*.png'])
+  return gulp.src(['./src/assets/img/*/*.png', './src/assets/img/*/*.jpg'])
     .pipe(copy('./public/assets/img', {
       prefix: 3
     }));
