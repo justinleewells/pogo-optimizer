@@ -35,10 +35,13 @@ new PokemonGoMITM({port: 8081})
     if (data.success && player !== null) {
       var delta = data.inventory_delta;
       var pokemon = _.reduce(delta.inventory_items, function (result, item) {
-        return (item.inventory_item_data.pokemon_data !== undefined && !item.inventory_item_data.pokemon_data.is_egg) ? _.concat(result, item.inventory_item_data.pokemon_data) : result;
+        return (item.inventory_item_data !== undefined &&
+                item.inventory_item_data.pokemon_data !== undefined &&
+               !item.inventory_item_data.pokemon_data.is_egg) ? _.concat(result, item.inventory_item_data.pokemon_data) : result;
       }, []);
       var candy = _.reduce(delta.inventory_items, function (result, item) {
-        return (item.inventory_item_data.pokemon_family !== undefined) ? _.concat(result, item.inventory_item_data.pokemon_family) : result;
+        return (item.inventory_item_data !== undefined &&
+                item.inventory_item_data.pokemon_family !== undefined) ? _.concat(result, item.inventory_item_data.pokemon_family) : result;
       }, []);
       if (inventory === null) {
         inventory = new Inventory(player.username);
@@ -50,6 +53,8 @@ new PokemonGoMITM({port: 8081})
       }
     } else if (player === null) {
       console.error("WARNING: Cannot set inventory. No player logged in.");
+    } else if (!data.inventory_delta) {
+      console.log(data);
     }
   })
   .setRequestHandler("ReleasePokemon", function (data) {
