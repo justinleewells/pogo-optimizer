@@ -4,8 +4,8 @@
             thead
                 tr
                     th.selectable(ng-click="setSort('metadata.id')") Pokemon
-                    th Fast
-                    th Special
+                    th.selectable(ng-click="setSort('data.move_1')") Fast
+                    th.selectable(ng-click="setSort('data.move_2')") Special
                     th.selectable.stat(ng-click="setSort('metadata.level')") Level
                     th.selectable.stat(ng-click="setSort('data.cp')") CP
                     th.selectable.stat(ng-click="setSort('data.stamina_max')") HP
