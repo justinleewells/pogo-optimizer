@@ -18,7 +18,7 @@ angular.module('optimizer', [
           function (data) {
             if (data !== null) {
               $rootScope.player = data;
-              if ($state.current.name === 'connect') $state.go('dashboard');
+              if ($state.current.name === 'connect') $state.go('spreadsheet');
             } else {
               if ($state.current.name !== 'connect') $state.go('connect');
             }
