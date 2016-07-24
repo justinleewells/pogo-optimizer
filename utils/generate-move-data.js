@@ -1,28 +1,49 @@
 var _ = require('lodash');
 var jsf = require('jsonfile');
-var raw = require('../data/raw_data.json');
-
-function capitalizeFirstLetter(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
-}
+var raw = require('../data/rawer_data.json')[0].Items;
 
 var moves = _.reduce(raw, function (result, entry) {
-  if (entry.Move !== undefined) result.push(entry.Move);
+  if (entry.Move !== undefined) {
+    var tmp = entry.Move;
+    if (tmp.UniqueId) {
+      tmp.UniqueID = entry.TemplateId.replace(/"/g, '');
+      delete tmp.UniqueId;
+    }
+    result.push(tmp);
+  }
   return result;
 }, []);
 
 moves = _.map(moves, function (entry) {
-  var tmp = {};
-  var info = entry.UniqueID.split('_');
-  tmp.id = parseInt(info[0].replace('V', ''));
-  var type = entry.Type.split('_');
-  tmp.type = capitalizeFirstLetter(type[type.length-1].toLowerCase());
-  var name = '';
-  for (var i = 2; i < info.length; i++) {
-    if (i !== 2) name += ' ';
-    name += capitalizeFirstLetter(info[i].toLowerCase());
+  var tmp = entry;
+  //console.log(entry);
+  if (typeof(entry.UniqueID) === 'string') {
+    var str = entry.UniqueID.split('_');
+    tmp.Id = parseInt(str[0].replace('V', ''));
+    var name = '';
+    for (var i = 2; i < str.length; i++) {
+      if (i !== 2) name += '_';
+      name += str[i];
+    }
+    tmp.Name = name;
+    var type = entry.Type.split('_');
+    tmp.Type = type[2];
+  } else {
+    tmp.Id = entry.UniqueID;
   }
-  tmp.name = name;
+  // var info = entry.UniqueID.split('_');
+  // tmp.id = parseInt(info[0].replace('V', ''));
+  // var type = entry.Type.split('_');
+  // tmp.type = type[type.length-1];
+  // var name = '';
+  // for (var i = 2; i < info.length; i++) {
+  //   if (i !== 2) name += '_';
+  //   name += info[i];
+  // }
+  // tmp.name = name;
+  // tmp.accuracy = entry.AccuracyChance;
+  // tmp.critical = entry.CriticalChance;
+  // tmp.duration = entry.DurationMs;
   return tmp;
 });
 
@@ -166,15 +187,6 @@ var data = {
   "099": "Signal Beam"
 };
 
-_.forEach(data, function (name, key) {
-  if (_.find(moves, {name: name}) == undefined) {
-    moves.push({
-      id: parseInt(key),
-      name: name
-    });
-  }
-});
-
-jsf.writeFile('../data/moves.json', moves, function (err) {
+jsf.writeFile('./out/moves.json', moves, {spaces: 2}, function (err) {
   if (err) console.log(err);
 });
