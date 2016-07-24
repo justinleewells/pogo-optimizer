@@ -20,7 +20,6 @@ angular.module('optimizer.spreadsheet.controller', [])
         } else {
           ret = $scope.search.split(',');
         }
-        console.log(ret);
         return ret;
       };
       $scope.favoriteClass = function (pokemon) {
@@ -67,7 +66,7 @@ angular.module('optimizer.spreadsheet.controller', [])
 
       $scope.getFilter = function () {
         var ret = '';
-        if ($scope.search.length > 0 && $scope.search.indexOf(',') === 0) {
+        if ($scope.search.length > 0 && $scope.search.indexOf(',') === -1) {
           ret = {
             data: {
               pokemon_id: $scope.search
