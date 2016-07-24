@@ -13,7 +13,7 @@ var initialized = false;
 gulp.task('clean', function (cb) {
   
   if (!initialized) {
-    rimraf('../public', function () {
+    rimraf('./public', function () {
       initialized = true;
       cb();
     });
