@@ -69,12 +69,14 @@
             .info
                 label Weight:
                 span {{formatMetric(selected.data.weight_kg)}}
-    .ui.modal.settings.small
+    .ui.modal.settings
         .header Settings
         .content
             .ui.toggle.checkbox
                 input(type="checkbox" name="public" ng-model="$root.player.settings.enableMoveColors" ng-change="updateSettings()")
-                label Display Move Colors
+                label
+            label Display Move Colors
             .ui.toggle.checkbox
                 input(type="checkbox" name="public" ng-model="$root.player.settings.enableIVColors" ng-change="updateSettings()")
-                label Display IV Colors
+                label
+            label Display IV Colors
