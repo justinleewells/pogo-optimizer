@@ -3,7 +3,8 @@ In Pokemon GO, each Pokemon has hidden values that determine its maximum attaina
 
 While this app is relatively undetectable, if Niantic contacts me and requests that I discontinue development, I will comply. Until then, please be aware that you are using this at your own risk.
 
-![example](http://i.imgur.com/3V8xw1G.png)
+![example](http://i.imgur.com/fXZQ3Lq.png)
+![example](http://i.imgur.com/7gUdFVR.png)
 
 ## Host Setup
 
@@ -19,12 +20,13 @@ brew install node
 brew install git
 brew install pkg-config
 brew install --devel protobuf
-npm install -g bower
+sudo npm install -g bower
+sudo npm install -g gulp
 git clone https://github.com/justinleewells/pogo-optimizer
 cd pogo-optimizer
 npm install
 bower install
-node index
+npm start
 ```
 
 ### Linux
@@ -36,6 +38,7 @@ Run the commands below for your flavor of choice to get the necessary dependenci
 ```
 sudo dnf install nodejs protobuf protobuf-devel npm
 sudo npm install -g bower
+sudo npm install -g gulp
 ```
 
 If your distribution is newer (e.g. F24+), npm is included with nodejs and you won't need both.
@@ -43,7 +46,7 @@ If your distribution is newer (e.g. F24+), npm is included with nodejs and you w
 #### Arch Linux
 
 ```
-sudo pacman -S nodejs protobuf npm bower
+sudo pacman -S nodejs protobuf npm bower gulp
 ```
 
 #### Deb based (Debian, Ubuntu, Raspbian, et al)
@@ -71,7 +74,7 @@ git clone https://github.com/justinleewells/pogo-optimizer
 cd pogo-optimizer
 npm install
 bower install
-node index
+npm start
 ```
 
 This should launch the webserver on localhost:3000.
@@ -161,18 +164,15 @@ To set up a WiFi proxy on your Android 6.0.1+ phone, follow these steps:
 * Enter e.g. 10.0.1.3 as the proxy name.
 * Enter 8081 as the port
 
-=======
 There is currently a problem with some Android phones not accepting ca.pem or ca.crt certificated (Sony Z5 series on 6.0.1 has this problem).
 
 The only way I have found to solve this problem is to install OpenSSL on your PC/Mac and use the above command to create a ca.crt.
 Once created this needs transfering to the phone manually and then installed at Root acccess level. For this task I used [Root Certificate Manager](https://play.google.com/store/apps/details?id=net.jolivier.cert.Importer&hl=en_GB), this is quite easy, just launch the tool, it will ask for Super User prividges, accept them then use the browser to find your new ca.crt file.
 
-## A Note About Windows
-Currently, it is very difficult to get this program working on Windows. Until a fully javascript implementation of protobuf can be utilized, Windows support will not be provided. For the time being, the recommended solution is Docker. If anyone would like to contribution documentation on how to get this project running flawlessly on Windows with Docker, please contact me.
 ## TODO
 
-* Display more information (level, dust efficiency, optimal moves, etc)
-* Improve user experience
+* Implement dashboard
+* Implement lucky egg calculator
 * Utilize fully javascript protobuf implementation
 * Create Electron app
 
