@@ -1,17 +1,17 @@
 #spreadsheet-view
     .ui.container
-        table#spreadsheet.ui.celled.table.inverted
+        table#spreadsheet.ui.celled.table.inverted.enable-move-colors.enable-iv-colors
             thead
                 tr
                     th.selectable(ng-click="setSort('metadata.id')") Pokemon
-                    th.selectable(ng-click="setSort('data.move_1')") Fast
-                    th.selectable(ng-click="setSort('data.move_2')") Special
+                    th.move.selectable(ng-click="setSort('data.move_1')") Fast
+                    th.move.selectable(ng-click="setSort('data.move_2')") Special
                     th.selectable.stat(ng-click="setSort('metadata.level')") Level
                     th.selectable.stat(ng-click="setSort('data.cp')") CP
                     th.selectable.stat(ng-click="setSort('data.stamina_max')") HP
-                    th.stat ATK
-                    th.stat DEF
-                    th.stat STA
+                    th.stat.atk ATK
+                    th.stat.def DEF
+                    th.stat.sta STA
                     th.selectable.stat(ng-click="setSort('metadata.piv')") IV%
                     th.selectable.stat(ng-click="setSort('metadata.pcp')") CP%
             tbody
@@ -20,14 +20,14 @@
                         h4.ui.image.header
                             img.ui.mini.rounded.image(src="{{'assets/img/icons/' + pokemon.metadata.id + '.png'}}")
                             .content.name {{pokemon.data.nickname || pokemon.data.pokemon_id.toLowerCase() || ''}}
-                    td.move(ng-bind="formatMoveName(pokemon.data.move_1)")
-                    td.move(ng-bind="formatMoveName(pokemon.data.move_2)")
+                    td.move(ng-bind="formatMoveName(pokemon.data.move_1)" class="{{pokemon.metadata.move_1.Type}}")
+                    td.move(ng-bind="formatMoveName(pokemon.data.move_2)" class="{{pokemon.metadata.move_2.Type}}")
                     td.stat(ng-bind="pokemon.metadata.level")
                     td.stat(ng-bind="pokemon.data.cp")
                     td.stat(ng-bind="pokemon.data.stamina_max")
-                    td.stat(ng-bind="pokemon.data.individual_attack")
-                    td.stat(ng-bind="pokemon.data.individual_defense")
-                    td.stat(ng-bind="pokemon.data.individual_stamina")
+                    td.stat.atk(ng-bind="pokemon.data.individual_attack")
+                    td.stat.def(ng-bind="pokemon.data.individual_defense")
+                    td.stat.sta(ng-bind="pokemon.data.individual_stamina")
                     td.stat
                         img(src="assets/img/icons/star.png" ng-show="pokemon.metadata.piv > .99")
                         span(ng-bind="formatPercentage(pokemon.metadata.piv)" ng-show="pokemon.metadata.piv < .99")
