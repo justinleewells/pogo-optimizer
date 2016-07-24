@@ -71,12 +71,12 @@ app.use("/ca.pem", express.static('.http-mitm-proxy/certs/ca.pem'));
 
 app.get('/api/player', function (req, res, next) {
   if (player) return res.send(player.toJSON());
-  else res.send({});
+  else res.send(null);
 });
 
 app.get('/api/inventory', function (req, res, next) {
   if (inventory) return res.send(inventory.toJSON());
-  else res.send({});
+  else res.send(null);
 });
 
 app.post('/api/logout', function (req, res, next) {
