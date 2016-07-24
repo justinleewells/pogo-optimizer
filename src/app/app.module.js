@@ -1,5 +1,8 @@
 angular.module('optimizer', [
-  'ui.router'
+  'ui.router',
+  'optimizer.connect.controller',
+  'optimizer.dashboard.controller',
+  'optimizer.spreadsheet.controller'
 ])
   .run([], function () {
   })
