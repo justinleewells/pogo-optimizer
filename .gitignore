@@ -5,3 +5,4 @@ public
 src/assets/lib
 data/save
 utils/out
+npm-debug.log
