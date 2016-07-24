@@ -78,9 +78,14 @@ gulp.task('js', ['clean'], function copyJS() {
 
 gulp.task('font', ['clean'], function copyFont() {
   return gulp.src([
-    './src/assets/lib/font-awesome/**/*'
+    './src/assets/lib/semantic/dist/**/*'
   ])
-    .pipe(copy('./public', {prefix: 1}));
+    .pipe(copy('./public/assets/lib', {prefix: 5}));
+  
+  // return gulp.src([
+  //   './src/assets/lib/font-awesome/**/*'
+  // ])
+  //   .pipe(copy('./public', {prefix: 1}));
 });
 
 /**
