@@ -1,0 +1,27 @@
+doctype html
+html(ng-app='optimizer')
+    head
+        meta(charset="utf-8")
+        title Pokemon GO Optimizer
+
+        link(rel="stylesheet" type="text/css" href="assets/css/semantic.css")
+        link(rel="stylesheet" type="text/css" href="assets/css/index.css")
+
+        script(type="text/javascript" src="assets/lib/angular.js")
+        script(type="text/javascript" src="assets/lib/angular-ui-router.js")
+
+        // Core
+        script(type="text/javascript" src="app/app.module.js")
+        script(type="text/javascript" src="app/app.routes.js")
+
+        // Controllers
+        script(type="text/javascript" src="app/components/connect/connect.controller.js")
+        script(type="text/javascript" src="app/components/dashboard/dashboard.controller.js")
+        script(type="text/javascript" src="app/components/spreadsheet/spreadsheet.controller.js")
+
+        // Directives
+        script(type="text/javascript" src="app/components/nav-menu/nav-menu.directive.js")
+
+    body
+        nav-menu
+        ui-view#main-content
