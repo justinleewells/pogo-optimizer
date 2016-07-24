@@ -33,7 +33,7 @@
                         span(ng-bind="formatPercentage(pokemon.metadata.piv)" ng-show="pokemon.metadata.piv < .99")
                     td.stat
                         img(src="assets/img/icons/star.png" ng-show="pokemon.metadata.piv > .99")
-                            span(ng-bind="formatPercentage(pokemon.metadata.pcp)" ng-show="pokemon.metadata.piv < .99")
+                        span(ng-bind="formatPercentage(pokemon.metadata.pcp)" ng-show="pokemon.metadata.piv < .99")
     #pokemon-modal.ui.basic.modal
         .content
             img(src="assets/img/sprites/{{selected.metadata.id}}.png")
