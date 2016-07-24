@@ -4,6 +4,6 @@
         .item(ui-sref="dashboard") Dashboard
         .item(ui-sref="spreadsheet") Spreadsheet
         .right.menu(ng-click="logout()")
-            .item Paperquake
+            .item(ng-bind="$root.player.data.username")
             .item
                 i.fa.fa-unlock-alt
