@@ -1,4 +1,4 @@
-angular.module('pogo-optimizer', [
+angular.module('optimizer', [
   'ui.router'
 ])
   .run([], function () {
