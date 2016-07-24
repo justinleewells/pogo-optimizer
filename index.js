@@ -121,6 +121,15 @@ app.post('/api/transfer', function (req, res, next) {
   res.send();
 });
 
+app.post('/api/rename', function (req, res, next) {
+  var data = req.body;
+  server.craftRequest("NicknamePokemon", {pokemon_id: data.id, nickname: data.name})
+    .then(function (data) {
+      console.log(data);
+    });
+  res.send();
+});
+
 app.post('/api/logout', function (req, res, next) {
   player    = null;
   inventory = null;

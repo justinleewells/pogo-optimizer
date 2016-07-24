@@ -94,6 +94,28 @@ angular.module('optimizer.api.service', [])
           });
 
           return deferred.promise;
+        },
+
+        nickname: function (pokemon, nickname) {
+          var deferred = $q.defer();
+
+          $http({
+            method  : 'POST',
+            url     : 'api/transfer',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            data: {
+              id: pokemon.data.id,
+              nickname: nickname
+            }
+          }).success(function () {
+            deferred.resolve(true);
+          }).error(function (err) {
+            deferred.reject(err);
+          });
+
+          return deferred.promise;
         }
 
       };

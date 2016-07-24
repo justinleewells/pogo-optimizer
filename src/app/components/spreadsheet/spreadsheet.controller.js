@@ -93,5 +93,14 @@ angular.module('optimizer.spreadsheet.controller', [])
             console.log(err);
           });
       };
+      $scope.setNickname = function (pokemon, name) {
+        APIService.nickname(pokemon, name).then(
+          function (resp) {
+            console.log(resp)
+          },
+          function (err) {
+            console.log(err);
+          });
+      };
     }
   ]);
