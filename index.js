@@ -13,6 +13,7 @@ jsf.writeFileSync('./data/inventory.json', [], {}, function (err) {
 
 app.use(express.static('public'));
 app.use("/ca.pem", express.static('.http-mitm-proxy/certs/ca.pem'));
+app.use("/ca.crt", express.static('.http-mitm-proxy/certs/ca.crt'));
 
 app.get('/api/pokemon', function (req, res, next) {
   jsf.readFile("./data/inventory.json", function (err, data) {
