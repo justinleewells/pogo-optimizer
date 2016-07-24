@@ -6,6 +6,7 @@ var jsf = require('jsonfile');
 var express = require('express');
 var app = express();
 var fs = require('fs');
+var jsf2csv = require('json2csv-stream');
 
 jsf.writeFileSync('./data/inventory.json', [], {}, function (err) {
   if (err) console.log(err);
@@ -21,6 +22,26 @@ app.get('/api/pokemon', function (req, res, next) {
     next();
   });
 });
+
+app.get('/api/pokemon/csv', function (req, res, next) {
+  res.setHeader("content-type", "text/csv");
+  res.setHeader('Content-disposition', 'attachment; filename=pokemon.csv');
+  var j2cStream = new jsf2csv({
+    keys: [
+      'id','pokemon_id','cp','stamina','stamina_max','move_1','move_2',
+      'height_m','weight_kg','individual_attack','individual_defense',
+      'individual_stamina','cp_multiplier','pokeball','captured_cell_id',
+      'creation_time_ms','nickname','power_quotient','pokedex_id',
+      'type_1/0','type_2/0','from_fort','battles_attacked','num_upgrades',
+      'additional_cp_multiplier','favorite','battles_defended'
+    ]
+  });
+  var reader = fs.createReadStream('./data/inventory.json');
+  reader.pipe(j2cStream).pipe(res);
+  reader.on('end', function() {
+    next();
+  });
+})
 
 app.listen(3000, function () {
   console.log('Pokemon GO Optimizer front-end listening on port 3000');

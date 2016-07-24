@@ -120,6 +120,7 @@ var PokemonList = React.createClass({
         <button className="ui button white" onClick={() => this.props.setSortType('cp')}>
           CP
         </button>
+        <a className="ui button white float-right" href="api/pokemon/csv">Export CSV</a>
         <table className="ui celled table">
           <thead>
             <tr>
