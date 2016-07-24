@@ -67,11 +67,7 @@ angular.module('optimizer.spreadsheet.controller', [])
       $scope.getFilter = function () {
         var ret = '';
         if ($scope.search.length > 0 && $scope.search.indexOf(',') === -1) {
-          ret = {
-            data: {
-              pokemon_id: $scope.search
-            }
-          };
+          ret = $scope.search;
         }
         return ret;
       };
