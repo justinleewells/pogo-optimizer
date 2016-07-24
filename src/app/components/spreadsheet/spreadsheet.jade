@@ -73,10 +73,10 @@
         .header Settings
         .content
             .ui.toggle.checkbox
-                input(type="checkbox" name="public" ng-model="$root.player.settings.enableMoveColors" ng-change="updateSettings()")
+                input(type="checkbox" name="public" ng-model="$root.player.settings.spreadsheet.enableMoveColors" ng-change="updateSettings()")
                 label
             label Display Move Colors
             .ui.toggle.checkbox
-                input(type="checkbox" name="public" ng-model="$root.player.settings.enableIVColors" ng-change="updateSettings()")
+                input(type="checkbox" name="public" ng-model="$root.player.settings.spreadsheet.enableIVColors" ng-change="updateSettings()")
                 label
             label Display IV Colors

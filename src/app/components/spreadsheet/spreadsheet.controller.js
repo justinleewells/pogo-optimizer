@@ -39,12 +39,12 @@ angular.module('optimizer.spreadsheet.controller', [])
       };
       $scope.moveColorClass = function () {
         var ret = '';
-        if ($rootScope.player.settings.enableMoveColors) ret = 'enable-move-colors';
+        if ($rootScope.player.settings.spreadsheet.enableMoveColors) ret = 'enable-move-colors';
         return ret;
       };
       $scope.ivColorClass = function () {
         var ret = '';
-        if ($rootScope.player.settings.enableIVColors) ret = 'enable-iv-colors';
+        if ($rootScope.player.settings.spreadsheet.enableIVColors) ret = 'enable-iv-colors';
         return ret;
       };
       var selectedArr = [];
