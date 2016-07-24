@@ -68,6 +68,7 @@ var PokemonListContainer = React.createClass({
 
 var PokemonList = React.createClass({
   render: function() {
+
     var pokemonNodes = this.props.data.map(function(pokemon) {
       return (
         <tr key={pokemon.id}>
@@ -85,6 +86,7 @@ var PokemonList = React.createClass({
               </div>
             </h4>
           </td>
+          <td className="stat">{formatCaughtTime(pokemon.creation_time_ms)}</td>
           <td className={"stat " + pokemon.pokemon_id}>{humanizePokemonId(pokemon.pokemon_id)}</td>
           <td className={"stat " + pokemon.type_1}>{pokemon.type_1}</td>
           <td className={"stat " + pokemon.type_2}>{pokemon.type_2}</td>
@@ -97,6 +99,22 @@ var PokemonList = React.createClass({
         </tr>
       );
     });
+
+    /**
+     * Reformats a system pokemon ID to title-like string
+     *
+     * @param {string} id A pokemon ID
+     */
+    function humanizePokemonId (id) {
+      return (id || '').split('_').map(function (part) {
+        return part.charAt(0).toUpperCase() + part.slice(1).toLowerCase();
+      }).join(' ');
+    }
+
+    function formatCaughtTime (ms) {
+      var date = new Date(Number(ms));
+      return date.toLocaleDateString() + ' ' + date.toLocaleTimeString();
+    }
 
     var thClass = function (prop, extra) {
       var cssClasses = (extra || '').split(' ');
@@ -116,6 +134,7 @@ var PokemonList = React.createClass({
           <thead>
             <tr>
               <th className={thClass('nickname')} onClick={() => this.props.setSortType('nickname')}>Pokemon</th>
+              <th className={thClass('creation_time_ms', 'stat')} onClick={() => this.props.setSortType('creation_time_ms')}>Caught</th>
               <th className={thClass('pokemon_id', 'stat')} onClick={() => this.props.setSortType('pokemon_id')}>Species</th>
               <th className={thClass('type_1', 'stat')} onClick={() => this.props.setSortType('type_1')}>Type 1</th>
               <th className={thClass('type_2', 'stat')} onClick={() => this.props.setSortType('type_2')}>Type 2</th>
@@ -170,18 +189,6 @@ function makeSort (props, reverse) {
   return function (a, b) {
     return sortOn(0, a, b);
   }
-}
-
-
-/**
- * Reformats a system pokemon ID to title-like string
- *
- * @param {string} id A pokemon ID
- */
-function humanizePokemonId (id) {
-  return (id || '').split('_').map(function (part) {
-    return part.charAt(0).toUpperCase() + part.slice(1).toLowerCase();
-  }).join(' ');
 }
 
 
