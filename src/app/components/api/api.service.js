@@ -9,7 +9,7 @@ angular.module('optimizer.api.service', [])
 
           $http({
             method  : 'GET',
-            url     : 'http://localhost:3000/api/player',
+            url     : 'api/player',
             headers: {
               'Content-Type': 'application/json'
             }
@@ -27,7 +27,7 @@ angular.module('optimizer.api.service', [])
 
           $http({
             method  : 'POST',
-            url     : 'http://localhost:3000/api/player/settings',
+            url     : 'api/player/settings',
             headers: {
               'Content-Type': 'application/json'
             },
@@ -46,7 +46,7 @@ angular.module('optimizer.api.service', [])
 
           $http({
             method  : 'GET',
-            url     : 'http://localhost:3000/api/inventory',
+            url     : 'api/inventory',
             headers: {
               'Content-Type': 'application/json'
             }
@@ -64,7 +64,7 @@ angular.module('optimizer.api.service', [])
 
           $http({
             method  : 'POST',
-            url     : 'http://localhost:3000/api/logout',
+            url     : 'api/logout',
             headers: {
               'Content-Type': 'application/json'
             }

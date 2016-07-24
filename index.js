@@ -94,7 +94,10 @@ app.post('/api/player/settings', function (req, res, next) {
 });
 
 app.get('/api/inventory', function (req, res, next) {
-  if (inventory) return res.send(inventory.toJSON());
+  if (inventory) {
+    res.send(inventory.toJSON());
+    inventory.updates = false;
+  }
   else return res.json(null);
 });
 

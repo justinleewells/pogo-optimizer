@@ -28,7 +28,9 @@ angular.module('optimizer', [
           });
         APIService.inventory().then(
           function (data) {
-            if (data !== null) $rootScope.inventory = data;
+            if (data !== null) {
+              if (data.updates || $rootScope.inventory === undefined) $rootScope.inventory = data;
+            }
           },
           function (err) {
             console.log(err);
