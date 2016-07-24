@@ -13,6 +13,7 @@
                     th.stat DEF
                     th.stat STA
                     th.selectable.stat(ng-click="setSort('metadata.piv')") IV%
+                    th.selectable.stat(ng-click="setSort('metadata.pcp')") CP%
             tbody
                 tr(ng-repeat="pokemon in $root.inventory.pokemon | orderBy: getSort()")
                     td.selectable(ng-click="openModal(pokemon)")
@@ -28,6 +29,7 @@
                     td.stat(ng-bind="pokemon.data.individual_defense")
                     td.stat(ng-bind="pokemon.data.individual_stamina")
                     td.stat(ng-bind="formatPercentage(pokemon.metadata.piv)")
+                    td.stat(ng-bind="formatPercentage(pokemon.metadata.pcp)")
     #pokemon-modal.ui.basic.modal
         .content
             img(src="http://www.serebii.net/pokemongo/pokemon/{{getFormattedId()}}.png")
