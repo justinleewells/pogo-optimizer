@@ -26,13 +26,15 @@ gulp.task('clean', function (cb) {
 gulp.task('jade', ['clean'], function buildHTML() {
   return gulp.src(['./src/index.jade', './src/**/*.jade'])
     .pipe(jade())
-    .pipe(gulp.dest('./public'));
+    .pipe(gulp.dest('./public'))
+    .pipe(connect.reload());
 });
 
 gulp.task('stylus', ['clean'], function buildCSS() {
   return gulp.src('./src/assets/css/index.styl')
     .pipe(stylus())
-    .pipe(gulp.dest('./public/assets/css'));
+    .pipe(gulp.dest('./public/assets/css'))
+    .pipe(connect.reload());
 });
 
 gulp.task('img', ['clean'], function copyImages() {
@@ -70,7 +72,8 @@ gulp.task('js', ['clean'], function copyJS() {
   return gulp.src([
     './src/app/**/*.js'
   ])
-    .pipe(copy('./public', {prefix: 1}));
+    .pipe(copy('./public', {prefix: 1}))
+    .pipe(connect.reload());
 });
 
 /**
@@ -87,6 +90,7 @@ gulp.task('connect', function connectServer() {
 
 gulp.task('watch', function watchFiles() {
   gulp.watch('./src/app/**/*.js', ['js']);
+  gulp.watch('./src/**/*.jade', ['jade']);
   return gulp.watch('./src/assets/css/*.styl', ['stylus']);
 });
 
