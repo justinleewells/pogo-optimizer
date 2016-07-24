@@ -13,8 +13,12 @@ angular.module('optimizer.data.service', [])
 
           $http({
             method  : 'GET',
-            url     : 'http://localhost:3000/api/player'
+            url     : 'http://localhost:3000/api/player',
+            headers: {
+              'Content-Type': 'application/json'
+            }
           }).success(function (resp) {
+            console.log(resp);
             deferred.resolve(resp);
           }).error(function (err) {
             deferred.reject(err);
@@ -23,12 +27,15 @@ angular.module('optimizer.data.service', [])
           return deferred.promise;
         },
 
-        pokemon: function () {
+        inventory: function () {
           var deferred = $q.defer();
 
           $http({
             method  : 'GET',
-            url     : 'http://localhost:3000/api/pokemon'
+            url     : 'http://localhost:3000/api/inventory',
+            headers: {
+              'Content-Type': 'application/json'
+            }
           }).success(function (resp) {
             deferred.resolve(resp);
           }).error(function (err) {
