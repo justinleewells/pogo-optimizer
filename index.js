@@ -67,6 +67,10 @@ var server = new PokemonGoMITM({port: 8081})
       inventory.save();
       releasing = null;
     }
+  })
+  .setRequestHandler("EvolvePokemon", function (data) {
+    inventory.release(data.pokemon_id);
+    inventory.save();
   });
 
 /**
