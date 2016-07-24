@@ -2,26 +2,6 @@ angular.module('optimizer.spreadsheet.controller', [])
   .controller('SpreadsheetCtrl', ['$scope', '$rootScope', 'APIService',
     function($scope, $rootScope, APIService) {
       $scope.selected = null;
-      $scope.sortColumn = 'metadata.id';
-      $scope.sortOrder = '+';
-      $scope.search = '';
-      $scope.setSort = function (column) {
-        if ($scope.sortColumn !== column) $scope.sortColumn = column;
-        else {
-          if ($scope.sortOrder === '-') $scope.sortOrder = '+';
-          else $scope.sortOrder = '-';
-        }
-      };
-      $scope.getSort = function () {
-        var ret = '';
-        if ($scope.search.indexOf(',') === -1) {
-          if ($scope.sortColumn === 'metadata.id') ret = [$scope.sortOrder + 'metadata.id', '-metadata.piv'];
-          else ret = $scope.sortOrder + $scope.sortColumn;
-        } else {
-          ret = $scope.search.split(',');
-        }
-        return ret;
-      };
       $scope.favoriteClass = function (pokemon) {
         var ret = '';
         if (pokemon.data.favorite) ret = 'favorite';
@@ -67,13 +47,6 @@ angular.module('optimizer.spreadsheet.controller', [])
         if ($rootScope.player.settings.enableIVColors) ret = 'enable-iv-colors';
         return ret;
       };
-      $scope.getFilter = function () {
-        var ret = '';
-        if ($scope.search.length > 0 && $scope.search.indexOf(',') === -1) {
-          ret = $scope.search;
-        }
-        return ret;
-      };
       var selectedArr = [];
       $scope.toggleSelected = function (pokemon) {
         var index = selectedArr.indexOf(pokemon);
@@ -102,5 +75,49 @@ angular.module('optimizer.spreadsheet.controller', [])
             console.log(err);
           });
       };
+
+      /**
+       * Sorting
+       */
+
+      $('.ui.dropdown').dropdown();
+
+      $scope.sort     = [];
+      $scope.sortArr  = [];
+
+      $scope.sortChange = function () {
+        if ($scope.sortArr.length < $scope.sort.length) {
+          for (var i = 0; i < $scope.sort.length; i++) {
+            var tmp = $scope.sort[i];
+            if ($scope.sortArr.indexOf(tmp) === -1) $scope.sortArr.push(tmp);
+          }
+        } else {
+          for (var i = 0; i < $scope.sortArr.length; i++) {
+            var tmp = $scope.sortArr[i];
+            if ($scope.sort.indexOf(tmp) === -1) $scope.sortArr.splice(i, 1);
+          }
+        }
+      };
+
+      $scope.getSortArray = function () {
+        var ret = ['+metadata.id', '-metadata.piv'];
+        if ($scope.sortArr.length > 0) ret = $scope.sortArr;
+        return ret;
+      };
+
+      /**
+       * Searching
+       */
+
+      $scope.search = '';
+
+      $scope.getSearchFilter = function () {
+        var ret = '';
+        if ($scope.search.length > 0 && $scope.search.indexOf(',') === -1) {
+          ret = $scope.search;
+        }
+        return ret;
+      };
+
     }
   ]);

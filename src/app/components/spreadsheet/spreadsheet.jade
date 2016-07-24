@@ -4,26 +4,40 @@
             //button.ui.icon.button.red(ng-click="bulkTransfer()")
                 i.fa.fa-trash
             button.ui.icon.button.black(ng-click="openSettingsModal()")
-                i.fa.fa-cog
+                i.icon.settings
         .ui.search
             input(class="prompt" placeholder="Search" ng-model="search")
+        select.ui.fluid.dropdown(name='skills', multiple='' ng-model="sort" ng-change="sortChange()")
+            option(value='') Sort
+            option(value='+metadata.id') Species (Asc)
+            option(value='-metadata.id') Species (Dsc)
+            option(value='+metadata.piv') IV% (Asc)
+            option(value='-metadata.piv') IV% (Dsc)
+            option(value='+metadata.pcp') CP% (Asc)
+            option(value='-metadata.pcp') CP% (Dsc)
+            option(value='+metadata.level') Level (Asc)
+            option(value='-metadata.level') Level (Dsc)
+            option(value='+data.cp') CP (Asc)
+            option(value='-data.cp') CP (Dsc)
+            option(value='+data.stamina_max') HP (Asc)
+            option(value='-data.stamina_max') HP (Dsc)
         table#spreadsheet.ui.celled.table.inverted(class="{{moveColorClass() + ' ' + ivColorClass()}}")
             thead
                 tr
                     //th
-                    th.selectable(ng-click="setSort('metadata.id')") Pokemon
-                    th.move.selectable(ng-click="setSort('data.move_1')") Fast
-                    th.move.selectable(ng-click="setSort('data.move_2')") Special
-                    th.selectable.stat(ng-click="setSort('metadata.level')") Level
-                    th.selectable.stat(ng-click="setSort('data.cp')") CP
-                    th.selectable.stat(ng-click="setSort('data.stamina_max')") HP
+                    th Pokemon
+                    th.move Fast
+                    th.move Special
+                    th.stat Level
+                    th.stat CP
+                    th.stat HP
                     th.stat.atk ATK
                     th.stat.def DEF
                     th.stat.sta STA
-                    th.selectable.stat(ng-click="setSort('metadata.piv')") IV%
-                    th.selectable.stat(ng-click="setSort('metadata.pcp')") CP%
+                    th.stat IV%
+                    th.stat CP%
             tbody
-                tr(ng-repeat="pokemon in $root.inventory.pokemon | orderBy: getSort() | filter: getFilter()")
+                tr(ng-repeat="pokemon in $root.inventory.pokemon | orderBy: getSortArray() | filter: getSearchFilter()")
                     //td.stat
                         .ui.checkbox
                             input(type="checkbox" name="test" ng-checked="isSelected(pokemon)" ng-click="toggleSelected(pokemon)")
