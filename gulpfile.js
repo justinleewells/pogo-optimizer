@@ -91,7 +91,7 @@ gulp.task('connect', function connectServer() {
 gulp.task('watch', function watchFiles() {
   gulp.watch('./src/app/**/*.js', ['js']);
   gulp.watch('./src/**/*.jade', ['jade']);
-  return gulp.watch('./src/assets/css/*.styl', ['stylus']);
+  gulp.watch('./src/assets/css/*.styl', ['stylus']);
 });
 
 gulp.task('default', ['clean', 'jade', 'stylus', 'img', 'lib-js', 'lib-css', 'favicon', 'js']);
