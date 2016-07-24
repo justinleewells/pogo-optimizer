@@ -3,7 +3,6 @@ In Pokemon GO, each Pokemon has hidden values that determine its maximum attaina
 
 While this app is relatively undetectable, if Niantic contacts me and requests that I discontinue development, I will comply. Until then, please be aware that you are using this at your own risk.
 
-![example](http://i.imgur.com/fXZQ3Lq.png)
 ![example](http://i.imgur.com/7gUdFVR.png)
 
 ## Host Setup
