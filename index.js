@@ -4,11 +4,9 @@
 
 var _       = require('lodash');
 var fs      = require('fs');
-var jsf     = require('jsonfile');
 var express = require('express');
 var app     = express();
 
-var stage     = 0;
 var player    = null;
 var inventory = null;
 var releasing = null;
@@ -30,7 +28,6 @@ new PokemonGoMITM({port: 8081})
       player = new Player(data.player_data.username);
       player.load(data.player_data);
       player.save();
-      stage = 1;
     }
   })
   .setResponseHandler('GetInventory', function (data) {
@@ -46,7 +43,6 @@ new PokemonGoMITM({port: 8081})
         inventory = new Inventory(player.username);
         inventory.load(candy, pokemon);
         inventory.save();
-        stage = 2;
       } else {
         inventory.update(candy, pokemon);
         inventory.save();
@@ -83,12 +79,7 @@ app.get('/api/inventory', function (req, res, next) {
   else res.send({});
 });
 
-app.get('/api/stage', function (req, res, next) {
-  return res.send(stage);
-});
-
 app.post('/api/logout', function (req, res, next) {
-  stage     = 0;
   player    = null;
   inventory = null;
   releasing = null;
