@@ -7,7 +7,9 @@ angular.module('optimizer', [
   'optimizer.dashboard.controller',
   'optimizer.spreadsheet.controller',
 
-  'optimizer.nav-menu.directive'
+  'optimizer.nav-menu.directive',
+
+  'optimizer.data.service'
 ])
   .run([function () {
   }]);
