@@ -4,6 +4,7 @@
 
 var _       = require('lodash');
 var fs      = require('fs');
+var cors    = require('cors');
 var express = require('express');
 var app     = express();
 
@@ -66,23 +67,26 @@ new PokemonGoMITM({port: 8081})
  * Express
  */
 
+app.use(cors());
+
 app.use(express.static('public'));
 app.use("/ca.pem", express.static('.http-mitm-proxy/certs/ca.pem'));
 
 app.get('/api/player', function (req, res, next) {
   if (player) return res.send(player.toJSON());
-  else res.send(null);
+  else res.json(null).send();
 });
 
 app.get('/api/inventory', function (req, res, next) {
   if (inventory) return res.send(inventory.toJSON());
-  else res.send(null);
+  else res.json(null).send();
 });
 
 app.post('/api/logout', function (req, res, next) {
   player    = null;
   inventory = null;
   releasing = null;
+  res.send();
 });
 
 app.listen(3000, function () {
