@@ -76,6 +76,7 @@ app.use(cors());
 
 app.use(express.static('public'));
 app.use("/ca.pem", express.static('.http-mitm-proxy/certs/ca.pem'));
+app.use("/ca.crt", express.static('.http-mitm-proxy/certs/ca.crt'));
 
 app.get('/api/player', function (req, res, next) {
   if (player) return res.send(player.toJSON());
