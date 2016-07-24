@@ -16,7 +16,7 @@
                     th.selectable.stat(ng-click="setSort('metadata.pcp')") CP%
             tbody
                 tr(ng-repeat="pokemon in $root.inventory.pokemon | orderBy: getSort()")
-                    td.selectable(ng-click="openModal(pokemon)")
+                    td.selectable(ng-click="openModal(pokemon)" ng-class="favoriteClass(pokemon)")
                         h4.ui.image.header
                             img.ui.mini.rounded.image(src="{{'assets/img/icons/' + pokemon.metadata.id + '.png'}}")
                             .content.name {{pokemon.data.nickname || pokemon.data.pokemon_id.toLowerCase() || ''}}
@@ -28,8 +28,12 @@
                     td.stat(ng-bind="pokemon.data.individual_attack")
                     td.stat(ng-bind="pokemon.data.individual_defense")
                     td.stat(ng-bind="pokemon.data.individual_stamina")
-                    td.stat(ng-bind="formatPercentage(pokemon.metadata.piv)")
-                    td.stat(ng-bind="formatPercentage(pokemon.metadata.pcp)")
+                    td.stat
+                        img(src="assets/img/icons/star.png" ng-show="pokemon.metadata.piv > .99")
+                        span(ng-bind="formatPercentage(pokemon.metadata.piv)" ng-show="pokemon.metadata.piv < .99")
+                    td.stat
+                        img(src="assets/img/icons/star.png" ng-show="pokemon.metadata.piv > .99")
+                            span(ng-bind="formatPercentage(pokemon.metadata.pcp)" ng-show="pokemon.metadata.piv < .99")
     #pokemon-modal.ui.basic.modal
         .content
             img(src="assets/img/sprites/{{selected.metadata.id}}.png")

@@ -17,6 +17,11 @@ angular.module('optimizer.spreadsheet.controller', [])
         else ret = $scope.sortOrder + $scope.sortColumn;
         return ret;
       };
+      $scope.favoriteClass = function (pokemon) {
+        var ret = '';
+        if (pokemon.data.favorite) ret = 'favorite';
+        return ret;
+      };
       $scope.formatPercentage = function (float) {
         return Math.round(float * 100);
       };
