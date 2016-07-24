@@ -1,9 +1,5 @@
-/**
- *  Example Service
- *  --- version: 1.0.0
- */
-angular.module('optimizer.data.service', [])
-  .factory('DataService', ['$q', '$http',
+angular.module('optimizer.api.service', [])
+  .factory('APIService', ['$q', '$http',
     function($q, $http) {
 
       return {

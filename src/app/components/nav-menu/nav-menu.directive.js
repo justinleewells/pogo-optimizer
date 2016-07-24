@@ -9,6 +9,9 @@ angular.module('optimizer.nav-menu.directive', [])
         $scope.display = function () {
           return $state.current.name !== 'connect';
         }
+        $scope.logout = function () {
+          
+        }
       }]
     };
 

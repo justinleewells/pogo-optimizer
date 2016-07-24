@@ -9,12 +9,12 @@ angular.module('optimizer', [
 
   'optimizer.nav-menu.directive',
 
-  'optimizer.data.service'
+  'optimizer.api.service'
 ])
-  .run(['DataService', '$rootScope', '$timeout', '$state',
-    function (DataService, $rootScope, $timeout, $state) {
+  .run(['APIService', '$rootScope', '$timeout', '$state',
+    function (APIService, $rootScope, $timeout, $state) {
       function fetchData() {
-        DataService.player().then(
+        APIService.player().then(
           function (data) {
             if (data !== null) {
               $rootScope.player = data;
@@ -26,7 +26,7 @@ angular.module('optimizer', [
           function (err) {
             console.log(err);
           });
-        DataService.inventory().then(
+        APIService.inventory().then(
           function (data) {
             if (data !== null) $rootScope.inventory = data;
           },
