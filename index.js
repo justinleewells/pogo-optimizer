@@ -4,6 +4,7 @@
 
 var _       = require('lodash');
 var fs      = require('fs');
+var bp      = require('body-parser');
 var cors    = require('cors');
 var express = require('express');
 var app     = express();
@@ -72,6 +73,7 @@ new PokemonGoMITM({port: 8081})
  * Express
  */
 
+app.use(bp.json());
 app.use(cors());
 
 app.use(express.static('public'));
@@ -81,6 +83,14 @@ app.use("/ca.crt", express.static('.http-mitm-proxy/certs/ca.crt'));
 app.get('/api/player', function (req, res, next) {
   if (player) return res.send(player.toJSON());
   else return res.json(null);
+});
+
+app.post('/api/player/settings', function (req, res, next) {
+  if (player) {
+    player.settings = req.body;
+    player.save();
+  }
+  return res.send();
 });
 
 app.get('/api/inventory', function (req, res, next) {

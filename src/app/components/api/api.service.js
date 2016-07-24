@@ -22,6 +22,25 @@ angular.module('optimizer.api.service', [])
           return deferred.promise;
         },
 
+        settings: function (settings) {
+          var deferred = $q.defer();
+
+          $http({
+            method  : 'POST',
+            url     : 'http://localhost:3000/api/player/settings',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            data: settings
+          }).success(function (resp) {
+            deferred.resolve(resp);
+          }).error(function (err) {
+            deferred.reject(err);
+          });
+
+          return deferred.promise;
+        },
+
         inventory: function () {
           var deferred = $q.defer();
 

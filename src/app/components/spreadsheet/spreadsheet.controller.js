@@ -1,6 +1,6 @@
 angular.module('optimizer.spreadsheet.controller', [])
-  .controller('SpreadsheetCtrl', ['$scope',
-    function($scope) {
+  .controller('SpreadsheetCtrl', ['$scope', '$rootScope', 'APIService',
+    function($scope, $rootScope, APIService) {
       $scope.selected = null;
       $scope.sortColumn = 'metadata.id';
       $scope.sortOrder = '+';
@@ -40,6 +40,23 @@ angular.module('optimizer.spreadsheet.controller', [])
       $scope.openModal = function (pokemon) {
         $scope.selected = pokemon;
         $('.ui.basic.modal').modal('show');
+      };
+      $scope.updateSettings = function () {
+        APIService.settings($rootScope.player.settings).then(
+          function () {},
+          function (err) {
+            console.log(err);
+          });
+      };
+      $scope.moveColorClass = function () {
+        var ret = '';
+        if ($rootScope.player.settings.enableMoveColors) ret = 'enable-move-colors';
+        return ret;
+      };
+      $scope.ivColorClass = function () {
+        var ret = '';
+        if ($rootScope.player.settings.enableIVColors) ret = 'enable-iv-colors';
+        return ret;
       };
     }
   ]);

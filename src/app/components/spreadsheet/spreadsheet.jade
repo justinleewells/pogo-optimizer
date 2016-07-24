@@ -1,6 +1,12 @@
 #spreadsheet-view
     .ui.container
-        table#spreadsheet.ui.celled.table.inverted.enable-move-colors.enable-iv-colors
+        .ui.toggle.checkbox.black
+            input(type="checkbox" name="public" ng-model="$root.player.settings.enableMoveColors" ng-change="updateSettings()")
+            label Move
+        .ui.toggle.checkbox
+            input(type="checkbox" name="public" ng-model="$root.player.settings.enableIVColors" ng-change="updateSettings()")
+            label IV
+        table#spreadsheet.ui.celled.table.inverted(class="{{moveColorClass() + ' ' + ivColorClass()}}")
             thead
                 tr
                     th.selectable(ng-click="setSort('metadata.id')") Pokemon
