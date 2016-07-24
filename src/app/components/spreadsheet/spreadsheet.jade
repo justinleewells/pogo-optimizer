@@ -1,9 +1,9 @@
 #spreadsheet-view
     .ui.container
-        //.buttons
-            button.ui.icon.button.black
+        .buttons
+            //button.ui.icon.button.black
                 i.fa.fa-trash
-            button.ui.icon.button.black
+            button.ui.icon.button.black(ng-click="openSettingsModal()")
                 i.fa.fa-cog
         .ui.search
             input(class="prompt" placeholder="Search" ng-model="search")
@@ -22,8 +22,8 @@
                     th.selectable.stat(ng-click="setSort('metadata.piv')") IV%
                     th.selectable.stat(ng-click="setSort('metadata.pcp')") CP%
             tbody
-                tr(ng-repeat="pokemon in $root.inventory.pokemon | orderBy: getSort() | filter: getFilter()")
-                    td.selectable(ng-click="openModal(pokemon)" ng-class="favoriteClass(pokemon)")
+                tr(ng-repeat="pokemon in $root.inventory.pokemon | orderBy: getSort() | filter: getFilter()" ng-click="openPokemonModal(pokemon)" )
+                    td.selectable(ng-class="favoriteClass(pokemon)")
                         h4.ui.image.header
                             img.ui.mini.rounded.image(src="{{'assets/img/icons/' + pokemon.metadata.id + '.png'}}")
                             .content.name {{pokemon.data.nickname || pokemon.data.pokemon_id.toLowerCase() || ''}}
@@ -50,3 +50,12 @@
             .info
                 label Weight:
                 span {{formatMetric(selected.data.weight_kg)}}
+    .ui.modal.settings.small
+        .header Settings
+        .content
+            .ui.toggle.checkbox
+                input(type="checkbox" name="public" ng-model="$root.player.settings.enableMoveColors" ng-change="updateSettings()")
+                label Display Move Colors
+            .ui.toggle.checkbox
+                input(type="checkbox" name="public" ng-model="$root.player.settings.enableIVColors" ng-change="updateSettings()")
+                label Display IV Colors

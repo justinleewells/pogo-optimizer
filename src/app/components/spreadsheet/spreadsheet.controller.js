@@ -42,9 +42,13 @@ angular.module('optimizer.spreadsheet.controller', [])
         }
         return ret;
       };
-      $scope.openModal = function (pokemon) {
+      $scope.openPokemonModal = function (pokemon) {
         $scope.selected = pokemon;
-        $('.ui.basic.modal').modal('show');
+        $('#pokemon-modal').modal('show');
+      };
+      $scope.openSettingsModal = function (pokemon) {
+        $scope.selected = pokemon;
+        $('.ui.modal.settings').modal('show');
       };
       $scope.updateSettings = function () {
         APIService.settings($rootScope.player.settings).then(
