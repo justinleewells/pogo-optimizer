@@ -1,5 +1,7 @@
 angular.module('optimizer', [
   'ui.router',
+  
+  'optimizer.routes',
 
   'optimizer.connect.controller',
   'optimizer.dashboard.controller',
@@ -8,5 +10,4 @@ angular.module('optimizer', [
   'optimizer.nav-menu.directive'
 ])
   .run([function () {
-    console.log('run');
   }]);
