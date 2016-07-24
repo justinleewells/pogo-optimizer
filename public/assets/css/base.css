@@ -25,7 +25,16 @@ body {
 .stat {
     text-align: center !important;
 }
-
+  
+.ui.table thead th {
+    cursor: pointer;
+}
+th.active:after {
+    content: '↓';
+}
+th.active.reverseSort:after {
+    content: '↑';
+}
 th.atk {
     background-color: #F08030 !important;
 }
