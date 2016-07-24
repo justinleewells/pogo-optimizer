@@ -36,15 +36,5 @@ angular.module('optimizer.spreadsheet.controller', [])
         $scope.selected = pokemon;
         $('.ui.basic.modal').modal('show');
       };
-      $scope.getFormattedId = function () {
-        var ret = '001';
-        if ($scope.selected !== null) {
-          ret = $scope.selected.metadata.id + '';
-          if (ret.length !== 3) {
-            while (ret.length !== 3) ret = "0" + ret;
-          }
-        }
-        return ret;
-      };
     }
   ]);

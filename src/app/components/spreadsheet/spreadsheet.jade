@@ -32,6 +32,10 @@
                     td.stat(ng-bind="formatPercentage(pokemon.metadata.pcp)")
     #pokemon-modal.ui.basic.modal
         .content
-            img(src="http://www.serebii.net/pokemongo/pokemon/{{getFormattedId()}}.png")
-            div Height: {{formatMetric(selected.data.height_m)}}
-            div Weight: {{formatMetric(selected.data.weight_kg)}}
+            img(src="assets/img/sprites/{{selected.metadata.id}}.png")
+            .info
+                label Height:
+                span {{formatMetric(selected.data.height_m)}}
+            .info
+                label Weight:
+                span {{formatMetric(selected.data.weight_kg)}}
