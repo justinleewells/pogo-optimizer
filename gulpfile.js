@@ -79,7 +79,7 @@ gulp.task('js', ['clean'], function copyJS() {
 
 gulp.task('connect', function connectServer() {
   return connect.server({
-    root: '../public',
+    root: './public',
     livereload: true,
     port: 3100
   });
