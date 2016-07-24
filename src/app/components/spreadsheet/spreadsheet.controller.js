@@ -4,6 +4,7 @@ angular.module('optimizer.spreadsheet.controller', [])
       $scope.selected = null;
       $scope.sortColumn = 'metadata.id';
       $scope.sortOrder = '+';
+      $scope.search = '';
       $scope.setSort = function (column) {
         if ($scope.sortColumn !== column) $scope.sortColumn = column;
         else {
@@ -13,8 +14,13 @@ angular.module('optimizer.spreadsheet.controller', [])
       };
       $scope.getSort = function () {
         var ret = '';
-        if ($scope.sortColumn === 'metadata.id') ret = [$scope.sortOrder + 'metadata.id', '-metadata.piv'];
-        else ret = $scope.sortOrder + $scope.sortColumn;
+        if ($scope.search.indexOf(',') === -1) {
+          if ($scope.sortColumn === 'metadata.id') ret = [$scope.sortOrder + 'metadata.id', '-metadata.piv'];
+          else ret = $scope.sortOrder + $scope.sortColumn;
+        } else {
+          ret = $scope.search.split(',');
+        }
+        console.log(ret);
         return ret;
       };
       $scope.favoriteClass = function (pokemon) {
@@ -56,6 +62,18 @@ angular.module('optimizer.spreadsheet.controller', [])
       $scope.ivColorClass = function () {
         var ret = '';
         if ($rootScope.player.settings.enableIVColors) ret = 'enable-iv-colors';
+        return ret;
+      };
+
+      $scope.getFilter = function () {
+        var ret = '';
+        if ($scope.search.length > 0 && $scope.search.indexOf(',') === 0) {
+          ret = {
+            data: {
+              pokemon_id: $scope.search
+            }
+          };
+        }
         return ret;
       };
     }

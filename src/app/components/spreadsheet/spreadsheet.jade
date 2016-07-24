@@ -1,11 +1,12 @@
 #spreadsheet-view
     .ui.container
-        .ui.toggle.checkbox.black
-            input(type="checkbox" name="public" ng-model="$root.player.settings.enableMoveColors" ng-change="updateSettings()")
-            label Move
-        .ui.toggle.checkbox
-            input(type="checkbox" name="public" ng-model="$root.player.settings.enableIVColors" ng-change="updateSettings()")
-            label IV
+        //.buttons
+            button.ui.icon.button.black
+                i.fa.fa-trash
+            button.ui.icon.button.black
+                i.fa.fa-cog
+        .ui.search
+            input(class="prompt" placeholder="Search" ng-model="search")
         table#spreadsheet.ui.celled.table.inverted(class="{{moveColorClass() + ' ' + ivColorClass()}}")
             thead
                 tr
@@ -21,7 +22,7 @@
                     th.selectable.stat(ng-click="setSort('metadata.piv')") IV%
                     th.selectable.stat(ng-click="setSort('metadata.pcp')") CP%
             tbody
-                tr(ng-repeat="pokemon in $root.inventory.pokemon | orderBy: getSort()")
+                tr(ng-repeat="pokemon in $root.inventory.pokemon | orderBy: getSort() | filter: getFilter()")
                     td.selectable(ng-click="openModal(pokemon)" ng-class="favoriteClass(pokemon)")
                         h4.ui.image.header
                             img.ui.mini.rounded.image(src="{{'assets/img/icons/' + pokemon.metadata.id + '.png'}}")
