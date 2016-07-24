@@ -10,17 +10,17 @@ angular.module("optimizer.routes", [
       $stateProvider
         .state("connect", {
           url: "/connect",
-          templateUrl: "app/connect/connect.html",
+          templateUrl: "app/components/connect/connect.html",
           controller: "ConnectCtrl"
         })
         .state("dashboard", {
           url: "/dashboard",
-          templateUrl: "app/dashboard/dashboard.html",
+          templateUrl: "app/components/dashboard/dashboard.html",
           controller: "DashboardCtrl"
         })
         .state("spreadsheet", {
           url: "/spreadsheet",
-          templateUrl: "app/spreadsheet/spreadsheet.html",
+          templateUrl: "app/components/spreadsheet/spreadsheet.html",
           controller: "SpreadsheetCtrl"
         });
 
