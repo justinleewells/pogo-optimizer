@@ -67,13 +67,31 @@ angular.module('optimizer.spreadsheet.controller', [])
         if ($rootScope.player.settings.enableIVColors) ret = 'enable-iv-colors';
         return ret;
       };
-
       $scope.getFilter = function () {
         var ret = '';
         if ($scope.search.length > 0 && $scope.search.indexOf(',') === -1) {
           ret = $scope.search;
         }
         return ret;
+      };
+      var selectedArr = [];
+      $scope.toggleSelected = function (pokemon) {
+        var index = selectedArr.indexOf(pokemon);
+        if (index === -1) selectedArr.push(pokemon);
+        else selectedArr.splice(index, 1);
+      };
+      $scope.isSelected = function (pokemon) {
+        return selectedArr.indexOf(pokemon) !== -1;
+      };
+      $scope.bulkTransfer = function () {
+        APIService.transfer(selectedArr).then(
+          function () {
+            selectedArr = [];
+            console.log('succeeded');
+          },
+          function (err) {
+            console.log(err);
+          });
       };
     }
   ]);

@@ -75,6 +75,25 @@ angular.module('optimizer.api.service', [])
           });
 
           return deferred.promise;
+        },
+
+        transfer: function (pokemon) {
+          var deferred = $q.defer();
+
+          $http({
+            method  : 'POST',
+            url     : 'api/transfer',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            data: pokemon
+          }).success(function () {
+            deferred.resolve(true);
+          }).error(function (err) {
+            deferred.reject(err);
+          });
+
+          return deferred.promise;
         }
 
       };

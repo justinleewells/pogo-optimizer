@@ -24,7 +24,7 @@ var PokemonGoMITM = require('pokemon-go-mitm');
 var Player    = require('./lib/player');
 var Inventory = require('./lib/inventory');
 
-new PokemonGoMITM({port: 8081})
+var server = new PokemonGoMITM({port: 8081})
   .setResponseHandler('GetPlayer', function (data) {
     if (data.success && player === null) {
       player = new Player(data.player_data.username);
@@ -99,6 +99,26 @@ app.get('/api/inventory', function (req, res, next) {
     inventory.updates = false;
   }
   else return res.json(null);
+});
+
+function transfer(arr) {
+  if (arr.length > 0) {
+    var p = arr.pop();
+    setTimeout(function () {
+      console.log('TRANSFER: ' + p.data.cp + ' CP ' + p.data.pokemon_id);
+      server.craftRequest("ReleasePokemon", {
+        pokemon_id: p.data.id
+      });
+      inventory.release(p.data.id);
+      transfer(arr);
+    }, 750);
+  }
+}
+
+app.post('/api/transfer', function (req, res, next) {
+  var pokemon = req.body;
+  transfer(pokemon);
+  res.send();
 });
 
 app.post('/api/logout', function (req, res, next) {
