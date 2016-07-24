@@ -14,7 +14,6 @@ angular.module('optimizer.api.service', [])
               'Content-Type': 'application/json'
             }
           }).success(function (resp) {
-            console.log(resp);
             deferred.resolve(resp);
           }).error(function (err) {
             deferred.reject(err);
@@ -34,6 +33,24 @@ angular.module('optimizer.api.service', [])
             }
           }).success(function (resp) {
             deferred.resolve(resp);
+          }).error(function (err) {
+            deferred.reject(err);
+          });
+
+          return deferred.promise;
+        },
+
+        logout: function () {
+          var deferred = $q.defer();
+
+          $http({
+            method  : 'POST',
+            url     : 'http://localhost:3000/api/logout',
+            headers: {
+              'Content-Type': 'application/json'
+            }
+          }).success(function () {
+            deferred.resolve(true);
           }).error(function (err) {
             deferred.reject(err);
           });
