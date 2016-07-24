@@ -1,9 +1,9 @@
 {
   "name": "pogo-optimizer",
   "dependencies": {
-    "react": "^15.2.1",
-    "babel": "*",
-    "jquery": "^3.1.0",
-    "semantic": "semantic-ui#^2.2.2"
+    "angular": "^1.5.8",
+    "semantic": "^2.2.2",
+    "angular-ui-router": "^0.3.1",
+    "font-awesome": "fontawesome#^4.6.3"
   }
 }

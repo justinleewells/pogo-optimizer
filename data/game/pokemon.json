@@ -1,0 +1,2102 @@
+[
+  {
+    "id": 1,
+    "name": "BULBASAUR",
+    "type1": "GRASS",
+    "type2": "POISON",
+    "stats": {
+      "stamina": 90,
+      "attack": 126,
+      "defense": 126
+    },
+    "candy": 25,
+    "family": "FAMILY_BULBASAUR",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 2,
+    "name": "IVYSAUR",
+    "type1": "GRASS",
+    "type2": "POISON",
+    "stats": {
+      "stamina": 120,
+      "attack": 156,
+      "defense": 158
+    },
+    "candy": 100,
+    "family": "FAMILY_BULBASAUR",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 3,
+    "name": "VENUSAUR",
+    "type1": "GRASS",
+    "type2": "POISON",
+    "stats": {
+      "stamina": 160,
+      "attack": 198,
+      "defense": 200
+    },
+    "family": "FAMILY_BULBASAUR",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 4,
+    "name": "CHARMANDER",
+    "type1": "FIRE",
+    "stats": {
+      "stamina": 78,
+      "attack": 128,
+      "defense": 108
+    },
+    "candy": 25,
+    "family": "FAMILY_CHARMANDER",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 5,
+    "name": "CHARMELEON",
+    "type1": "FIRE",
+    "stats": {
+      "stamina": 116,
+      "attack": 160,
+      "defense": 140
+    },
+    "candy": 100,
+    "family": "FAMILY_CHARMANDER",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 6,
+    "name": "CHARIZARD",
+    "type1": "FIRE",
+    "type2": "FLYING",
+    "stats": {
+      "stamina": 156,
+      "attack": 212,
+      "defense": 182
+    },
+    "family": "FAMILY_CHARMANDER",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 7,
+    "name": "SQUIRTLE",
+    "type1": "WATER",
+    "stats": {
+      "stamina": 88,
+      "attack": 112,
+      "defense": 142
+    },
+    "candy": 25,
+    "family": "FAMILY_SQUIRTLE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 8,
+    "name": "WARTORTLE",
+    "type1": "WATER",
+    "stats": {
+      "stamina": 118,
+      "attack": 144,
+      "defense": 176
+    },
+    "candy": 100,
+    "family": "FAMILY_SQUIRTLE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 9,
+    "name": "BLASTOISE",
+    "type1": "WATER",
+    "stats": {
+      "stamina": 158,
+      "attack": 186,
+      "defense": 222
+    },
+    "family": "FAMILY_SQUIRTLE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 10,
+    "name": "CATERPIE",
+    "type1": "BUG",
+    "stats": {
+      "stamina": 90,
+      "attack": 62,
+      "defense": 66
+    },
+    "candy": 12,
+    "family": "FAMILY_CATERPIE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 11,
+    "name": "METAPOD",
+    "type1": "BUG",
+    "stats": {
+      "stamina": 100,
+      "attack": 56,
+      "defense": 86
+    },
+    "candy": 50,
+    "family": "FAMILY_CATERPIE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 12,
+    "name": "BUTTERFREE",
+    "type1": "BUG",
+    "type2": "FLYING",
+    "stats": {
+      "stamina": 120,
+      "attack": 144,
+      "defense": 144
+    },
+    "family": "FAMILY_CATERPIE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 13,
+    "name": "WEEDLE",
+    "type1": "BUG",
+    "type2": "POISON",
+    "stats": {
+      "stamina": 80,
+      "attack": 68,
+      "defense": 64
+    },
+    "candy": 12,
+    "family": "FAMILY_WEEDLE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 14,
+    "name": "KAKUNA",
+    "type1": "BUG",
+    "type2": "POISON",
+    "stats": {
+      "stamina": 90,
+      "attack": 62,
+      "defense": 82
+    },
+    "candy": 50,
+    "family": "FAMILY_WEEDLE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 15,
+    "name": "BEEDRILL",
+    "type1": "BUG",
+    "type2": "POISON",
+    "stats": {
+      "stamina": 130,
+      "attack": 144,
+      "defense": 130
+    },
+    "family": "FAMILY_WEEDLE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 16,
+    "name": "PIDGEY",
+    "type1": "NORMAL",
+    "type2": "FLYING",
+    "stats": {
+      "stamina": 80,
+      "attack": 94,
+      "defense": 90
+    },
+    "candy": 12,
+    "family": "FAMILY_PIDGEY",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 17,
+    "name": "PIDGEOTTO",
+    "type1": "NORMAL",
+    "type2": "FLYING",
+    "stats": {
+      "stamina": 126,
+      "attack": 126,
+      "defense": 122
+    },
+    "candy": 50,
+    "family": "FAMILY_PIDGEY",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 18,
+    "name": "PIDGEOT",
+    "type1": "NORMAL",
+    "type2": "FLYING",
+    "stats": {
+      "stamina": 166,
+      "attack": 170,
+      "defense": 166
+    },
+    "family": "FAMILY_PIDGEY",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 19,
+    "name": "RATTATA",
+    "type1": "NORMAL",
+    "stats": {
+      "stamina": 60,
+      "attack": 92,
+      "defense": 86
+    },
+    "candy": 25,
+    "family": "FAMILY_RATTATA",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 20,
+    "name": "RATICATE",
+    "type1": "NORMAL",
+    "stats": {
+      "stamina": 110,
+      "attack": 146,
+      "defense": 150
+    },
+    "family": "FAMILY_RATTATA",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 21,
+    "name": "SPEAROW",
+    "type1": "NORMAL",
+    "type2": "FLYING",
+    "stats": {
+      "stamina": 80,
+      "attack": 102,
+      "defense": 78
+    },
+    "candy": 50,
+    "family": "FAMILY_SPEAROW",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 22,
+    "name": "FEAROW",
+    "type1": "NORMAL",
+    "type2": "FLYING",
+    "stats": {
+      "stamina": 130,
+      "attack": 168,
+      "defense": 146
+    },
+    "family": "FAMILY_SPEAROW",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 23,
+    "name": "EKANS",
+    "type1": "POISON",
+    "stats": {
+      "stamina": 70,
+      "attack": 112,
+      "defense": 112
+    },
+    "candy": 50,
+    "family": "FAMILY_EKANS",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 24,
+    "name": "ARBOK",
+    "type1": "POISON",
+    "stats": {
+      "stamina": 120,
+      "attack": 166,
+      "defense": 166
+    },
+    "family": "FAMILY_EKANS",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 25,
+    "name": "PIKACHU",
+    "type1": "ELECTRIC",
+    "stats": {
+      "stamina": 70,
+      "attack": 124,
+      "defense": 108
+    },
+    "candy": 50,
+    "family": "FAMILY_PIKACHU",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 26,
+    "name": "RAICHU",
+    "type1": "ELECTRIC",
+    "stats": {
+      "stamina": 120,
+      "attack": 200,
+      "defense": 154
+    },
+    "family": "FAMILY_PIKACHU",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 27,
+    "name": "SANDSHREW",
+    "type1": "GROUND",
+    "stats": {
+      "stamina": 100,
+      "attack": 90,
+      "defense": 114
+    },
+    "candy": 50,
+    "family": "FAMILY_SANDSHREW",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 28,
+    "name": "SANDSLASH",
+    "type1": "GROUND",
+    "stats": {
+      "stamina": 150,
+      "attack": 150,
+      "defense": 172
+    },
+    "family": "FAMILY_SANDSHREW",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 29,
+    "name": "NIDORAN_FEMALE",
+    "type1": "POISON",
+    "stats": {
+      "stamina": 110,
+      "attack": 100,
+      "defense": 104
+    },
+    "candy": 25,
+    "family": "FAMILY_NIDORAN_FEMALE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 30,
+    "name": "NIDORINA",
+    "type1": "POISON",
+    "stats": {
+      "stamina": 140,
+      "attack": 132,
+      "defense": 136
+    },
+    "candy": 100,
+    "family": "FAMILY_NIDORAN_FEMALE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 31,
+    "name": "NIDOQUEEN",
+    "type1": "POISON",
+    "type2": "GROUND",
+    "stats": {
+      "stamina": 180,
+      "attack": 184,
+      "defense": 190
+    },
+    "family": "FAMILY_NIDORAN_FEMALE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 32,
+    "name": "NIDORAN_MALE",
+    "type1": "POISON",
+    "stats": {
+      "stamina": 92,
+      "attack": 110,
+      "defense": 94
+    },
+    "candy": 25,
+    "family": "FAMILY_NIDORAN_MALE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 33,
+    "name": "NIDORINO",
+    "type1": "POISON",
+    "stats": {
+      "stamina": 122,
+      "attack": 142,
+      "defense": 128
+    },
+    "candy": 100,
+    "family": "FAMILY_NIDORAN_MALE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 34,
+    "name": "NIDOKING",
+    "type1": "POISON",
+    "type2": "GROUND",
+    "stats": {
+      "stamina": 162,
+      "attack": 204,
+      "defense": 170
+    },
+    "family": "FAMILY_NIDORAN_MALE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 35,
+    "name": "CLEFAIRY",
+    "type1": "FAIRY",
+    "stats": {
+      "stamina": 140,
+      "attack": 116,
+      "defense": 124
+    },
+    "candy": 50,
+    "family": "FAMILY_CLEFAIRY",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 36,
+    "name": "CLEFABLE",
+    "type1": "FAIRY",
+    "stats": {
+      "stamina": 190,
+      "attack": 178,
+      "defense": 178
+    },
+    "family": "FAMILY_CLEFAIRY",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 37,
+    "name": "VULPIX",
+    "type1": "FIRE",
+    "stats": {
+      "stamina": 76,
+      "attack": 106,
+      "defense": 118
+    },
+    "candy": 50,
+    "family": "FAMILY_VULPIX",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 38,
+    "name": "NINETALES",
+    "type1": "FIRE",
+    "stats": {
+      "stamina": 146,
+      "attack": 176,
+      "defense": 194
+    },
+    "family": "FAMILY_VULPIX",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 39,
+    "name": "JIGGLYPUFF",
+    "type1": "NORMAL",
+    "type2": "FAIRY",
+    "stats": {
+      "stamina": 230,
+      "attack": 98,
+      "defense": 54
+    },
+    "candy": 50,
+    "family": "FAMILY_JIGGLYPUFF",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 40,
+    "name": "WIGGLYTUFF",
+    "type1": "NORMAL",
+    "type2": "FAIRY",
+    "stats": {
+      "stamina": 280,
+      "attack": 168,
+      "defense": 108
+    },
+    "family": "FAMILY_JIGGLYPUFF",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 41,
+    "name": "ZUBAT",
+    "type1": "POISON",
+    "type2": "FLYING",
+    "stats": {
+      "stamina": 80,
+      "attack": 88,
+      "defense": 90
+    },
+    "candy": 50,
+    "family": "FAMILY_ZUBAT",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 42,
+    "name": "GOLBAT",
+    "type1": "POISON",
+    "type2": "FLYING",
+    "stats": {
+      "stamina": 150,
+      "attack": 164,
+      "defense": 164
+    },
+    "family": "FAMILY_ZUBAT",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 43,
+    "name": "ODDISH",
+    "type1": "GRASS",
+    "type2": "POISON",
+    "stats": {
+      "stamina": 90,
+      "attack": 134,
+      "defense": 130
+    },
+    "candy": 25,
+    "family": "FAMILY_ODDISH",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 44,
+    "name": "GLOOM",
+    "type1": "GRASS",
+    "type2": "POISON",
+    "stats": {
+      "stamina": 120,
+      "attack": 162,
+      "defense": 158
+    },
+    "candy": 100,
+    "family": "FAMILY_ODDISH",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 45,
+    "name": "VILEPLUME",
+    "type1": "GRASS",
+    "type2": "POISON",
+    "stats": {
+      "stamina": 150,
+      "attack": 202,
+      "defense": 190
+    },
+    "family": "FAMILY_ODDISH",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 46,
+    "name": "PARAS",
+    "type1": "BUG",
+    "type2": "GRASS",
+    "stats": {
+      "stamina": 70,
+      "attack": 122,
+      "defense": 120
+    },
+    "candy": 50,
+    "family": "FAMILY_PARAS",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 47,
+    "name": "PARASECT",
+    "type1": "BUG",
+    "type2": "GRASS",
+    "stats": {
+      "stamina": 120,
+      "attack": 162,
+      "defense": 170
+    },
+    "family": "FAMILY_PARAS",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 48,
+    "name": "VENONAT",
+    "type1": "BUG",
+    "type2": "POISON",
+    "stats": {
+      "stamina": 120,
+      "attack": 108,
+      "defense": 118
+    },
+    "candy": 50,
+    "family": "FAMILY_VENONAT",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 49,
+    "name": "VENOMOTH",
+    "type1": "BUG",
+    "type2": "POISON",
+    "stats": {
+      "stamina": 140,
+      "attack": 172,
+      "defense": 154
+    },
+    "family": "FAMILY_VENONAT",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 50,
+    "name": "DIGLETT",
+    "type1": "GROUND",
+    "stats": {
+      "stamina": 20,
+      "attack": 108,
+      "defense": 86
+    },
+    "candy": 50,
+    "family": "FAMILY_DIGLETT",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 51,
+    "name": "DUGTRIO",
+    "type1": "GROUND",
+    "stats": {
+      "stamina": 70,
+      "attack": 148,
+      "defense": 140
+    },
+    "family": "FAMILY_DIGLETT",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 52,
+    "name": "MEOWTH",
+    "type1": "NORMAL",
+    "stats": {
+      "stamina": 80,
+      "attack": 104,
+      "defense": 94
+    },
+    "candy": 50,
+    "family": "FAMILY_MEOWTH",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 53,
+    "name": "PERSIAN",
+    "type1": "NORMAL",
+    "stats": {
+      "stamina": 130,
+      "attack": 156,
+      "defense": 146
+    },
+    "family": "FAMILY_MEOWTH",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 54,
+    "name": "PSYDUCK",
+    "type1": "WATER",
+    "stats": {
+      "stamina": 100,
+      "attack": 132,
+      "defense": 112
+    },
+    "candy": 50,
+    "family": "FAMILY_PSYDUCK",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 55,
+    "name": "GOLDUCK",
+    "type1": "WATER",
+    "stats": {
+      "stamina": 160,
+      "attack": 194,
+      "defense": 176
+    },
+    "family": "FAMILY_PSYDUCK",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 56,
+    "name": "MANKEY",
+    "type1": "FIGHTING",
+    "stats": {
+      "stamina": 80,
+      "attack": 122,
+      "defense": 96
+    },
+    "candy": 50,
+    "family": "FAMILY_MANKEY",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 57,
+    "name": "PRIMEAPE",
+    "type1": "FIGHTING",
+    "stats": {
+      "stamina": 130,
+      "attack": 178,
+      "defense": 150
+    },
+    "family": "FAMILY_MANKEY",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 58,
+    "name": "GROWLITHE",
+    "type1": "FIRE",
+    "stats": {
+      "stamina": 110,
+      "attack": 156,
+      "defense": 110
+    },
+    "candy": 50,
+    "family": "FAMILY_GROWLITHE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 59,
+    "name": "ARCANINE",
+    "type1": "FIRE",
+    "stats": {
+      "stamina": 180,
+      "attack": 230,
+      "defense": 180
+    },
+    "family": "FAMILY_GROWLITHE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 60,
+    "name": "POLIWAG",
+    "type1": "WATER",
+    "stats": {
+      "stamina": 80,
+      "attack": 108,
+      "defense": 98
+    },
+    "candy": 25,
+    "family": "FAMILY_POLIWAG",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 61,
+    "name": "POLIWHIRL",
+    "type1": "WATER",
+    "stats": {
+      "stamina": 130,
+      "attack": 132,
+      "defense": 132
+    },
+    "candy": 100,
+    "family": "FAMILY_POLIWAG",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 62,
+    "name": "POLIWRATH",
+    "type1": "WATER",
+    "type2": "FIGHTING",
+    "stats": {
+      "stamina": 180,
+      "attack": 180,
+      "defense": 202
+    },
+    "family": "FAMILY_POLIWAG",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 63,
+    "name": "ABRA",
+    "type1": "PSYCHIC",
+    "stats": {
+      "stamina": 50,
+      "attack": 110,
+      "defense": 76
+    },
+    "candy": 25,
+    "family": "FAMILY_ABRA",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 64,
+    "name": "KADABRA",
+    "type1": "PSYCHIC",
+    "stats": {
+      "stamina": 80,
+      "attack": 150,
+      "defense": 112
+    },
+    "candy": 100,
+    "family": "FAMILY_ABRA",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 65,
+    "name": "ALAKAZAM",
+    "type1": "PSYCHIC",
+    "stats": {
+      "stamina": 110,
+      "attack": 186,
+      "defense": 152
+    },
+    "family": "FAMILY_ABRA",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 66,
+    "name": "MACHOP",
+    "type1": "FIGHTING",
+    "stats": {
+      "stamina": 140,
+      "attack": 118,
+      "defense": 96
+    },
+    "candy": 25,
+    "family": "FAMILY_MACHOP",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 67,
+    "name": "MACHOKE",
+    "type1": "FIGHTING",
+    "stats": {
+      "stamina": 160,
+      "attack": 154,
+      "defense": 144
+    },
+    "candy": 100,
+    "family": "FAMILY_MACHOP",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 68,
+    "name": "MACHAMP",
+    "type1": "FIGHTING",
+    "stats": {
+      "stamina": 180,
+      "attack": 198,
+      "defense": 180
+    },
+    "family": "FAMILY_MACHOP",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 69,
+    "name": "BELLSPROUT",
+    "type1": "GRASS",
+    "type2": "POISON",
+    "stats": {
+      "stamina": 100,
+      "attack": 158,
+      "defense": 78
+    },
+    "candy": 25,
+    "family": "FAMILY_BELLSPROUT",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 70,
+    "name": "WEEPINBELL",
+    "type1": "GRASS",
+    "type2": "POISON",
+    "stats": {
+      "stamina": 130,
+      "attack": 190,
+      "defense": 110
+    },
+    "candy": 100,
+    "family": "FAMILY_BELLSPROUT",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 71,
+    "name": "VICTREEBEL",
+    "type1": "GRASS",
+    "type2": "POISON",
+    "stats": {
+      "stamina": 160,
+      "attack": 222,
+      "defense": 152
+    },
+    "family": "FAMILY_BELLSPROUT",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 72,
+    "name": "TENTACOOL",
+    "type1": "WATER",
+    "type2": "POISON",
+    "stats": {
+      "stamina": 80,
+      "attack": 106,
+      "defense": 136
+    },
+    "candy": 50,
+    "family": "FAMILY_TENTACOOL",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 73,
+    "name": "TENTACRUEL",
+    "type1": "WATER",
+    "type2": "POISON",
+    "stats": {
+      "stamina": 160,
+      "attack": 170,
+      "defense": 196
+    },
+    "family": "FAMILY_TENTACOOL",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 74,
+    "name": "GEODUDE",
+    "type1": "ROCK",
+    "type2": "GROUND",
+    "stats": {
+      "stamina": 80,
+      "attack": 106,
+      "defense": 118
+    },
+    "candy": 25,
+    "family": "FAMILY_GEODUDE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 75,
+    "name": "GRAVELER",
+    "type1": "ROCK",
+    "type2": "GROUND",
+    "stats": {
+      "stamina": 110,
+      "attack": 142,
+      "defense": 156
+    },
+    "candy": 100,
+    "family": "FAMILY_GEODUDE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 76,
+    "name": "GOLEM",
+    "type1": "ROCK",
+    "type2": "GROUND",
+    "stats": {
+      "stamina": 160,
+      "attack": 176,
+      "defense": 198
+    },
+    "family": "FAMILY_GEODUDE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 77,
+    "name": "PONYTA",
+    "type1": "FIRE",
+    "stats": {
+      "stamina": 100,
+      "attack": 168,
+      "defense": 138
+    },
+    "candy": 50,
+    "family": "FAMILY_PONYTA",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 78,
+    "name": "RAPIDASH",
+    "type1": "FIRE",
+    "stats": {
+      "stamina": 130,
+      "attack": 200,
+      "defense": 170
+    },
+    "family": "FAMILY_PONYTA",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 79,
+    "name": "SLOWPOKE",
+    "type1": "WATER",
+    "type2": "PSYCHIC",
+    "stats": {
+      "stamina": 180,
+      "attack": 110,
+      "defense": 110
+    },
+    "candy": 50,
+    "family": "FAMILY_SLOWPOKE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 80,
+    "name": "SLOWBRO",
+    "type1": "WATER",
+    "type2": "PSYCHIC",
+    "stats": {
+      "stamina": 190,
+      "attack": 184,
+      "defense": 198
+    },
+    "family": "FAMILY_SLOWPOKE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 81,
+    "name": "MAGNEMITE",
+    "type1": "ELECTRIC",
+    "type2": "STEEL",
+    "stats": {
+      "stamina": 50,
+      "attack": 128,
+      "defense": 138
+    },
+    "candy": 50,
+    "family": "FAMILY_MAGNEMITE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 82,
+    "name": "MAGNETON",
+    "type1": "ELECTRIC",
+    "type2": "STEEL",
+    "stats": {
+      "stamina": 100,
+      "attack": 186,
+      "defense": 180
+    },
+    "family": "FAMILY_MAGNEMITE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 83,
+    "name": "FARFETCHD",
+    "type1": "NORMAL",
+    "type2": "FLYING",
+    "stats": {
+      "stamina": 104,
+      "attack": 138,
+      "defense": 132
+    },
+    "family": "FAMILY_FARFETCHD",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 84,
+    "name": "DODUO",
+    "type1": "NORMAL",
+    "type2": "FLYING",
+    "stats": {
+      "stamina": 70,
+      "attack": 126,
+      "defense": 96
+    },
+    "candy": 50,
+    "family": "FAMILY_DODUO",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 85,
+    "name": "DODRIO",
+    "type1": "NORMAL",
+    "type2": "FLYING",
+    "stats": {
+      "stamina": 120,
+      "attack": 182,
+      "defense": 150
+    },
+    "family": "FAMILY_DODUO",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 86,
+    "name": "SEEL",
+    "type1": "WATER",
+    "stats": {
+      "stamina": 130,
+      "attack": 104,
+      "defense": 138
+    },
+    "candy": 50,
+    "family": "FAMILY_SEEL",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 87,
+    "name": "DEWGONG",
+    "type1": "WATER",
+    "type2": "ICE",
+    "stats": {
+      "stamina": 180,
+      "attack": 156,
+      "defense": 192
+    },
+    "family": "FAMILY_SEEL",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 88,
+    "name": "GRIMER",
+    "type1": "POISON",
+    "stats": {
+      "stamina": 160,
+      "attack": 124,
+      "defense": 110
+    },
+    "candy": 50,
+    "family": "FAMILY_GRIMER",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 89,
+    "name": "MUK",
+    "type1": "POISON",
+    "stats": {
+      "stamina": 210,
+      "attack": 180,
+      "defense": 188
+    },
+    "family": "FAMILY_GRIMER",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 90,
+    "name": "SHELLDER",
+    "type1": "WATER",
+    "stats": {
+      "stamina": 60,
+      "attack": 120,
+      "defense": 112
+    },
+    "candy": 50,
+    "family": "FAMILY_SHELLDER",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 91,
+    "name": "CLOYSTER",
+    "type1": "WATER",
+    "type2": "ICE",
+    "stats": {
+      "stamina": 100,
+      "attack": 196,
+      "defense": 196
+    },
+    "family": "FAMILY_SHELLDER",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 92,
+    "name": "GASTLY",
+    "type1": "GHOST",
+    "type2": "POISON",
+    "stats": {
+      "stamina": 60,
+      "attack": 136,
+      "defense": 82
+    },
+    "candy": 25,
+    "family": "FAMILY_GASTLY",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 93,
+    "name": "HAUNTER",
+    "type1": "GHOST",
+    "type2": "POISON",
+    "stats": {
+      "stamina": 90,
+      "attack": 172,
+      "defense": 118
+    },
+    "candy": 100,
+    "family": "FAMILY_GASTLY",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 94,
+    "name": "GENGAR",
+    "type1": "GHOST",
+    "type2": "POISON",
+    "stats": {
+      "stamina": 120,
+      "attack": 204,
+      "defense": 156
+    },
+    "family": "FAMILY_GASTLY",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 95,
+    "name": "ONIX",
+    "type1": "ROCK",
+    "type2": "GROUND",
+    "stats": {
+      "stamina": 70,
+      "attack": 90,
+      "defense": 186
+    },
+    "family": "FAMILY_ONIX",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 96,
+    "name": "DROWZEE",
+    "type1": "PSYCHIC",
+    "stats": {
+      "stamina": 120,
+      "attack": 104,
+      "defense": 140
+    },
+    "candy": 50,
+    "family": "FAMILY_DROWZEE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 97,
+    "name": "HYPNO",
+    "type1": "PSYCHIC",
+    "stats": {
+      "stamina": 170,
+      "attack": 162,
+      "defense": 196
+    },
+    "family": "FAMILY_DROWZEE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 98,
+    "name": "KRABBY",
+    "type1": "WATER",
+    "stats": {
+      "stamina": 60,
+      "attack": 116,
+      "defense": 110
+    },
+    "candy": 50,
+    "family": "FAMILY_KRABBY",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 99,
+    "name": "KINGLER",
+    "type1": "WATER",
+    "stats": {
+      "stamina": 110,
+      "attack": 178,
+      "defense": 168
+    },
+    "family": "FAMILY_KRABBY",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 100,
+    "name": "VOLTORB",
+    "type1": "ELECTRIC",
+    "stats": {
+      "stamina": 80,
+      "attack": 102,
+      "defense": 124
+    },
+    "candy": 50,
+    "family": "FAMILY_VOLTORB",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 101,
+    "name": "ELECTRODE",
+    "type1": "ELECTRIC",
+    "stats": {
+      "stamina": 120,
+      "attack": 150,
+      "defense": 174
+    },
+    "family": "FAMILY_VOLTORB",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 102,
+    "name": "EXEGGCUTE",
+    "type1": "GRASS",
+    "type2": "PSYCHIC",
+    "stats": {
+      "stamina": 120,
+      "attack": 110,
+      "defense": 132
+    },
+    "candy": 50,
+    "family": "FAMILY_EXEGGCUTE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 103,
+    "name": "EXEGGUTOR",
+    "type1": "GRASS",
+    "type2": "PSYCHIC",
+    "stats": {
+      "stamina": 190,
+      "attack": 232,
+      "defense": 164
+    },
+    "family": "FAMILY_EXEGGCUTE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 104,
+    "name": "CUBONE",
+    "type1": "GROUND",
+    "stats": {
+      "stamina": 100,
+      "attack": 102,
+      "defense": 150
+    },
+    "candy": 50,
+    "family": "FAMILY_CUBONE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 105,
+    "name": "MAROWAK",
+    "type1": "GROUND",
+    "stats": {
+      "stamina": 120,
+      "attack": 140,
+      "defense": 202
+    },
+    "family": "FAMILY_CUBONE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 106,
+    "name": "HITMONLEE",
+    "type1": "FIGHTING",
+    "stats": {
+      "stamina": 100,
+      "attack": 148,
+      "defense": 172
+    },
+    "family": "FAMILY_HITMONLEE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 107,
+    "name": "HITMONCHAN",
+    "type1": "FIGHTING",
+    "stats": {
+      "stamina": 100,
+      "attack": 138,
+      "defense": 204
+    },
+    "family": "FAMILY_HITMONCHAN",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 108,
+    "name": "LICKITUNG",
+    "type1": "NORMAL",
+    "stats": {
+      "stamina": 180,
+      "attack": 126,
+      "defense": 160
+    },
+    "family": "FAMILY_LICKITUNG",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 109,
+    "name": "KOFFING",
+    "type1": "POISON",
+    "stats": {
+      "stamina": 80,
+      "attack": 136,
+      "defense": 142
+    },
+    "candy": 50,
+    "family": "FAMILY_KOFFING",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 110,
+    "name": "WEEZING",
+    "type1": "POISON",
+    "stats": {
+      "stamina": 130,
+      "attack": 190,
+      "defense": 198
+    },
+    "family": "FAMILY_KOFFING",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 111,
+    "name": "RHYHORN",
+    "type1": "GROUND",
+    "type2": "ROCK",
+    "stats": {
+      "stamina": 160,
+      "attack": 110,
+      "defense": 116
+    },
+    "candy": 50,
+    "family": "FAMILY_RHYHORN",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 112,
+    "name": "RHYDON",
+    "type1": "GROUND",
+    "type2": "ROCK",
+    "stats": {
+      "stamina": 210,
+      "attack": 166,
+      "defense": 160
+    },
+    "family": "FAMILY_RHYHORN",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 113,
+    "name": "CHANSEY",
+    "type1": "NORMAL",
+    "stats": {
+      "stamina": 500,
+      "attack": 40,
+      "defense": 60
+    },
+    "family": "FAMILY_CHANSEY",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 114,
+    "name": "TANGELA",
+    "type1": "GRASS",
+    "stats": {
+      "stamina": 130,
+      "attack": 164,
+      "defense": 152
+    },
+    "family": "FAMILY_TANGELA",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 115,
+    "name": "KANGASKHAN",
+    "type1": "NORMAL",
+    "stats": {
+      "stamina": 210,
+      "attack": 142,
+      "defense": 178
+    },
+    "family": "FAMILY_KANGASKHAN",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 116,
+    "name": "HORSEA",
+    "type1": "WATER",
+    "stats": {
+      "stamina": 60,
+      "attack": 122,
+      "defense": 100
+    },
+    "candy": 50,
+    "family": "FAMILY_HORSEA",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 117,
+    "name": "SEADRA",
+    "type1": "WATER",
+    "stats": {
+      "stamina": 110,
+      "attack": 176,
+      "defense": 150
+    },
+    "family": "FAMILY_HORSEA",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 118,
+    "name": "GOLDEEN",
+    "type1": "WATER",
+    "stats": {
+      "stamina": 90,
+      "attack": 112,
+      "defense": 126
+    },
+    "candy": 50,
+    "family": "FAMILY_GOLDEEN",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 119,
+    "name": "SEAKING",
+    "type1": "WATER",
+    "stats": {
+      "stamina": 160,
+      "attack": 172,
+      "defense": 160
+    },
+    "family": "FAMILY_GOLDEEN",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 120,
+    "name": "STARYU",
+    "type1": "WATER",
+    "stats": {
+      "stamina": 60,
+      "attack": 130,
+      "defense": 128
+    },
+    "candy": 50,
+    "family": "FAMILY_STARYU",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 121,
+    "name": "STARMIE",
+    "type1": "WATER",
+    "type2": "PSYCHIC",
+    "stats": {
+      "stamina": 120,
+      "attack": 194,
+      "defense": 192
+    },
+    "family": "FAMILY_STARYU",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 122,
+    "name": "MR_MIME",
+    "type1": "PSYCHIC",
+    "type2": "FAIRY",
+    "stats": {
+      "stamina": 80,
+      "attack": 154,
+      "defense": 196
+    },
+    "family": "FAMILY_MR_MIME",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 123,
+    "name": "SCYTHER",
+    "type1": "BUG",
+    "type2": "FLYING",
+    "stats": {
+      "stamina": 140,
+      "attack": 176,
+      "defense": 180
+    },
+    "family": "FAMILY_SCYTHER",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 124,
+    "name": "JYNX",
+    "type1": "ICE",
+    "type2": "PSYCHIC",
+    "stats": {
+      "stamina": 130,
+      "attack": 172,
+      "defense": 134
+    },
+    "family": "FAMILY_JYNX",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 125,
+    "name": "ELECTABUZZ",
+    "type1": "ELECTRIC",
+    "stats": {
+      "stamina": 130,
+      "attack": 198,
+      "defense": 160
+    },
+    "family": "FAMILY_ELECTABUZZ",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 126,
+    "name": "MAGMAR",
+    "type1": "FIRE",
+    "stats": {
+      "stamina": 130,
+      "attack": 214,
+      "defense": 158
+    },
+    "family": "FAMILY_MAGMAR",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 127,
+    "name": "PINSIR",
+    "type1": "BUG",
+    "stats": {
+      "stamina": 130,
+      "attack": 184,
+      "defense": 186
+    },
+    "family": "FAMILY_PINSIR",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 128,
+    "name": "TAUROS",
+    "type1": "NORMAL",
+    "stats": {
+      "stamina": 150,
+      "attack": 148,
+      "defense": 184
+    },
+    "family": "FAMILY_TAUROS",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 129,
+    "name": "MAGIKARP",
+    "type1": "WATER",
+    "stats": {
+      "stamina": 40,
+      "attack": 42,
+      "defense": 84
+    },
+    "candy": 400,
+    "family": "FAMILY_MAGIKARP",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 130,
+    "name": "GYARADOS",
+    "type1": "WATER",
+    "type2": "FLYING",
+    "stats": {
+      "stamina": 190,
+      "attack": 192,
+      "defense": 196
+    },
+    "family": "FAMILY_MAGIKARP",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 131,
+    "name": "LAPRAS",
+    "type1": "WATER",
+    "type2": "ICE",
+    "stats": {
+      "stamina": 260,
+      "attack": 186,
+      "defense": 190
+    },
+    "family": "FAMILY_LAPRAS",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 132,
+    "name": "DITTO",
+    "type1": "NORMAL",
+    "stats": {
+      "stamina": 96,
+      "attack": 110,
+      "defense": 110
+    },
+    "family": "FAMILY_DITTO",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 133,
+    "name": "EEVEE",
+    "type1": "NORMAL",
+    "stats": {
+      "stamina": 110,
+      "attack": 114,
+      "defense": 128
+    },
+    "candy": 25,
+    "family": "FAMILY_EEVEE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 134,
+    "name": "VAPOREON",
+    "type1": "WATER",
+    "stats": {
+      "stamina": 260,
+      "attack": 186,
+      "defense": 168
+    },
+    "family": "FAMILY_EEVEE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 135,
+    "name": "JOLTEON",
+    "type1": "ELECTRIC",
+    "stats": {
+      "stamina": 130,
+      "attack": 192,
+      "defense": 174
+    },
+    "family": "FAMILY_EEVEE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 136,
+    "name": "FLAREON",
+    "type1": "FIRE",
+    "stats": {
+      "stamina": 130,
+      "attack": 238,
+      "defense": 178
+    },
+    "family": "FAMILY_EEVEE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 137,
+    "name": "PORYGON",
+    "type1": "NORMAL",
+    "stats": {
+      "stamina": 130,
+      "attack": 156,
+      "defense": 158
+    },
+    "family": "FAMILY_PORYGON",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 138,
+    "name": "OMANYTE",
+    "type1": "ROCK",
+    "type2": "WATER",
+    "stats": {
+      "stamina": 70,
+      "attack": 132,
+      "defense": 160
+    },
+    "candy": 50,
+    "family": "FAMILY_OMANYTE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 139,
+    "name": "OMASTAR",
+    "type1": "ROCK",
+    "type2": "WATER",
+    "stats": {
+      "stamina": 140,
+      "attack": 180,
+      "defense": 202
+    },
+    "family": "FAMILY_OMANYTE",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 140,
+    "name": "KABUTO",
+    "type1": "ROCK",
+    "type2": "WATER",
+    "stats": {
+      "stamina": 60,
+      "attack": 148,
+      "defense": 142
+    },
+    "candy": 50,
+    "family": "FAMILY_KABUTO",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 141,
+    "name": "KABUTOPS",
+    "type1": "ROCK",
+    "type2": "WATER",
+    "stats": {
+      "stamina": 120,
+      "attack": 190,
+      "defense": 190
+    },
+    "family": "FAMILY_KABUTO",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 142,
+    "name": "AERODACTYL",
+    "type1": "ROCK",
+    "type2": "FLYING",
+    "stats": {
+      "stamina": 160,
+      "attack": 182,
+      "defense": 162
+    },
+    "family": "FAMILY_AERODACTYL",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 143,
+    "name": "SNORLAX",
+    "type1": "NORMAL",
+    "stats": {
+      "stamina": 320,
+      "attack": 180,
+      "defense": 180
+    },
+    "family": "FAMILY_SNORLAX",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 144,
+    "name": "ARTICUNO",
+    "type1": "ICE",
+    "type2": "FLYING",
+    "stats": {
+      "stamina": 180,
+      "attack": 198,
+      "defense": 242
+    },
+    "family": "FAMILY_ARTICUNO",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 145,
+    "name": "ZAPDOS",
+    "type1": "ELECTRIC",
+    "type2": "FLYING",
+    "stats": {
+      "stamina": 180,
+      "attack": 232,
+      "defense": 194
+    },
+    "family": "FAMILY_ZAPDOS",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 146,
+    "name": "MOLTRES",
+    "type1": "FIRE",
+    "type2": "FLYING",
+    "stats": {
+      "stamina": 180,
+      "attack": 242,
+      "defense": 194
+    },
+    "family": "FAMILY_MOLTRES",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 147,
+    "name": "DRATINI",
+    "type1": "DRAGON",
+    "stats": {
+      "stamina": 82,
+      "attack": 128,
+      "defense": 110
+    },
+    "candy": 25,
+    "family": "FAMILY_DRATINI",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 148,
+    "name": "DRAGONAIR",
+    "type1": "DRAGON",
+    "stats": {
+      "stamina": 122,
+      "attack": 170,
+      "defense": 152
+    },
+    "candy": 100,
+    "family": "FAMILY_DRATINI",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 149,
+    "name": "DRAGONITE",
+    "type1": "DRAGON",
+    "type2": "FLYING",
+    "stats": {
+      "stamina": 182,
+      "attack": 250,
+      "defense": 212
+    },
+    "family": "FAMILY_DRATINI",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 150,
+    "name": "MEWTWO",
+    "type1": "PSYCHIC",
+    "stats": {
+      "stamina": 212,
+      "attack": 284,
+      "defense": 202
+    },
+    "family": "FAMILY_MEWTWO",
+    "moves1": [],
+    "moves2": []
+  },
+  {
+    "id": 151,
+    "name": "MEW",
+    "type1": "PSYCHIC",
+    "stats": {
+      "stamina": 200,
+      "attack": 220,
+      "defense": 220
+    },
+    "family": "FAMILY_MEW",
+    "moves1": [],
+    "moves2": []
+  }
+]
