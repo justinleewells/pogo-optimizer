@@ -19,12 +19,10 @@ brew install node
 brew install git
 brew install pkg-config
 brew install --devel protobuf
-sudo npm install -g bower
-sudo npm install -g gulp
 git clone https://github.com/justinleewells/pogo-optimizer
 cd pogo-optimizer
 npm install
-bower install
+npm run install-libs
 npm start
 ```
 
@@ -36,8 +34,6 @@ Run the commands below for your flavor of choice to get the necessary dependenci
 
 ```
 sudo dnf install nodejs protobuf protobuf-devel npm
-sudo npm install -g bower
-sudo npm install -g gulp
 ```
 
 If your distribution is newer (e.g. F24+), npm is included with nodejs and you won't need both.
@@ -45,7 +41,7 @@ If your distribution is newer (e.g. F24+), npm is included with nodejs and you w
 #### Arch Linux
 
 ```
-sudo pacman -S nodejs protobuf npm bower gulp
+sudo pacman -S nodejs protobuf npm
 ```
 
 #### Deb based (Debian, Ubuntu, Raspbian, et al)
@@ -56,8 +52,6 @@ For Debian stable, you'll need the latest node from sources:
 sudo apt-get install -y curl build-essential libprotobuf-dev git pkg-config
 curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
 sudo apt-get install nodejs
-sudo npm install -g bower
-sudo npm install -g gulp
 
 ```
 
@@ -65,8 +59,6 @@ For Debian testing, you can just get nodejs from the repository:
 
 ```
 sudo apt-get install -y build-essential libprotobuf-dev git pkg-config nodejs
-sudo npm install -g bower
-sudo npm install -g gulp
 ```
 
 #### Common
@@ -77,7 +69,7 @@ After you install the necessary packages, all Linux flavors follow this routine:
 git clone https://github.com/justinleewells/pogo-optimizer
 cd pogo-optimizer
 npm install
-bower install
+npm run install-libs
 npm start
 ```
 
