@@ -127,6 +127,8 @@ This should now run the latest version of Pokemon Go Optimizer! check using http
 
 If this website is not accessible on other devices in your network, then you have some problems with your firewall setup and should disable it for ease of use. You could also setup firewall policies that allow inbound and outbound traffic on port 3000 and 8081.
 
+If these Docker instructions didn't work for you, check out [this](https://www.reddit.com/r/TheSilphRoad/comments/4tk33a/pokemon_go_optimizer_automatically_detect_pokemon/d5nyshi) Reddit post by mgxts for further instruction.
+
 ## Phone Setup
 
 Before proceeding to phone setup, you should have a webserver running on your host computer, and your phone and host computer
