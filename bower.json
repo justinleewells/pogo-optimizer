@@ -3,6 +3,7 @@
   "dependencies": {
     "angular": "^1.5.8",
     "semantic": "^2.2.2",
-    "angular-ui-router": "^0.3.1"
+    "angular-ui-router": "^0.3.1",
+    "StickyTableHeaders": "^0.1.19"
   }
 }

@@ -1,6 +1,11 @@
 angular.module('optimizer.spreadsheet.controller', [])
   .controller('SpreadsheetCtrl', ['$scope', '$rootScope', 'APIService',
     function($scope, $rootScope, APIService) {
+
+      setTimeout(function () {
+        $('table').stickyTableHeaders({fixedOffset: $('#nav-menu')});
+      }, 1000);
+
       $scope.selected = null;
       $scope.favoriteClass = function (pokemon) {
         var ret = '';
