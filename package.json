@@ -1,6 +1,6 @@
 {
   "name": "pogo-optimizer",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "justinleewells",
   "dependencies": {
     "body-parser": "^1.15.2",
