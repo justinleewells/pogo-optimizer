@@ -11,6 +11,7 @@
     "pokemon-go-mitm": "^1.5.0"
   },
   "devDependencies": {
+    "bower": "^1.7.9",
     "gulp": "^3.9.1",
     "gulp-connect": "^4.2.0",
     "gulp-copy": "0.0.2",
@@ -19,6 +20,7 @@
     "rimraf": "^2.5.4"
   },
   "scripts": {
+    "install-libs": "bower install",
     "start": "gulp && node index"
   }
 }

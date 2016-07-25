@@ -2,8 +2,9 @@ FROM node
 
 RUN apt-get update -qq
 RUN apt-get install -yqq libprotobuf-dev
-RUN npm install -g --silent bower
-RUN npm install -g --silent gulp
+
+# Setup PATH to prioritize local npm bin ahead of system PATH.
+ENV PATH node_modules/.bin:$PATH
 
 RUN mkdir /code
 WORKDIR /code
