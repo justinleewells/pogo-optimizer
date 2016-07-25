@@ -10,6 +10,17 @@ While this app is relatively undetectable, if Niantic contacts me and requests t
 ## A Note About Windows
 Currently, it is very difficult to get this program working on Windows. Until a fully javascript implementation of protobuf can be utilized, Windows support will not be provided. For the time being, the recommended solution is Docker. If anyone would like to contribution documentation on how to get this project running flawlessly on Windows with Docker, please contact me.
 
+### WIP Windows Process 
+
+- Install docker-toolbox
+- Launch docker through start.sh in docker-toolbox
+- Find your ip address on the network (with ipconfig e.g, beware, don't use the virtual adapters one), let's name this MYIP
+- Open virtualbox, configure the "default" vm, and in network settings, go to "ports redirection". Add one for MYIP, 3000, 3000, and one for MYIP 8081 8081
+- Launch the app through `docker run -d -p 3000:3000 -p 8081:8081 -it cmeter/pogo-optimizer`
+- Verify in firefox that MYIP:3000 correctly gives the pogo website
+- Follow phone instructions
+- Enjoy
+
 ### Mac OSX
 
 Run these commands:
