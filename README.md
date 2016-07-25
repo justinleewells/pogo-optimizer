@@ -56,12 +56,17 @@ For Debian stable, you'll need the latest node from sources:
 sudo apt-get install -y curl build-essential libprotobuf-dev git pkg-config
 curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
 sudo apt-get install nodejs
+sudo npm install -g bower
+sudo npm install -g gulp
+
 ```
 
 For Debian testing, you can just get nodejs from the repository:
 
 ```
 sudo apt-get install -y build-essential libprotobuf-dev git pkg-config nodejs
+sudo npm install -g bower
+sudo npm install -g gulp
 ```
 
 #### Common
