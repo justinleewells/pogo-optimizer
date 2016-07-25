@@ -16,7 +16,7 @@ Currently, it is very difficult to get this program working on Windows. Until a 
 - Launch docker through start.sh in docker-toolbox
 - Find your ip address on the network (with ipconfig e.g, beware, don't use the virtual adapters one), let's name this MYIP
 - Open virtualbox, configure the "default" vm, and in network settings, go to "ports redirection". Add one for MYIP, 3000, 3000, and one for MYIP 8081 8081
-- Launch the app through `docker run -d -p 3000:3000 -p 8081:8081 -it cmeter/pogo-optimizer`
+- Launch the app through git clone + docker run (not working atm with direct docker-registry download for some reason)
 - Verify in firefox that MYIP:3000 correctly gives the pogo website
 - Follow phone instructions
 - Enjoy
