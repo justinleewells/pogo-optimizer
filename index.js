@@ -111,35 +111,6 @@ app.get('/api/inventory', function (req, res, next) {
   else return res.json(null);
 });
 
-function transfer(arr) {
-  if (arr.length > 0) {
-    var p = arr.pop();
-    setTimeout(function () {
-      console.log('TRANSFER: ' + p.data.cp + ' CP ' + p.data.pokemon_id);
-      server.craftRequest("ReleasePokemon", {
-        pokemon_id: p.data.id
-      });
-      inventory.release(p.data.id);
-      transfer(arr);
-    }, 750);
-  }
-}
-
-app.post('/api/transfer', function (req, res, next) {
-  var pokemon = req.body;
-  transfer(pokemon);
-  res.send();
-});
-
-app.post('/api/rename', function (req, res, next) {
-  var data = req.body;
-  server.craftRequest("NicknamePokemon", {pokemon_id: data.id, nickname: data.name})
-    .then(function (data) {
-      console.log(data);
-    });
-  res.send();
-});
-
 app.post('/api/logout', function (req, res, next) {
   player    = null;
   inventory = null;
