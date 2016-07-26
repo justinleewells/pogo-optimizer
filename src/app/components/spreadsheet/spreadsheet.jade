@@ -1,0 +1,84 @@
+#spreadsheet-view
+    .ui.container
+        .buttons
+            //button.ui.icon.button.red(ng-click="bulkTransfer()")
+                i.fa.fa-trash
+            button.ui.icon.button.black(ng-click="openSettingsModal()")
+                i.icon.settings
+        .ui.search
+            input(class="prompt" placeholder="Search" ng-model="search")
+        select.ui.fluid.dropdown(name='skills', multiple='' ng-model="sort" ng-change="sortChange()")
+            option(value='') Sort
+            option(value='+metadata.id') Number (Asc)
+            option(value='-metadata.id') Number (Dsc)
+            option(value='+data.pokemon_id') Name (Asc)
+            option(value='-data.pokemon_id') Name (Dsc)
+            option(value='+metadata.piv') IV% (Asc)
+            option(value='-metadata.piv') IV% (Dsc)
+            option(value='+metadata.pcp') CP% (Asc)
+            option(value='-metadata.pcp') CP% (Dsc)
+            option(value='+metadata.level') Level (Asc)
+            option(value='-metadata.level') Level (Dsc)
+            option(value='+data.cp') CP (Asc)
+            option(value='-data.cp') CP (Dsc)
+            option(value='+data.stamina_max') HP (Asc)
+            option(value='-data.stamina_max') HP (Dsc)
+        table#spreadsheet.ui.celled.table.inverted(class="{{moveColorClass() + ' ' + ivColorClass()}}")
+            thead
+                tr
+                    //th
+                    th Pokemon
+                    th.move Fast
+                    th.move Special
+                    th.stat Level
+                    th.stat CP
+                    th.stat HP
+                    th.stat.atk ATK
+                    th.stat.def DEF
+                    th.stat.sta STA
+                    th.stat IV%
+                    th.stat CP%
+            tbody
+                tr(ng-repeat="pokemon in $root.inventory.pokemon | orderBy: getSortArray() | filter: getSearchFilter()")
+                    //td.stat
+                        .ui.checkbox
+                            input(type="checkbox" name="test" ng-checked="isSelected(pokemon)" ng-click="toggleSelected(pokemon)")
+                            label
+                    td.selectable(ng-class="favoriteClass(pokemon)" ng-click="openPokemonModal(pokemon)")
+                        h4.ui.image.header
+                            img.ui.mini.rounded.image(src="{{'assets/img/icons/' + pokemon.metadata.id + '.png'}}")
+                            .content.name {{pokemon.data.nickname || pokemon.data.pokemon_id.toLowerCase() || ''}}
+                    td.move(ng-bind="formatMoveName(pokemon.data.move_1)" class="{{pokemon.metadata.move_1.Type}}")
+                    td.move(ng-bind="formatMoveName(pokemon.data.move_2)" class="{{pokemon.metadata.move_2.Type}}")
+                    td.stat(ng-bind="pokemon.metadata.level")
+                    td.stat(ng-bind="pokemon.data.cp")
+                    td.stat(ng-bind="pokemon.data.stamina_max")
+                    td.stat.atk(ng-bind="pokemon.data.individual_attack")
+                    td.stat.def(ng-bind="pokemon.data.individual_defense")
+                    td.stat.sta(ng-bind="pokemon.data.individual_stamina")
+                    td.stat
+                        img(src="assets/img/icons/star.png" ng-show="pokemon.metadata.piv > .99")
+                        span(ng-bind="formatPercentage(pokemon.metadata.piv)" ng-show="pokemon.metadata.piv < .99")
+                    td.stat
+                        img(src="assets/img/icons/star.png" ng-show="pokemon.metadata.piv > .99")
+                        span(ng-bind="formatPercentage(pokemon.metadata.pcp)" ng-show="pokemon.metadata.piv < .99")
+    #pokemon-modal.ui.basic.modal
+        .content
+            img(src="assets/img/sprites/{{selected.metadata.id}}.png")
+            .info
+                label Height:
+                span {{formatMetric(selected.data.height_m)}}
+            .info
+                label Weight:
+                span {{formatMetric(selected.data.weight_kg)}}
+    .ui.modal.settings
+        .header Settings
+        .content
+            .ui.toggle.checkbox
+                input(type="checkbox" name="public" ng-model="$root.player.settings.spreadsheet.enableMoveColors" ng-change="updateSettings()")
+                label
+            label Display Move Colors
+            .ui.toggle.checkbox
+                input(type="checkbox" name="public" ng-model="$root.player.settings.spreadsheet.enableIVColors" ng-change="updateSettings()")
+                label
+            label Display IV Colors

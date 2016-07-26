@@ -1,0 +1,9 @@
+#nav-menu.ui.menu.inverted.fixed(ng-show="display()")
+    .ui.container
+        .header.item Optimizer
+        //.item(ui-sref="dashboard") Dashboard
+        .item(ui-sref="spreadsheet") Spreadsheet
+        .right.menu(ng-click="logout()")
+            .item(ng-bind="$root.player.data.username")
+            .item.logout
+                i.icon.unlock.alternate

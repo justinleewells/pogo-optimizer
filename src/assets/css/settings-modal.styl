@@ -1,0 +1,17 @@
+.ui.modal.settings
+  width 300px;
+  margin 0 0 0 -150px;
+  padding-bottom 20px;
+  .checkbox
+    float left;
+  .checkbox:not(:last-child)
+    clear both;
+    display block;
+    margin-bottom: 20px;
+  label
+    display block;
+    float right;
+  .ui.toggle.checkbox input:checked ~ .box:before, .ui.toggle.checkbox input:checked ~ label:before
+    background-color #333 !important;
+  .ui.toggle.checkbox .box:before, .ui.toggle.checkbox label:before
+    background-color rgba(0, 0, 0, 0.05) !important;

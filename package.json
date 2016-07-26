@@ -1,11 +1,26 @@
 {
   "name": "pogo-optimizer",
-  "version": "0.1.0",
+  "version": "1.2.0",
   "author": "justinleewells",
   "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.7.1",
     "express": "^4.14.0",
     "jsonfile": "^2.3.1",
     "lodash": "^4.13.1",
-    "pokemon-go-mitm": "git+https://github.com/rastapasta/pokemon-go-mitm-node.git#c3a3419"
+    "pokemon-go-mitm": "^1.5.0"
+  },
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^4.2.0",
+    "gulp-copy": "0.0.2",
+    "gulp-jade": "^1.1.0",
+    "gulp-stylus": "^2.5.0",
+    "rimraf": "^2.5.4"
+  },
+  "scripts": {
+    "install-libs": "bower install",
+    "start": "gulp && node index"
   }
 }

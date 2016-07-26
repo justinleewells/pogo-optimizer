@@ -1,0 +1,95 @@
+#spreadsheet-view
+  margin-top 54px;
+  .buttons
+    float right;
+    .button:last-child
+      margin-right 0;
+  .search
+    margin-bottom: 8px;
+    width: 50%;
+    input
+      width: 100%;
+      border-radius 0;
+  #spreadsheet
+    clear both;
+    margin-bottom 16px;
+    border-radius 0 !important;
+    border none !important;
+    .name
+      text-transform capitalize;
+      color white;
+    .stat
+      text-align center;
+    .selectable
+      cursor pointer;
+    .move
+      text-transform capitalize;
+    .favorite
+      background-color #FFB61E;
+    th
+      background-color #2B2B2B;
+    td
+      cursor pointer;
+      transition: none;
+    tbody
+      .checkbox
+        width 10px;
+        position relative;
+        top 2px;
+      tr:hover
+        td
+          background-color rgba(1, 1, 1, 0.3) !important;
+    &.enable-iv-colors
+      th
+        &.stat.atk
+          background-color #8F1D21;
+        &.stat.def
+          background-color #003171;
+        &.stat.sta
+          background-color #006442;
+      td
+        &.stat.atk
+          background-color #DC3023;
+        &.stat.def
+          background-color #1F4788;
+        &.stat.sta
+          background-color #26A65B;
+    &.enable-move-colors
+      th.move
+        background-color #444;
+      .NORMAL
+        background-color NORMAL;
+      .FIGHTING
+        background-color FIGHTING;
+      .FLYING
+        background-color FLYING;
+      .POISON
+        background-color POISON;
+      .GROUND
+        background-color GROUND;
+      .ROCK
+        background-color ROCK;
+      .BUG
+        background-color BUG;
+      .GHOST
+        background-color GHOST;
+      .STEEL
+        background-color STEEL;
+      .FIRE
+        background-color FIRE;
+      .WATER
+        background-color WATER;
+      .GRASS
+        background-color GRASS;
+      .ELECTRIC
+        background-color ELECTRIC;
+      .PSYCHIC
+        background-color PSYCHIC;
+      .ICE
+        background-color ICE;
+      .DRAGON
+        background-color DRAGON;
+      .DARK
+        background-color DARK;
+      .FAIRY
+        background-color FAIRY;
