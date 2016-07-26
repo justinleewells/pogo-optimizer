@@ -50,7 +50,7 @@
                             label
                     td.selectable(ng-class="favoriteClass(pokemon)" ng-click="openPokemonModal(pokemon)")
                         h4.ui.image.header
-                            img.ui.mini.rounded.image(src="{{'assets/img/icons/' + pokemon.metadata.id + '.png'}}")
+                            img.ui.mini.rounded.image(ng-src="{{'assets/img/icons/' + pokemon.metadata.id + '.png'}}")
                             .content.name {{pokemon.data.nickname || pokemon.data.pokemon_id.toLowerCase() || ''}}
                     td.move(class="{{pokemon.metadata.move_1.Type}}") {{formatMoveName(pokemon.data.move_1)}} [{{getMoveDPS(pokemon.metadata.move_1)}}]
                     td.stat(ng-bind="pokemon.metadata.move_1.EnergyDelta")
@@ -70,7 +70,7 @@
                         span(ng-bind="formatPercentage(pokemon.metadata.pcp)" ng-show="pokemon.metadata.piv < .99")
     #pokemon-modal.ui.basic.modal
         .content
-            img(src="assets/img/sprites/{{selected.metadata.id}}.png")
+            img(ng-src="assets/img/sprites/{{selected.metadata.id}}.png")
             .info
                 label Height:
                 span {{formatMetric(selected.data.height_m)}}
