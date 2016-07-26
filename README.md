@@ -3,14 +3,14 @@ In Pokemon GO, each Pokemon has hidden values that determine its maximum attaina
 
 While this app is relatively undetectable, if Niantic contacts me and requests that I discontinue development, I will comply. Until then, please be aware that you are using this at your own risk.
 
-![example](http://i.imgur.com/aoHumcX.png)
+![example](https://i.imgur.com/aoHumcX.png)
 
 ## Host Setup
 
 ## A Note About Windows
 Currently, it is very difficult to get this program working on Windows. Until a fully javascript implementation of protobuf can be utilized, Windows support will not be provided. For the time being, the recommended solution is Docker. If anyone would like to contribution documentation on how to get this project running flawlessly on Windows with Docker, please contact me.
 
-### Mac OSX
+### OS X
 
 Run these commands:
 
@@ -130,11 +130,15 @@ Check your host computer's network settings for your IP address.
 If your host computer's IP is 10.0.1.3, you'll visit http://10.0.1.3:3000 on your phone to view the pogo-optimizer application.
 Verify you can connect before continuing.
 
-Next, visit http://10.0.1.3:3000/ca.pem and install the certificate.
+Next, visit http://10.0.1.3:3000/ca.pem and install the certificate. If your phone doesn’t understand `.pem` certificates (as is the case on Android devices), use http://10.0.1.3:3000/ca.crt instead.
+
+There is currently a problem with some Android phones not accepting `ca.pem` or `ca.crt` certificates — Sony Z5 series on 6.0.1 has this problem.
+
+The only way I have found to solve this problem is to install OpenSSL on your PC/Mac. Download the `ca.crt` to the phone and then install it at Root acccess level. For this task I used [Root Certificate Manager](https://play.google.com/store/apps/details?id=net.jolivier.cert.Importer&hl=en_GB). This is quite easy: just launch the tool, it will ask for Super User privileges, accept them, and then use the browser to find your new `ca.crt` file.
 
 Then, add 10.0.1.3 port 8081 as a proxy for your WiFi connection on your phone.
 
-Lastly, after accepting the certificate and enabling the proxy, open Pokemon GO on your phone.
+Lastly, after accepting the certificate and enabling the proxy, open Pokémon GO on your phone.
 After you can see your character walking around, go to http://localhost:3000 on your host machine. Enjoy!
 
 ### iOS
@@ -149,9 +153,6 @@ To set up a WiFi proxy on your iOS 9.0.0+ phone, follow these steps:
 
 ### Android
 
-If your Android phone doesn't understand ".pem" certificates you will have to convert it to a ".crt".
-Convert it with `openssl x509 -inform PEM -outform DER -in ca.pem -out ca.crt` on a system with openssl available.
-
 To set up a WiFi proxy on your Android 6.0.1+ phone, follow these steps:
 
 * Go to Settings > WiFi.
@@ -161,11 +162,6 @@ To set up a WiFi proxy on your Android 6.0.1+ phone, follow these steps:
 * Under "Proxy," change the setting from None to Manual.
 * Enter e.g. 10.0.1.3 as the proxy name.
 * Enter 8081 as the port
-
-There is currently a problem with some Android phones not accepting ca.pem or ca.crt certificated (Sony Z5 series on 6.0.1 has this problem).
-
-The only way I have found to solve this problem is to install OpenSSL on your PC/Mac and use the above command to create a ca.crt.
-Once created this needs transfering to the phone manually and then installed at Root acccess level. For this task I used [Root Certificate Manager](https://play.google.com/store/apps/details?id=net.jolivier.cert.Importer&hl=en_GB), this is quite easy, just launch the tool, it will ask for Super User prividges, accept them then use the browser to find your new ca.crt file.
 
 ## TODO
 
