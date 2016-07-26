@@ -9,8 +9,10 @@
             input(class="prompt" placeholder="Search" ng-model="search")
         select.ui.fluid.dropdown(name='skills', multiple='' ng-model="sort" ng-change="sortChange()")
             option(value='') Sort
-            option(value='+metadata.id') Species (Asc)
-            option(value='-metadata.id') Species (Dsc)
+            option(value='+metadata.id') Number (Asc)
+            option(value='-metadata.id') Number (Dsc)
+            option(value='+data.pokemon_id') Name (Asc)
+            option(value='-data.pokemon_id') Name (Dsc)
             option(value='+metadata.piv') IV% (Asc)
             option(value='-metadata.piv') IV% (Dsc)
             option(value='+metadata.pcp') CP% (Asc)
