@@ -3,7 +3,9 @@
         .header.item Optimizer
         //.item(ui-sref="dashboard") Dashboard
         .item(ui-sref="spreadsheet") Spreadsheet
-        .right.menu(ng-click="logout()")
-            .item(ng-bind="$root.player.data.username")
-            .item.logout
+        .right.menu
+            .header.item(ng-bind="$root.player.data.username")
+            .header.item mon : {{$root.inventory.pokemon.length}}/{{$root.player.data.max_pokemon_storage}}
+            .item(ng-click="logout()")
                 i.icon.unlock.alternate
+                span Logout

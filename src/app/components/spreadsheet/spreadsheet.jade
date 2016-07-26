@@ -23,13 +23,17 @@
             option(value='-data.cp') CP (Dsc)
             option(value='+data.stamina_max') HP (Asc)
             option(value='-data.stamina_max') HP (Dsc)
+            option(value='+data.creation_time_ms') Recent (Asc)
+            option(value='-data.creation_time_ms') Recent (Dsc)
         table#spreadsheet.ui.celled.table.inverted(class="{{moveColorClass() + ' ' + ivColorClass()}}")
             thead
                 tr
                     //th
                     th Pokemon
-                    th.move Fast
-                    th.move Special
+                    th.move Fast [DPS]
+                    th.stat Energy
+                    th.move Special [DPS]
+                    th.stat Energy
                     th.stat Level
                     th.stat CP
                     th.stat HP
@@ -46,10 +50,12 @@
                             label
                     td.selectable(ng-class="favoriteClass(pokemon)" ng-click="openPokemonModal(pokemon)")
                         h4.ui.image.header
-                            img.ui.mini.rounded.image(src="{{'assets/img/icons/' + pokemon.metadata.id + '.png'}}")
+                            img.ui.mini.rounded.image(ng-src="{{'assets/img/icons/' + pokemon.metadata.id + '.png'}}")
                             .content.name {{pokemon.data.nickname || pokemon.data.pokemon_id.toLowerCase() || ''}}
-                    td.move(ng-bind="formatMoveName(pokemon.data.move_1)" class="{{pokemon.metadata.move_1.Type}}")
-                    td.move(ng-bind="formatMoveName(pokemon.data.move_2)" class="{{pokemon.metadata.move_2.Type}}")
+                    td.move(class="{{pokemon.metadata.move_1.Type}}") {{formatMoveName(pokemon.data.move_1)}} [{{getMoveDPS(pokemon.metadata.move_1)}}]
+                    td.stat(ng-bind="pokemon.metadata.move_1.EnergyDelta")
+                    td.move(class="{{pokemon.metadata.move_2.Type}}") {{formatMoveName(pokemon.data.move_2)}} [{{getMoveDPS(pokemon.metadata.move_2)}}]
+                    td.stat(ng-bind="pokemon.metadata.move_2.EnergyDelta")
                     td.stat(ng-bind="pokemon.metadata.level")
                     td.stat(ng-bind="pokemon.data.cp")
                     td.stat(ng-bind="pokemon.data.stamina_max")
@@ -64,7 +70,7 @@
                         span(ng-bind="formatPercentage(pokemon.metadata.pcp)" ng-show="pokemon.metadata.piv < .99")
     #pokemon-modal.ui.basic.modal
         .content
-            img(src="assets/img/sprites/{{selected.metadata.id}}.png")
+            img(ng-src="assets/img/sprites/{{selected.metadata.id}}.png")
             .info
                 label Height:
                 span {{formatMetric(selected.data.height_m)}}
