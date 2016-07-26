@@ -31,6 +31,14 @@ angular.module('optimizer.spreadsheet.controller', [])
         }
         return ret;
       };
+      $scope.getMoveDPS = function (move) {
+        var ret = 0;
+        if (move.Power && move.DurationMs) {
+          var dps = parseInt(move.Power)/parseInt(move.DurationMs)*1000;
+          ret = dps.toFixed(2);
+        }
+        return ret;
+      };
       $scope.openPokemonModal = function (pokemon) {
         $scope.selected = pokemon;
         $('#pokemon-modal').modal('show');

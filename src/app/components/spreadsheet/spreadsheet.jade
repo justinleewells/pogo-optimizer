@@ -30,8 +30,10 @@
                 tr
                     //th
                     th Pokemon
-                    th.move Fast
-                    th.move Special
+                    th.move Fast [DPS]
+                    th.stat Energy
+                    th.move Special [DPS]
+                    th.stat Energy
                     th.stat Level
                     th.stat CP
                     th.stat HP
@@ -50,8 +52,10 @@
                         h4.ui.image.header
                             img.ui.mini.rounded.image(src="{{'assets/img/icons/' + pokemon.metadata.id + '.png'}}")
                             .content.name {{pokemon.data.nickname || pokemon.data.pokemon_id.toLowerCase() || ''}}
-                    td.move(ng-bind="formatMoveName(pokemon.data.move_1)" class="{{pokemon.metadata.move_1.Type}}")
-                    td.move(ng-bind="formatMoveName(pokemon.data.move_2)" class="{{pokemon.metadata.move_2.Type}}")
+                    td.move(class="{{pokemon.metadata.move_1.Type}}") {{formatMoveName(pokemon.data.move_1)}} [{{getMoveDPS(pokemon.metadata.move_1)}}]
+                    td.stat(ng-bind="pokemon.metadata.move_1.EnergyDelta")
+                    td.move(class="{{pokemon.metadata.move_2.Type}}") {{formatMoveName(pokemon.data.move_2)}} [{{getMoveDPS(pokemon.metadata.move_2)}}]
+                    td.stat(ng-bind="pokemon.metadata.move_2.EnergyDelta")
                     td.stat(ng-bind="pokemon.metadata.level")
                     td.stat(ng-bind="pokemon.data.cp")
                     td.stat(ng-bind="pokemon.data.stamina_max")
