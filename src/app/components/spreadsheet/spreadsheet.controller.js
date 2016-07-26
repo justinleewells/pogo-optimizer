@@ -1,6 +1,15 @@
 angular.module('optimizer.spreadsheet.controller', [])
-  .controller('SpreadsheetCtrl', ['$scope', '$rootScope', 'APIService',
-    function($scope, $rootScope, APIService) {
+  .controller('SpreadsheetCtrl', ['$scope', '$rootScope', '$timeout', 'APIService',
+    function($scope, $rootScope, $timeout, APIService) {
+
+      /**
+       * Initialization
+       */
+
+      $timeout(function () {
+        $('table').stickyTableHeaders({fixedOffset: $('#nav-menu')});
+      }, 10);
+
       $scope.selected = null;
       $scope.favoriteClass = function (pokemon) {
         var ret = '';
@@ -55,25 +64,6 @@ angular.module('optimizer.spreadsheet.controller', [])
       };
       $scope.isSelected = function (pokemon) {
         return selectedArr.indexOf(pokemon) !== -1;
-      };
-      $scope.bulkTransfer = function () {
-        APIService.transfer(selectedArr).then(
-          function () {
-            selectedArr = [];
-            console.log('succeeded');
-          },
-          function (err) {
-            console.log(err);
-          });
-      };
-      $scope.setNickname = function (pokemon, name) {
-        APIService.nickname(pokemon, name).then(
-          function (resp) {
-            console.log(resp)
-          },
-          function (err) {
-            console.log(err);
-          });
       };
 
       /**

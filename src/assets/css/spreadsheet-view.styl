@@ -1,17 +1,15 @@
 #spreadsheet-view
   margin-top 54px;
-  .ui.label
-    border-radius 0;
   .buttons
     float right;
+    .button:last-child
+      margin-right 0;
   .search
     margin-bottom: 8px;
     width: 50%;
     input
       width: 100%;
       border-radius 0;
-  .dropdown
-    border-radius 0;
   #spreadsheet
     clear both;
     margin-bottom 16px;
@@ -28,6 +26,8 @@
       text-transform capitalize;
     .favorite
       background-color #FFB61E;
+    th
+      background-color #2B2B2B;
     td
       cursor pointer;
       transition: none;

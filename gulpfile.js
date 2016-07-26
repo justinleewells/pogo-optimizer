@@ -49,7 +49,8 @@ gulp.task('lib-js', ['clean'], function copyJSLibs() {
     './src/assets/lib/angular/angular.js',
     './src/assets/lib/jquery/dist/jquery.js',
     './src/assets/lib/semantic/dist/semantic.js',
-    './src/assets/lib/angular-ui-router/release/angular-ui-router.js'
+    './src/assets/lib/angular-ui-router/release/angular-ui-router.js',
+    './src/assets/lib/StickyTableHeaders/js/jquery.stickytableheaders.js'
   ])
     .pipe(copy('./public/assets/lib', {prefix: 100}));
 });
