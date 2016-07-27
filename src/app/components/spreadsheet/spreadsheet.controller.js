@@ -17,6 +17,10 @@ angular.module('optimizer.spreadsheet.controller', [])
       $scope.openSettingsModal = function () {
         $('#spreadsheet-settings-modal').modal('show');
       };
+
+      $scope.closeSettingsModal = function () {
+        $('#spreadsheet-settings-modal').modal('hide');
+      };
       
       $scope.updateSettings = function () {
         APIService.settings($rootScope.player.settings).then(
@@ -25,6 +29,7 @@ angular.module('optimizer.spreadsheet.controller', [])
             console.log(err);
           });
       };
+
       
       /**
        * Pokemon Selection Modal
