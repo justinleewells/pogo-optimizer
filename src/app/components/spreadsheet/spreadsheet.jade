@@ -1,8 +1,6 @@
 #spreadsheet-view
     .ui.container
         .buttons
-            //button.ui.icon.button.red(ng-click="bulkTransfer()")
-                i.fa.fa-trash
             button.ui.icon.button.black(ng-click="openSettingsModal()")
                 i.icon.settings
         .ui.search
@@ -44,10 +42,6 @@
                     th.stat CP%
             tbody
                 tr(ng-repeat="pokemon in $root.inventory.pokemon | orderBy: getSortArray() | filter: getSearchFilter()")
-                    //td.stat
-                        .ui.checkbox
-                            input(type="checkbox" name="test" ng-checked="isSelected(pokemon)" ng-click="toggleSelected(pokemon)")
-                            label
                     td.selectable(ng-class="favoriteClass(pokemon)" ng-click="openPokemonModal(pokemon)")
                         h4.ui.image.header
                             img.ui.mini.rounded.image(ng-src="{{'assets/img/icons/' + pokemon.metadata.id + '.png'}}")
