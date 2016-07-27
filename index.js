@@ -87,6 +87,20 @@ new PokemonGoMITM({port: 8081})
 app.use(bp.json());
 app.use(cors());
 
+function renamePokemon(mon) {
+  // don't rename pokemon that have already been renamed
+  if (mon.nickname[2] === '%') return null;
+
+  // only renames pokemon with no nickname
+  // feel free to comment this out so you can override all your Pokemon's nicknames
+  if (mon.nickname.toUpperCase() !== mon.pokemon_id) return null;
+
+  const percentage = Math.floor((mon.individual_attack + mon.individual_defense + mon.individual_stamina) / 45 * 100)
+  const stats = `${mon.individual_attack}/${mon.individual_defense}/${mon.individual_stamina}`
+
+  return `${percentage}% ${stats}`
+}
+
 app.use(express.static('public'));
 app.use("/ca.pem", express.static('.http-mitm-proxy/certs/ca.pem'));
 app.use("/ca.crt", express.static('.http-mitm-proxy/certs/ca.crt'));
@@ -125,6 +139,23 @@ app.listen(3000, function () {
   require('dns').lookup(require('os').hostname(), function (err, add, fam) {
     console.log('Accept the cert at ' + add + ':3000/ca.pem if you haven\'t already done so');
   });
+});
+
+app.get('/rename', (req, res) => {
+  jsf.readFileSync('./data/inventory.json')
+    .reduce((p, pokemon) => {
+      const pokemon_id = pokemon.id;
+      const nickname = renamePokemon(pokemon);
+      const data = { pokemon_id, nickname };
+
+      if (!nickname) return p;
+
+      return p
+        .then(() => server.craftRequest('NicknamePokemon', data));
+    }, Promise.resolve())
+    .then(() => {
+      res.send('OK');
+    });
 });
 
 /**
