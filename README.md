@@ -76,18 +76,10 @@ npm start
 This should launch the webserver on localhost:3000.
 
 ### Setup using Docker
-To install and setup everything using Docker, build the image in the root directory of this repository with:
+A prebuilt Docker image has been created for this repo. You can pull and start it by running:
 
 ```bash
-$ git clone https://github.com/justinleewells/pogo-optimizer.git
-$ cd pogo-optimizer
-$ docker build -t pogo .
-```
-
-Then create a container with the same ports as described above with this command:
-
-```bash
-$ docker run -d -p 3000:3000 -p 8081:8081 -it pogo
+$ docker run -d -p 3000:3000 -p 8081:8081 -it justinleewells/pogo-optimizer
 ```
 
 All ports are not accessible and usable as described above.
@@ -101,18 +93,8 @@ First install [Docker](https://docs.docker.com/docker-for-windows/)
 If you do not have the Hyper-V installed from Microsoft, after running Docker for the first time, it will give you a warning.
 Accept this warning to install and restart your PC, if this does not work, there are manual instructions on how to complete this installation.
 
-Next launch Command Line and use the docker commands above using the lastet version by downloading the ZIP file (if you have Git installed you can grab the latest version using the git command as well).
-
 ```
-git clone https://github.com/justinleewells/pogo-optimizer.git
-cd pogo-optimizer
-docker build -t pogo .
-```
-
-If you do not have git installed you can use the following command to automatically get the lastest version of PoGo Optimizer (I have not tested this).
-
-```
-docker run -d -p 3000:3000 -p 8081:8081 -it cmeter/pogo-optimizer
+docker run -d -p 3000:3000 -p 8081:8081 -it justinleewells/pogo-optimizer
 ```
 
 This should now run the latest version of Pokemon Go Optimizer! check using http://localhost:3000/
