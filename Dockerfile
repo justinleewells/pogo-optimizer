@@ -17,7 +17,4 @@ RUN GIT_DIR=/tmp bower install --allow-root --silent
 EXPOSE 8081
 EXPOSE 3000
 
-CMD npm start& \
-sleep 10; \
-openssl x509 -inform PEM -outform DM -in /code/.http-mitm-proxy/certs/ca.pem -out /code/.http-mitm-proxy/certs/ca.crt; \
-sleep infinity
+CMD npm start

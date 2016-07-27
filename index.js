@@ -8,12 +8,19 @@ var bp      = require('body-parser');
 var cors    = require('cors');
 var express = require('express');
 var app     = express();
+var forge   = require('node-forge');
+
 
 var player    = null;
 var inventory = null;
 var releasing = null;
 
 if (!fs.existsSync(__dirname + '/data/save/')) fs.mkdirSync(__dirname + '/data/save/');
+
+if (!fs.existsSync(__dirname + '/.htt-mitm-proxy/certs/ca.crt')) {
+  var cert = forge.pki.certificateFromPem(fs.readFile('.http-mitm-proxy/certs/ca.pem'));
+  fs.writeFile('.http-mitm-proxy/certs/ca.crt', forge.asn1.toDer(forge.pki.certificateToAsn1(cert)).getBytes(), {encoding: 'binary'});
+}
 
 /**
  * Mitm

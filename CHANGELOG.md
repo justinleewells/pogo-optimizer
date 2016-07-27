@@ -2,6 +2,7 @@
 
 ### v1.3.0
 
+* .crt file is now generated automatically upon starting the program
 * Fixed bug that caused accounts to become irreparably merged
 * Fixed transferred Pokemon bug
 * Implemented toggleable columns
