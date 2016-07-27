@@ -97,7 +97,7 @@ angular.module('optimizer.spreadsheet.controller', [])
         return Math.round(float * 100);
       };
       
-      $scope.formatMetric = function (float) {
+      $scope.formatDecimal = function (float) {
         return Math.round(float * 100) / 100;
       };
       

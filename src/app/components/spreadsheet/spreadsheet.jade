@@ -21,6 +21,12 @@
             option(value='-data.cp') CP (Dsc)
             option(value='+data.stamina_max') HP (Asc)
             option(value='-data.stamina_max') HP (Dsc)
+            option(value='+metadata.atk') ATK (Asc)
+            option(value='-metadata.atk') ATK (Dsc)
+            option(value='+metadata.def') DEF (Asc)
+            option(value='-metadata.def') DEF (Dsc)
+            option(value='+metadata.dps') DPS (Asc)
+            option(value='-metadata.dps') DPS (Dsc)
             option(value='+data.creation_time_ms') Recent (Asc)
             option(value='-data.creation_time_ms') Recent (Dsc)
         table#spreadsheet.ui.celled.table.inverted(class="{{moveColorClass() + ' ' + ivColorClass()}}")
@@ -38,9 +44,12 @@
                     th.stat(ng-show="isVisible('level')") Level
                     th.stat(ng-show="isVisible('cp')") CP
                     th.stat(ng-show="isVisible('hp')") HP
-                    th.stat.atk(ng-show="isVisible('atk')") ATK
-                    th.stat.def(ng-show="isVisible('def')") DEF
-                    th.stat.sta(ng-show="isVisible('sta')") STA
+                    th.stat(ng-show="isVisible('atk')") ATK
+                    th.stat(ng-show="isVisible('def')") DEF
+                    th.stat.atk(ng-show="isVisible('iva')") IVA
+                    th.stat.def(ng-show="isVisible('ivd')") IVD
+                    th.stat.sta(ng-show="isVisible('ivs')") IVS
+                    th.stat(ng-show="isVisible('dps')") DPS
                     th.stat(ng-show="isVisible('piv')") IV%
                     th.stat(ng-show="isVisible('pcp')") CP%
             tbody
@@ -60,9 +69,12 @@
                     td.stat(ng-bind="pokemon.metadata.level" ng-show="isVisible('level')")
                     td.stat(ng-bind="pokemon.data.cp" ng-show="isVisible('cp')")
                     td.stat(ng-bind="pokemon.data.stamina_max" ng-show="isVisible('hp')")
-                    td.stat.atk(ng-bind="pokemon.data.individual_attack" ng-show="isVisible('atk')")
-                    td.stat.def(ng-bind="pokemon.data.individual_defense" ng-show="isVisible('def')")
-                    td.stat.sta(ng-bind="pokemon.data.individual_stamina" ng-show="isVisible('sta')")
+                    td.stat(ng-show="isVisible('atk')") {{formatDecimal(pokemon.metadata.atk)}}
+                    td.stat(ng-show="isVisible('def')") {{formatDecimal(pokemon.metadata.def)}}
+                    td.stat.atk(ng-bind="pokemon.data.individual_attack" ng-show="isVisible('iva')")
+                    td.stat.def(ng-bind="pokemon.data.individual_defense" ng-show="isVisible('ivd')")
+                    td.stat.sta(ng-bind="pokemon.data.individual_stamina" ng-show="isVisible('ivs')")
+                    td.stat(ng-show="isVisible('dps')") {{formatDecimal(pokemon.metadata.dps)}}
                     td.stat(ng-show="isVisible('piv')")
                         img(src="assets/img/icons/star.png" ng-show="pokemon.metadata.piv > .99")
                         span(ng-bind="formatPercentage(pokemon.metadata.piv)" ng-show="pokemon.metadata.piv < .99")
@@ -74,10 +86,10 @@
             img(ng-src="assets/img/sprites/{{selected.metadata.id}}.png")
             .info
                 label Height:
-                span {{formatMetric(selected.data.height_m)}}
+                span {{formatDecimal(selected.data.height_m)}}
             .info
                 label Weight:
-                span {{formatMetric(selected.data.weight_kg)}}
+                span {{formatDecimal(selected.data.weight_kg)}}
     #spreadsheet-settings-modal.ui.modal.settings
         .header Settings
         .content
@@ -130,17 +142,32 @@
                 .ui.toggle.checkbox
                     input(type="checkbox" name="public" ng-model="$root.player.settings.spreadsheet.display.atk" ng-change="updateSettings()")
                     label
-                label Display ATK
+                label Display Attack
             .checkbox-container
                 .ui.toggle.checkbox
                     input(type="checkbox" name="public" ng-model="$root.player.settings.spreadsheet.display.def" ng-change="updateSettings()")
                     label
-                label Display DEF
+                label Display Defense
             .checkbox-container
                 .ui.toggle.checkbox
-                    input(type="checkbox" name="public" ng-model="$root.player.settings.spreadsheet.display.sta" ng-change="updateSettings()")
+                    input(type="checkbox" name="public" ng-model="$root.player.settings.spreadsheet.display.iva" ng-change="updateSettings()")
                     label
-                label Display STA
+                label Display Attack IV
+            .checkbox-container
+                .ui.toggle.checkbox
+                    input(type="checkbox" name="public" ng-model="$root.player.settings.spreadsheet.display.ivd" ng-change="updateSettings()")
+                    label
+                label Display Defense IV
+            .checkbox-container
+                .ui.toggle.checkbox
+                    input(type="checkbox" name="public" ng-model="$root.player.settings.spreadsheet.display.ivs" ng-change="updateSettings()")
+                    label
+                label Display Stamina IV
+            .checkbox-container
+                .ui.toggle.checkbox
+                    input(type="checkbox" name="public" ng-model="$root.player.settings.spreadsheet.display.dps" ng-change="updateSettings()")
+                    label
+                label Display DPS
             .checkbox-container
                 .ui.toggle.checkbox
                     input(type="checkbox" name="public" ng-model="$root.player.settings.spreadsheet.display.piv" ng-change="updateSettings()")
