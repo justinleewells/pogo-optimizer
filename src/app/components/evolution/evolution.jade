@@ -1,1 +1,20 @@
 #evolution-view
+    .ui.container
+        table.ui.celled.table.inverted
+            thead
+                tr
+                    th Name
+                    th.center Cost
+                    th.center Count
+                    th.center Candy
+                    th.center Evos
+            tbody
+                tr(ng-repeat="candy in $root.inventory.candy | orderBy: '-candy'" ng-show="candy.cost")
+                    td
+                        h4.ui.image.header
+                            img.ui.mini.rounded.image(ng-src="{{'assets/img/icons/' + candy.id + '.png'}}")
+                            .content.name {{formatName(candy.family_id)}}
+                    td.center(ng-bind="candy.cost")
+                    td.center {{getPokemonCount(candy.family_id)}}
+                    td.center(ng-bind="candy.candy")
+                    td.center {{getEvolutions(candy)}}
