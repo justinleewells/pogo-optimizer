@@ -22,7 +22,6 @@ brew install --devel protobuf
 git clone https://github.com/justinleewells/pogo-optimizer
 cd pogo-optimizer
 npm install
-npm run install-libs
 npm start
 ```
 
