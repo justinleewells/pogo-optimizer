@@ -50,7 +50,8 @@ gulp.task('lib-js', ['clean'], function copyJSLibs() {
     './src/assets/lib/jquery/dist/jquery.js',
     './src/assets/lib/semantic/dist/semantic.js',
     './src/assets/lib/angular-ui-router/release/angular-ui-router.js',
-    './src/assets/lib/StickyTableHeaders/js/jquery.stickytableheaders.js'
+    './src/assets/lib/StickyTableHeaders/js/jquery.stickytableheaders.js',
+    './src/assets/lib/lodash/dist/lodash.min.js'
   ])
     .pipe(copy('./public/assets/lib', {prefix: 100}));
 });
