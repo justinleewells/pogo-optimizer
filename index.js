@@ -132,7 +132,7 @@ app.listen(3000, function () {
  */
 
 setTimeout(function() {
-  if (!fs.existsSync(__dirname + '/.htt-mitm-proxy/certs/ca.crt')) {
+  if (!fs.existsSync(__dirname + '/.http-mitm-proxy/certs/ca.crt')) {
     var cert = forge.pki.certificateFromPem(fs.readFileSync('.http-mitm-proxy/certs/ca.pem'));
     fs.writeFile('.http-mitm-proxy/certs/ca.crt', forge.asn1.toDer(forge.pki.certificateToAsn1(cert)).getBytes(), {encoding: 'binary'});
   }
