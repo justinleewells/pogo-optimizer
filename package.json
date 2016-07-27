@@ -22,6 +22,7 @@
   },
   "scripts": {
     "install-libs": "bower install",
-    "start": "gulp && node index"
+    "start": "gulp && node index",
+    "postinstall": "npm run install-libs"
   }
 }
