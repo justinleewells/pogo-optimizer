@@ -4,6 +4,7 @@
     "angular": "^1.5.8",
     "semantic": "^2.2.2",
     "angular-ui-router": "^0.3.1",
-    "StickyTableHeaders": "^0.1.19"
+    "StickyTableHeaders": "^0.1.19",
+    "lodash": "^4.14.0"
   }
 }
