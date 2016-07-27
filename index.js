@@ -10,7 +10,6 @@ var express = require('express');
 var app     = express();
 var forge   = require('node-forge');
 
-
 var player    = null;
 var inventory = null;
 var releasing = null;
@@ -31,7 +30,7 @@ var PokemonGoMITM = require('pokemon-go-mitm');
 var Player    = require('./lib/player');
 var Inventory = require('./lib/inventory');
 
-var server = new PokemonGoMITM({port: 8081})
+new PokemonGoMITM({port: 8081})
   .setResponseHandler('GetPlayer', function (data) {
     if (data.success && player === null) {
       player = new Player(data.player_data.username);
