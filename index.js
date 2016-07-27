@@ -16,11 +16,6 @@ var releasing = null;
 
 if (!fs.existsSync(__dirname + '/data/save/')) fs.mkdirSync(__dirname + '/data/save/');
 
-if (!fs.existsSync(__dirname + '/.htt-mitm-proxy/certs/ca.crt')) {
-  var cert = forge.pki.certificateFromPem(fs.readFileSync('.http-mitm-proxy/certs/ca.pem'));
-  fs.writeFile('.http-mitm-proxy/certs/ca.crt', forge.asn1.toDer(forge.pki.certificateToAsn1(cert)).getBytes(), {encoding: 'binary'});
-}
-
 /**
  * Mitm
  */
@@ -131,3 +126,14 @@ app.listen(3000, function () {
     console.log('Accept the cert at ' + add + ':3000/ca.pem if you haven\'t already done so');
   });
 });
+
+/**
+ * Certificate
+ */
+
+setTimeout(function() {
+  if (!fs.existsSync(__dirname + '/.htt-mitm-proxy/certs/ca.crt')) {
+    var cert = forge.pki.certificateFromPem(fs.readFileSync('.http-mitm-proxy/certs/ca.pem'));
+    fs.writeFile('.http-mitm-proxy/certs/ca.crt', forge.asn1.toDer(forge.pki.certificateToAsn1(cert)).getBytes(), {encoding: 'binary'});
+  }
+}, 5000);
