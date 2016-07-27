@@ -18,6 +18,11 @@ angular.module("optimizer.routes", [
           templateUrl: "app/components/dashboard/dashboard.html",
           controller: "DashboardCtrl"
         })
+        .state("evolution", {
+          url: "/evolution",
+          templateUrl: "app/components/evolution/evolution.html",
+          controller: "EvolutionCtrl"
+        })
         .state("spreadsheet", {
           url: "/spreadsheet",
           templateUrl: "app/components/spreadsheet/spreadsheet.html",

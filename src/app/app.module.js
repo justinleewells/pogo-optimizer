@@ -5,6 +5,7 @@ angular.module('optimizer', [
 
   'optimizer.connect.controller',
   'optimizer.dashboard.controller',
+  'optimizer.evolution.controller',
   'optimizer.spreadsheet.controller',
 
   'optimizer.nav-menu.directive',
