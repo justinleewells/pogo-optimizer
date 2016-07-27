@@ -5,7 +5,7 @@
         .item(ui-sref="spreadsheet") Spreadsheet
         .right.menu
             .header.item(ng-bind="$root.player.data.username")
-            .header.item mon : {{$root.inventory.pokemon.length}}/{{$root.player.data.max_pokemon_storage}}
+            .header.item {{$root.inventory.pokemon.length}}/{{$root.player.data.max_pokemon_storage}}
             .item(ng-click="logout()")
                 i.icon.unlock.alternate
                 span Logout
