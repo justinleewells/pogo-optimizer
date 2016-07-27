@@ -24,7 +24,11 @@ angular.module('optimizer.spreadsheet.controller', [])
       
       $scope.updateSettings = function () {
         APIService.settings($rootScope.player.settings).then(
-          function () {},
+          function () {
+            var table = $('table');
+            table.stickyTableHeaders('destroy');
+            table.stickyTableHeaders({fixedOffset: $('#nav-menu')});
+          },
           function (err) {
             console.log(err);
           });
@@ -124,14 +128,18 @@ angular.module('optimizer.spreadsheet.controller', [])
       
       $scope.moveColorClass = function () {
         var ret = '';
-        if ($rootScope.player.settings.spreadsheet.enableMoveColors) ret = 'enable-move-colors';
+        if ($rootScope.player.settings.spreadsheet.color.move) ret = 'enable-move-colors';
         return ret;
       };
       
       $scope.ivColorClass = function () {
         var ret = '';
-        if ($rootScope.player.settings.spreadsheet.enableIVColors) ret = 'enable-iv-colors';
+        if ($rootScope.player.settings.spreadsheet.color.iv) ret = 'enable-iv-colors';
         return ret;
+      };
+      
+      $scope.isVisible = function (column) {
+        return $rootScope.player.settings.spreadsheet.display[column];
       };
       
     }
