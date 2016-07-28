@@ -11,7 +11,7 @@ WORKDIR /code
 
 ADD . /code/
 
-RUN npm install --silent
+RUN SKIP_POSTINSTALL=1 npm install --silent
 RUN GIT_DIR=/tmp bower install --allow-root --silent
 
 EXPOSE 8081
