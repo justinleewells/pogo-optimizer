@@ -7,11 +7,8 @@ angular.module('optimizer.evolution.controller', [])
        */
 
       $scope.getPokemonCount = function (family_id) {
-        var spl = family_id.split('_');
-        var name = spl[1];
-        if (spl.length === 3) name += '_' + spl[2];
         return _.reduce($rootScope.inventory.pokemon, function (sum, p) {
-          if (p.data.pokemon_id === name) sum++;
+          if (p.data.pokemon_id === family_id) sum++;
           return sum;
         }, 0);
       };
@@ -31,8 +28,8 @@ angular.module('optimizer.evolution.controller', [])
 
       $scope.formatName = function (family_id) {
         var spl = family_id.toLowerCase().split('_');
-        var ret = spl[1];
-        if (spl.length === 3) ret += ' ' + spl[2];
+        var ret = spl[0];
+        if (spl.length === 2) ret += ' ' + spl[1];
         return ret;
       };
 

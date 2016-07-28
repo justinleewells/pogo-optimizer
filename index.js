@@ -43,7 +43,7 @@ new PokemonGoMITM({port: 8081})
       }, []);
       var candy = _.reduce(delta.inventory_items, function (result, item) {
         return (item.inventory_item_data !== undefined &&
-                item.inventory_item_data.pokemon_family !== undefined) ? _.concat(result, item.inventory_item_data.pokemon_family) : result;
+                item.inventory_item_data.candy !== undefined) ? _.concat(result, item.inventory_item_data.candy) : result;
       }, []);
       if (inventory === null) {
         inventory = new Inventory(player.username);
