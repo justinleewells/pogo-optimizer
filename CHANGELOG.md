@@ -1,5 +1,11 @@
 # Changelog
 
+###
+
+* Fixed .crt creation
+* Less annoying inventory caching
+* ng-repeat optimization
+
 ### v1.3.0
 
 * Added evolutions page
