@@ -86,10 +86,10 @@
             img(ng-src="assets/img/sprites/{{selected.metadata.id}}.png")
             .info
                 label Height:
-                span {{formatDecimal(selected.data.height_m)}}
+                span {{formatDecimal(selectedPokemon.data.height_m)}}
             .info
                 label Weight:
-                span {{formatDecimal(selected.data.weight_kg)}}
+                span {{formatDecimal(selectedPokemon.data.weight_kg)}}
     #spreadsheet-settings-modal.ui.modal.settings
         .header Settings
         .content
