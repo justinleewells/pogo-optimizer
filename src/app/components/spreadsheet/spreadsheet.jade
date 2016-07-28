@@ -27,6 +27,8 @@
             option(value='-metadata.def') DEF (Dsc)
             option(value='+metadata.dps') DPS (Asc)
             option(value='-metadata.dps') DPS (Dsc)
+            option(value='+metadata.max_dps') Max DPS (Asc)
+            option(value='-metadata.max_dps') Max DPS (Dsc)
             option(value='+data.creation_time_ms') Recent (Asc)
             option(value='-data.creation_time_ms') Recent (Dsc)
         table#spreadsheet.ui.celled.table.inverted(class="{{moveColorClass() + ' ' + ivColorClass()}}")
@@ -50,6 +52,7 @@
                     th.stat.def(ng-show="isVisible('ivd')") IVD
                     th.stat.sta(ng-show="isVisible('ivs')") IVS
                     th.stat(ng-show="isVisible('dps')") DPS
+                    th.stat(ng-show="isVisible('max_dps')") MDPS
                     th.stat(ng-show="isVisible('piv')") IV%
                     th.stat(ng-show="isVisible('pcp')") CP%
             tbody
@@ -75,6 +78,7 @@
                     td.stat.def(ng-bind="pokemon.data.individual_defense" ng-show="isVisible('ivd')")
                     td.stat.sta(ng-bind="pokemon.data.individual_stamina" ng-show="isVisible('ivs')")
                     td.stat(ng-show="isVisible('dps')") {{formatDecimal(pokemon.metadata.dps)}}
+                    td.stat(ng-show="isVisible('max_dps')") {{formatDecimal(pokemon.metadata.max_dps)}}
                     td.stat(ng-show="isVisible('piv')")
                         img(src="assets/img/icons/star.png" ng-show="pokemon.metadata.piv > .99")
                         span(ng-bind="formatPercentage(pokemon.metadata.piv)" ng-show="pokemon.metadata.piv < .99")
@@ -168,6 +172,11 @@
                     input(type="checkbox" name="public" ng-model="$root.player.settings.spreadsheet.display.dps" ng-change="updateSettings()")
                     label
                 label Display DPS
+            .checkbox-container
+                .ui.toggle.checkbox
+                    input(type="checkbox" name="public" ng-model="$root.player.settings.spreadsheet.display.max_dps" ng-change="updateSettings()")
+                    label
+                label Display Max DPS
             .checkbox-container
                 .ui.toggle.checkbox
                     input(type="checkbox" name="public" ng-model="$root.player.settings.spreadsheet.display.piv" ng-change="updateSettings()")
