@@ -128,18 +128,18 @@ angular.module('optimizer.spreadsheet.controller', [])
       
       $scope.moveColorClass = function () {
         var ret = '';
-        if ($rootScope.player.settings.spreadsheet.color.move) ret = 'enable-move-colors';
+        if ($rootScope.player && $rootScope.player.settings.spreadsheet.color.move) ret = 'enable-move-colors';
         return ret;
       };
       
       $scope.ivColorClass = function () {
         var ret = '';
-        if ($rootScope.player.settings.spreadsheet.color.iv) ret = 'enable-iv-colors';
+        if ($rootScope.player && $rootScope.player.settings.spreadsheet.color.iv) ret = 'enable-iv-colors';
         return ret;
       };
       
       $scope.isVisible = function (column) {
-        return $rootScope.player.settings.spreadsheet.display[column];
+        return ($rootScope.player && $rootScope.player.settings.spreadsheet.display[column]);
       };
       
     }
