@@ -9,7 +9,8 @@
     "jsonfile": "^2.3.1",
     "lodash": "^4.13.1",
     "node-forge": "^0.6.41",
-    "pokemon-go-mitm": "^1.6.0"
+    "pokemon-go-mitm": "^1.6.0",
+    "quick-local-ip": "^1.0.7"
   },
   "devDependencies": {
     "bower": "^1.7.9",
