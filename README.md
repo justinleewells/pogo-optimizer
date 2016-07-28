@@ -81,6 +81,8 @@ A prebuilt Docker image has been created for this repo. You can pull and start i
 $ docker run -d -p 3000:3000 -p 8081:8081 -it justinleewells/pogo-optimizer
 ```
 
+If there have been updates to the repo, run `docker pull justinleewells/pogo-optimizer` before you do `docker run -d -p 3000:3000 -p 8081:8081 -it justinleewells/pogo-optimizer`
+
 All ports are not accessible and usable as described above.
 
 ### Docker setup for Windows (Docker)
