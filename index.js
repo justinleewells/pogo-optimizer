@@ -122,9 +122,8 @@ app.post('/api/logout', function (req, res, next) {
 app.listen(3000, function () {
   console.log('Pokemon GO Optimizer front-end listening on port 3000');
 
-  require('dns').lookup(require('os').hostname(), function (err, add, fam) {
-    console.log('Accept the cert at ' + add + ':3000/ca.pem if you haven\'t already done so');
-  });
+  var ip = require('quick-local-ip').getLocalIP4();
+  console.log('Accept the cert at http://' + ip + ':3000/ca.pem if you haven\'t already done so');
 });
 
 /**
