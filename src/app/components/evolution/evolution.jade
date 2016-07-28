@@ -9,7 +9,7 @@
                     th.center Candy
                     th.center Evos
             tbody
-                tr(ng-repeat="candy in $root.inventory.candy | orderBy: '-candy'" ng-show="candy.cost")
+                tr(ng-repeat="candy in $root.inventory.candy | orderBy: '-candy' track by candy.family_id" ng-show="candy.cost")
                     td
                         h4.ui.image.header
                             img.ui.mini.rounded.image(ng-src="{{'assets/img/icons/' + candy.id + '.png'}}")

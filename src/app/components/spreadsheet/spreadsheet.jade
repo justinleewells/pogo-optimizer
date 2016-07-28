@@ -53,7 +53,7 @@
                     th.stat(ng-show="isVisible('piv')") IV%
                     th.stat(ng-show="isVisible('pcp')") CP%
             tbody
-                tr(ng-repeat="pokemon in $root.inventory.pokemon | orderBy: getSortArray() | filter: getSearchFilter()")
+                tr(ng-repeat="pokemon in $root.inventory.pokemon | orderBy: getSortArray() | filter: getSearchFilter() track by pokemon.data.id")
                     td.selectable(ng-class="favoriteClass(pokemon)" ng-click="openPokemonModal(pokemon)")
                         h4.ui.image.header
                             img.ui.mini.rounded.image(ng-src="{{'assets/img/icons/' + pokemon.metadata.id + '.png'}}")
