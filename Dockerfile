@@ -16,6 +16,9 @@ COPY .bowerrc /code/
 COPY bower.json /code/
 RUN GIT_DIR=/tmp bower install --allow-root --silent
 
+# Generate .http-mitm-proxy
+RUN ["node", "-e", "require('http-mitm-proxy')().listen({}, function () {process.exit();});"]
+
 COPY . /code/
 
 EXPOSE 8081
