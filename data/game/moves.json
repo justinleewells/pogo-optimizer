@@ -2,7 +2,7 @@
   {
     "AnimationId": 5,
     "Type": "NORMAL",
-    "Power": 15,
+    "Power": 25,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.06,
@@ -182,7 +182,7 @@
   {
     "AnimationId": 5,
     "Type": "PSYCHIC",
-    "Power": 35,
+    "Power": 40,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.065,
@@ -471,7 +471,7 @@
   {
     "AnimationId": 5,
     "Type": "POISON",
-    "Power": 15,
+    "Power": 25,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.05,
@@ -940,7 +940,7 @@
   {
     "AnimationId": 5,
     "Type": "FAIRY",
-    "Power": 20,
+    "Power": 25,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.04,
@@ -1677,7 +1677,7 @@
   {
     "AnimationId": 5,
     "Type": "NORMAL",
-    "Power": 15,
+    "Power": 25,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.06,
@@ -1695,7 +1695,7 @@
   {
     "AnimationId": 5,
     "Type": "NORMAL",
-    "Power": 15,
+    "Power": 25,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.06,
