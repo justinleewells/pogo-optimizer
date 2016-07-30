@@ -777,7 +777,7 @@
   {
     "AnimationId": 5,
     "Type": "STEEL",
-    "Power": 25,
+    "Power": 30,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.06,
@@ -1247,7 +1247,7 @@
   {
     "AnimationId": 5,
     "Type": "WATER",
-    "Power": 20,
+    "Power": 25,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.065,
