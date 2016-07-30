@@ -1,7 +1,7 @@
 # Pokemon GO Optimizer
 In Pokemon GO, each Pokemon has hidden values that determine its maximum attainable HP and CP known as individual values — or IVs for short. The goal of this project is to display these hidden values to the user as painlessly as possible, while giving insight into each Pokemon's combat abilities.
 
-While this app is relatively undetectable, if Niantic contacts me and requests that I discontinue development, I will comply. Until then, please be aware that you are using this at your own risk.
+This project is no longer being developed because as of July 30th Niantic has implemented SSL pinning, rendering this method useless. Happy hunting, everyone.
 
 ![example](https://i.imgur.com/aoHumcX.png)
 
