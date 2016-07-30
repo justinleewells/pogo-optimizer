@@ -20,7 +20,7 @@
   {
     "AnimationId": 5,
     "Type": "NORMAL",
-    "Power": 70,
+    "Power": 120,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.15,
@@ -92,7 +92,7 @@
   {
     "AnimationId": 5,
     "Type": "FIRE",
-    "Power": 35,
+    "Power": 40,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.06,
@@ -110,7 +110,7 @@
   {
     "AnimationId": 5,
     "Type": "BUG",
-    "Power": 55,
+    "Power": 80,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.12,
@@ -128,7 +128,7 @@
   {
     "AnimationId": 5,
     "Type": "FIRE",
-    "Power": 50,
+    "Power": 55,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.09,
@@ -146,7 +146,7 @@
   {
     "AnimationId": 5,
     "Type": "GROUND",
-    "Power": 45,
+    "Power": 70,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.08,
@@ -164,7 +164,7 @@
   {
     "AnimationId": 5,
     "Type": "FIGHTING",
-    "Power": 55,
+    "Power": 60,
     "AccuracyChance": 1,
     "CriticalChance": 0.25,
     "StaminaLossScalar": 0.1,
@@ -200,7 +200,7 @@
   {
     "AnimationId": 5,
     "Type": "GROUND",
-    "Power": 60,
+    "Power": 100,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.1,
@@ -218,7 +218,7 @@
   {
     "AnimationId": 5,
     "Type": "ROCK",
-    "Power": 55,
+    "Power": 80,
     "AccuracyChance": 1,
     "CriticalChance": 0.5,
     "StaminaLossScalar": 0.1,
@@ -272,7 +272,7 @@
   {
     "AnimationId": 5,
     "Type": "ELECTRIC",
-    "Power": 40,
+    "Power": 35,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.08,
@@ -290,7 +290,7 @@
   {
     "AnimationId": 5,
     "Type": "STEEL",
-    "Power": 55,
+    "Power": 60,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.08,
@@ -308,7 +308,7 @@
   {
     "AnimationId": 5,
     "Type": "FLYING",
-    "Power": 30,
+    "Power": 40,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.08,
@@ -344,7 +344,7 @@
   {
     "AnimationId": 5,
     "Type": "ICE",
-    "Power": 60,
+    "Power": 100,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.11,
@@ -362,7 +362,7 @@
   {
     "AnimationId": 5,
     "Type": "FIRE",
-    "Power": 60,
+    "Power": 80,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.095,
@@ -380,7 +380,7 @@
   {
     "AnimationId": 5,
     "Type": "FLYING",
-    "Power": 25,
+    "Power": 30,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.06,
@@ -398,7 +398,7 @@
   {
     "AnimationId": 5,
     "Type": "GROUND",
-    "Power": 40,
+    "Power": 50,
     "AccuracyChance": 1,
     "CriticalChance": 0.25,
     "StaminaLossScalar": 0.08,
@@ -416,7 +416,7 @@
   {
     "AnimationId": 5,
     "Type": "GRASS",
-    "Power": 50,
+    "Power": 65,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.09,
@@ -453,7 +453,7 @@
   {
     "AnimationId": 5,
     "Type": "BUG",
-    "Power": 50,
+    "Power": 75,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.09,
@@ -489,7 +489,7 @@
   {
     "AnimationId": 5,
     "Type": "DARK",
-    "Power": 25,
+    "Power": 30,
     "AccuracyChance": 1,
     "CriticalChance": 0.25,
     "StaminaLossScalar": 0.07,
@@ -507,7 +507,7 @@
   {
     "AnimationId": 5,
     "Type": "WATER",
-    "Power": 25,
+    "Power": 30,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.065,
@@ -561,7 +561,7 @@
   {
     "AnimationId": 5,
     "Type": "WATER",
-    "Power": 15,
+    "Power": 25,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.04,
@@ -579,7 +579,7 @@
   {
     "AnimationId": 5,
     "Type": "WATER",
-    "Power": 50,
+    "Power": 45,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.09,
@@ -597,7 +597,7 @@
   {
     "AnimationId": 5,
     "Type": "GRASS",
-    "Power": 30,
+    "Power": 40,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.08,
@@ -633,7 +633,7 @@
   {
     "AnimationId": 5,
     "Type": "ROCK",
-    "Power": 30,
+    "Power": 35,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.06,
@@ -741,7 +741,7 @@
   {
     "AnimationId": 5,
     "Type": "GHOST",
-    "Power": 25,
+    "Power": 30,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.06,
@@ -795,7 +795,7 @@
   {
     "AnimationId": 5,
     "Type": "STEEL",
-    "Power": 40,
+    "Power": 30,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.08,
@@ -850,7 +850,7 @@
   {
     "AnimationId": 5,
     "Type": "ELECTRIC",
-    "Power": 65,
+    "Power": 100,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.11,
@@ -868,7 +868,7 @@
   {
     "AnimationId": 5,
     "Type": "ELECTRIC",
-    "Power": 50,
+    "Power": 55,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.09,
@@ -886,7 +886,7 @@
   {
     "AnimationId": 5,
     "Type": "DRAGON",
-    "Power": 15,
+    "Power": 25,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.04,
@@ -904,7 +904,7 @@
   {
     "AnimationId": 5,
     "Type": "DRAGON",
-    "Power": 50,
+    "Power": 65,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.085,
@@ -922,7 +922,7 @@
   {
     "AnimationId": 5,
     "Type": "DRAGON",
-    "Power": 40,
+    "Power": 35,
     "AccuracyChance": 1,
     "CriticalChance": 0.25,
     "StaminaLossScalar": 0.08,
@@ -958,7 +958,7 @@
   {
     "AnimationId": 5,
     "Type": "FAIRY",
-    "Power": 15,
+    "Power": 25,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "HealScalar": 1,
@@ -977,7 +977,7 @@
   {
     "AnimationId": 5,
     "Type": "FAIRY",
-    "Power": 45,
+    "Power": 55,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.08,
@@ -995,7 +995,7 @@
   {
     "AnimationId": 5,
     "Type": "FAIRY",
-    "Power": 60,
+    "Power": 80,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.095,
@@ -1013,7 +1013,7 @@
   {
     "AnimationId": 5,
     "Type": "FAIRY",
-    "Power": 50,
+    "Power": 55,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.1,
@@ -1031,7 +1031,7 @@
   {
     "AnimationId": 5,
     "Type": "POISON",
-    "Power": 20,
+    "Power": 25,
     "AccuracyChance": 1,
     "CriticalChance": 0.25,
     "StaminaLossScalar": 0.07,
@@ -1049,7 +1049,7 @@
   {
     "AnimationId": 5,
     "Type": "POISON",
-    "Power": 50,
+    "Power": 55,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.09,
@@ -1085,7 +1085,7 @@
   {
     "AnimationId": 5,
     "Type": "POISON",
-    "Power": 60,
+    "Power": 65,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.12,
@@ -1121,7 +1121,7 @@
   {
     "AnimationId": 5,
     "Type": "GROUND",
-    "Power": 30,
+    "Power": 35,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.06,
@@ -1139,7 +1139,7 @@
   {
     "AnimationId": 5,
     "Type": "GROUND",
-    "Power": 25,
+    "Power": 30,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.065,
@@ -1175,7 +1175,7 @@
   {
     "AnimationId": 5,
     "Type": "BUG",
-    "Power": 30,
+    "Power": 35,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.08,
@@ -1229,7 +1229,7 @@
   {
     "AnimationId": 5,
     "Type": "FIRE",
-    "Power": 60,
+    "Power": 100,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.11,
@@ -1265,7 +1265,7 @@
   {
     "AnimationId": 5,
     "Type": "WATER",
-    "Power": 30,
+    "Power": 35,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.06,
@@ -1319,7 +1319,7 @@
   {
     "AnimationId": 5,
     "Type": "PSYCHIC",
-    "Power": 50,
+    "Power": 55,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.09,
@@ -1355,7 +1355,7 @@
   {
     "AnimationId": 5,
     "Type": "ICE",
-    "Power": 15,
+    "Power": 25,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.055,
@@ -1392,7 +1392,7 @@
   {
     "AnimationId": 5,
     "Type": "FIRE",
-    "Power": 35,
+    "Power": 40,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.075,
@@ -1410,7 +1410,7 @@
   {
     "AnimationId": 5,
     "Type": "GRASS",
-    "Power": 65,
+    "Power": 120,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.12,
@@ -1428,7 +1428,7 @@
   {
     "AnimationId": 5,
     "Type": "GRASS",
-    "Power": 45,
+    "Power": 55,
     "AccuracyChance": 1,
     "CriticalChance": 0.25,
     "StaminaLossScalar": 0.09,
@@ -1446,7 +1446,7 @@
   {
     "AnimationId": 5,
     "Type": "GRASS",
-    "Power": 60,
+    "Power": 70,
     "AccuracyChance": 1,
     "StaminaLossScalar": 0.12,
     "TrainerLevelMin": 1,
@@ -1463,7 +1463,7 @@
   {
     "AnimationId": 5,
     "Type": "FLYING",
-    "Power": 25,
+    "Power": 30,
     "AccuracyChance": 1,
     "CriticalChance": 0.25,
     "StaminaLossScalar": 0.06,
@@ -1481,7 +1481,7 @@
   {
     "AnimationId": 5,
     "Type": "FLYING",
-    "Power": 60,
+    "Power": 80,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.11,
@@ -1553,7 +1553,7 @@
   {
     "AnimationId": 5,
     "Type": "NORMAL",
-    "Power": 25,
+    "Power": 30,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.065,
@@ -1589,7 +1589,7 @@
   {
     "AnimationId": 5,
     "Type": "NORMAL",
-    "Power": 50,
+    "Power": 40,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.085,
@@ -1659,7 +1659,7 @@
   {
     "AnimationId": 5,
     "Type": "WATER",
-    "Power": 60,
+    "Power": 90,
     "AccuracyChance": 1,
     "CriticalChance": 0.05,
     "StaminaLossScalar": 0.11,
@@ -1730,7 +1730,7 @@
   {
     "AnimationId": 4,
     "Type": "BUG",
-    "Power": 6,
+    "Power": 5,
     "AccuracyChance": 1,
     "StaminaLossScalar": 0.01,
     "TrainerLevelMin": 1,
@@ -1883,7 +1883,7 @@
   {
     "AnimationId": 4,
     "Type": "FLYING",
-    "Power": 12,
+    "Power": 9,
     "AccuracyChance": 1,
     "StaminaLossScalar": 0.01,
     "TrainerLevelMin": 1,
@@ -1917,7 +1917,7 @@
   {
     "AnimationId": 4,
     "Type": "GHOST",
-    "Power": 10,
+    "Power": 5,
     "AccuracyChance": 1,
     "StaminaLossScalar": 0.01,
     "TrainerLevelMin": 1,
@@ -1934,7 +1934,7 @@
   {
     "AnimationId": 4,
     "Type": "GHOST",
-    "Power": 16,
+    "Power": 11,
     "AccuracyChance": 1,
     "StaminaLossScalar": 0.01,
     "TrainerLevelMin": 1,
@@ -1951,7 +1951,7 @@
   {
     "AnimationId": 4,
     "Type": "GRASS",
-    "Power": 10,
+    "Power": 7,
     "AccuracyChance": 1,
     "StaminaLossScalar": 0.01,
     "TrainerLevelMin": 1,
@@ -1985,7 +1985,7 @@
   {
     "AnimationId": 4,
     "Type": "GROUND",
-    "Power": 12,
+    "Power": 6,
     "AccuracyChance": 1,
     "StaminaLossScalar": 0.01,
     "TrainerLevelMin": 1,
@@ -2002,7 +2002,7 @@
   {
     "AnimationId": 4,
     "Type": "ICE",
-    "Power": 10,
+    "Power": 15,
     "AccuracyChance": 1,
     "StaminaLossScalar": 0.01,
     "TrainerLevelMin": 1,
@@ -2019,7 +2019,7 @@
   {
     "AnimationId": 4,
     "Type": "ICE",
-    "Power": 12,
+    "Power": 9,
     "AccuracyChance": 1,
     "StaminaLossScalar": 0.01,
     "TrainerLevelMin": 1,
@@ -2053,7 +2053,7 @@
   {
     "AnimationId": 4,
     "Type": "NORMAL",
-    "Power": 10,
+    "Power": 6,
     "AccuracyChance": 1,
     "StaminaLossScalar": 0.01,
     "TrainerLevelMin": 1,
@@ -2087,7 +2087,7 @@
   {
     "AnimationId": 4,
     "Type": "NORMAL",
-    "Power": 8,
+    "Power": 7,
     "AccuracyChance": 1,
     "StaminaLossScalar": 0.01,
     "TrainerLevelMin": 1,
@@ -2121,7 +2121,7 @@
   {
     "AnimationId": 4,
     "Type": "POISON",
-    "Power": 15,
+    "Power": 12,
     "AccuracyChance": 1,
     "StaminaLossScalar": 0.01,
     "TrainerLevelMin": 1,
@@ -2155,7 +2155,7 @@
   {
     "AnimationId": 4,
     "Type": "PSYCHIC",
-    "Power": 15,
+    "Power": 7,
     "AccuracyChance": 1,
     "StaminaLossScalar": 0.01,
     "TrainerLevelMin": 1,
@@ -2189,7 +2189,7 @@
   {
     "AnimationId": 4,
     "Type": "STEEL",
-    "Power": 12,
+    "Power": 8,
     "AccuracyChance": 1,
     "StaminaLossScalar": 0.01,
     "TrainerLevelMin": 1,
@@ -2223,7 +2223,7 @@
   {
     "AnimationId": 4,
     "Type": "WATER",
-    "Power": 10,
+    "Power": 6,
     "AccuracyChance": 1,
     "StaminaLossScalar": 0.01,
     "TrainerLevelMin": 1,
@@ -2273,7 +2273,7 @@
   {
     "AnimationId": 4,
     "Type": "GROUND",
-    "Power": 6,
+    "Power": 15,
     "AccuracyChance": 1,
     "StaminaLossScalar": 0.01,
     "TrainerLevelMin": 1,
@@ -2290,7 +2290,7 @@
   {
     "AnimationId": 4,
     "Type": "PSYCHIC",
-    "Power": 15,
+    "Power": 12,
     "AccuracyChance": 1,
     "StaminaLossScalar": 0.01,
     "TrainerLevelMin": 1,
@@ -2307,7 +2307,7 @@
   {
     "AnimationId": 4,
     "Type": "PSYCHIC",
-    "Power": 12,
+    "Power": 15,
     "AccuracyChance": 1,
     "StaminaLossScalar": 0.01,
     "TrainerLevelMin": 1,
@@ -2341,7 +2341,7 @@
   {
     "AnimationId": 4,
     "Type": "WATER",
-    "Power": 15,
+    "Power": 25,
     "AccuracyChance": 1,
     "StaminaLossScalar": 0.01,
     "TrainerLevelMin": 1,
@@ -2392,7 +2392,7 @@
   {
     "AnimationId": 4,
     "Type": "FIRE",
-    "Power": 7,
+    "Power": 10,
     "AccuracyChance": 1,
     "StaminaLossScalar": 0.01,
     "TrainerLevelMin": 1,
@@ -2409,7 +2409,7 @@
   {
     "AnimationId": 4,
     "Type": "FIGHTING",
-    "Power": 5,
+    "Power": 15,
     "AccuracyChance": 1,
     "StaminaLossScalar": 0.01,
     "TrainerLevelMin": 1,

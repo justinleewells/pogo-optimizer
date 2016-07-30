@@ -1,5 +1,11 @@
 # Changelog
 
+### v1.3.3
+
+* Updated move powers
+* Fixed modal positioning
+* Added Max DPS column
+
 ### v1.3.2
 
 * NaN no longer shows up for height/weight
