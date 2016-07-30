@@ -13,13 +13,22 @@ angular.module('optimizer.evolution.controller', [])
         }, 0);
       };
 
-      $scope.getEvolutions = function (candy) {
+      $scope.getEvolutions = function (candy, transfer) {
         var count = this.getPokemonCount(candy.family_id);
-        var ret   = -1;
-        for (var i = 0; i < candy.candy && ret < count; i += candy.cost) {
-          ret++;
+        var n = parseInt(Math.min(candy.candy / candy.cost, count));
+        if (!transfer) {
+          return n;
+        } else {
+          var remainder = parseInt(candy.candy - (candy.cost * n));
+          return n + Math.min(parseInt((count + remainder - n) / (candy.cost + 1)), count - n);
         }
-        return ret;
+      };
+
+      $scope.getTransfers = function (candy) {
+        var n = this.getEvolutions(candy, true);
+        var count = this.getPokemonCount(candy.family_id);
+        var rem = count - n;
+        return n ? rem : 0;
       };
 
       /**
