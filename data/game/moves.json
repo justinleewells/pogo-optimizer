@@ -2256,7 +2256,7 @@
   {
     "AnimationId": 4,
     "Type": "WATER",
-    "Power": 10,
+    "Power": 6,
     "AccuracyChance": 1,
     "StaminaLossScalar": 0.01,
     "TrainerLevelMin": 1,
